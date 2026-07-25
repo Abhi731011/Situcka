@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply overflow-x-hidden;
+  }
+}
+
+@layer components {
+  .app-section-bg {
+    background-color: #f99a1c;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600' viewBox='0 0 800 600' fill='none'%3E%3Cpath d='M0 120h800M0 240h800M0 360h800M0 480h800M120 0v600M240 0v600M360 0v600M480 0v600M600 0v600M720 0v600' stroke='white' stroke-opacity='0.12' stroke-width='1.5'/%3E%3Cpath d='M40 0c80 120 80 360 80 600M200 0c60 200 60 400 60 600M320 0c100 180 100 420 100 600M520 0c-70 150-70 450-70 600M640 0c90 200 90 400 90 600' stroke='white' stroke-opacity='0.08' stroke-width='2'/%3E%3C/svg%3E");
+    background-size: cover;
+    background-position: center;
+  }
+}
