@@ -6,7 +6,7 @@ const primaryItems = [
     icon: "Resturant.svg",
     href: "./restaurants.html",
   },
-  { key: "groceries", label: "Groceries", icon: "Groseries.svg", href: "#" },
+  { key: "groceries", label: "Groceries", icon: "Groseries.svg", href: "./groceries.html" },
   { key: "parcel", label: "Parcel", icon: "Parcel.svg", href: "#" },
 ];
 

@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="SITÙCKA dashboard for food, grocery, pharmacy, and parcel delivery."
+      content="Shop fresh groceries, daily essentials, and more on SITÙCKA."
     />
-    <title>Home | SITÙCKA</title>
+    <title>Groceries | SITÙCKA</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -22,17 +22,17 @@
   </head>
   <body>
     <div class="app-shell">
-      <app-sidebar active="home"></app-sidebar>
+      <app-sidebar active="groceries"></app-sidebar>
       <button class="mobile-overlay" type="button" aria-label="Close menu"></button>
 
       <div class="app-main">
         <app-header></app-header>
 
         <main class="dashboard-content">
-          <section class="hero-banner" aria-label="SITÙCKA home banner">
+          <section class="hero-banner" aria-label="SITÙCKA groceries banner">
             <img
               src="./assets/Images/Banner.png"
-              alt="Everything you need, delivered to you — food, groceries, and daily essentials"
+              alt="Everything you need, delivered to you — fresh groceries and daily essentials"
             />
           </section>
 
@@ -49,48 +49,54 @@
               <a class="view-all" href="#">View all</a>
             </div>
 
-            <div class="category-grid">
-              <a class="category-card" href="#">
-                <span class="category-icon category-icon--dine">
-                  <img src="./assets/dine.svg" alt="" aria-hidden="true" />
+            <div class="cuisine-scroller">
+              <a class="cuisine-item" href="#">
+                <span class="cuisine-avatar">
+                  <img src="./assets/Images/img25.png" alt="" aria-hidden="true" />
                 </span>
-                <h3>Dine</h3>
-                <p>24K+ Stores</p>
+                <span class="cuisine-name">Produce</span>
               </a>
-              <a class="category-card" href="./groceries.html">
-                <span class="category-icon category-icon--grocery">
-                  <img src="./assets/Grocery.svg" alt="" aria-hidden="true" />
+              <a class="cuisine-item" href="#">
+                <span class="cuisine-avatar">
+                  <img src="./assets/Images/img26.png" alt="" aria-hidden="true" />
                 </span>
-                <h3>Grocery</h3>
-                <p>24K+ Stores</p>
+                <span class="cuisine-name">Dairy</span>
               </a>
-              <a class="category-card" href="#">
-                <span class="category-icon category-icon--pharmacy">
-                  <img src="./assets/Pharmacy.svg" alt="" aria-hidden="true" />
+              <a class="cuisine-item" href="#">
+                <span class="cuisine-avatar">
+                  <img src="./assets/Images/img27.jpg" alt="" aria-hidden="true" />
                 </span>
-                <h3>Pharmacy</h3>
-                <p>24K+ Stores</p>
+                <span class="cuisine-name">Meats</span>
               </a>
-              <a class="category-card" href="#">
-                <span class="category-icon category-icon--bakery">
-                  <img src="./assets/Backery.svg" alt="" aria-hidden="true" />
+              <a class="cuisine-item" href="#">
+                <span class="cuisine-avatar">
+                  <img src="./assets/Images/img28.png" alt="" aria-hidden="true" />
                 </span>
-                <h3>Bakery</h3>
-                <p>24K+ Stores</p>
+                <span class="cuisine-name">Beverages</span>
               </a>
-              <a class="category-card" href="#">
-                <span class="category-icon category-icon--parcel">
-                  <img src="./assets/Parcel%20copy.svg" alt="" aria-hidden="true" />
+              <a class="cuisine-item" href="#">
+                <span class="cuisine-avatar">
+                  <img src="./assets/Images/img29.jpg" alt="" aria-hidden="true" />
                 </span>
-                <h3>Parcel</h3>
-                <p>24K+ Stores</p>
+                <span class="cuisine-name">Snacks</span>
               </a>
-              <a class="category-card" href="#">
-                <span class="category-icon category-icon--offers">
-                  <img src="./assets/Discount.svg" alt="" aria-hidden="true" />
+              <a class="cuisine-item" href="#">
+                <span class="cuisine-avatar">
+                  <img src="./assets/Images/img30.jpg" alt="" aria-hidden="true" />
                 </span>
-                <h3>Offers</h3>
-                <p>24K+ Stores</p>
+                <span class="cuisine-name">Salads</span>
+              </a>
+              <a class="cuisine-item" href="#">
+                <span class="cuisine-avatar">
+                  <img src="./assets/Images/img31.jpg" alt="" aria-hidden="true" />
+                </span>
+                <span class="cuisine-name">Dry Fruits</span>
+              </a>
+              <a class="cuisine-item" href="#">
+                <span class="cuisine-avatar">
+                  <img src="./assets/Images/img32.jpg" alt="" aria-hidden="true" />
+                </span>
+                <span class="cuisine-name">Chocolates</span>
               </a>
             </div>
           </section>
@@ -218,6 +224,44 @@
                   </div>
                 </div>
               </article>
+
+              <article class="product-card">
+                <div class="product-media">
+                  <img src="./assets/Images/img4.png" alt="Peanut Butter" />
+                  <button class="product-wish" type="button" aria-label="Add Peanut Butter to wishlist">
+                    <img src="./assets/Tab/wishlist.svg" alt="" aria-hidden="true" />
+                  </button>
+                </div>
+                <div class="product-body">
+                  <h3>Peanut Butter</h3>
+                  <p>500g • Creamy</p>
+                  <div class="product-meta">
+                    <strong>$5.20</strong>
+                    <button class="product-cart" type="button" aria-label="Add Peanut Butter to cart">
+                      <img src="./assets/Header/cart.svg" alt="" aria-hidden="true" />
+                    </button>
+                  </div>
+                </div>
+              </article>
+
+              <article class="product-card">
+                <div class="product-media">
+                  <img src="./assets/Images/img5.png" alt="Choco Ice-cream" />
+                  <button class="product-wish" type="button" aria-label="Add Choco Ice-cream to wishlist">
+                    <img src="./assets/Tab/wishlist.svg" alt="" aria-hidden="true" />
+                  </button>
+                </div>
+                <div class="product-body">
+                  <h3>Choco Ice-cream</h3>
+                  <p>500ml • Premium</p>
+                  <div class="product-meta">
+                    <strong>$6.75</strong>
+                    <button class="product-cart" type="button" aria-label="Add Choco Ice-cream to cart">
+                      <img src="./assets/Header/cart.svg" alt="" aria-hidden="true" />
+                    </button>
+                  </div>
+                </div>
+              </article>
             </div>
           </section>
 
@@ -235,147 +279,21 @@
             </div>
           </section>
 
-          <section class="content-section content-section--products" aria-labelledby="bites-heading">
+          <section class="content-section content-section--products" aria-labelledby="stores-heading">
             <div class="section-heading">
               <div>
-                <h2 id="bites-heading">Quick Bites</h2>
-                <p>Snackable item for quick craving</p>
+                <h2 id="stores-heading">Popular Stores</h2>
+                <p>Handpicked top-rated stores near you</p>
               </div>
               <a class="view-all" href="#">View all</a>
-            </div>
-
-            <div class="product-scroller">
-              <article class="product-card">
-                <div class="product-media">
-                  <img src="./assets/Images/img7.png" alt="Cheese Pizza" />
-                  <button class="product-wish" type="button" aria-label="Add Cheese Pizza to wishlist">
-                    <img src="./assets/Tab/wishlist.svg" alt="" aria-hidden="true" />
-                  </button>
-                </div>
-                <div class="product-body">
-                  <h3>Cheese Pizza</h3>
-                  <p>6 slices • Cheese</p>
-                  <div class="product-meta">
-                    <strong>$8.99</strong>
-                    <button class="product-cart" type="button" aria-label="Add Cheese Pizza to cart">
-                      <img src="./assets/Header/cart.svg" alt="" aria-hidden="true" />
-                    </button>
-                  </div>
-                </div>
-              </article>
-
-              <article class="product-card">
-                <div class="product-media">
-                  <img src="./assets/Images/img8.png" alt="Sushi Sampler" />
-                  <button class="product-wish" type="button" aria-label="Add Sushi Sampler to wishlist">
-                    <img src="./assets/Tab/wishlist.svg" alt="" aria-hidden="true" />
-                  </button>
-                </div>
-                <div class="product-body">
-                  <h3>Sushi Sampler</h3>
-                  <p>12 pcs • Fresh</p>
-                  <div class="product-meta">
-                    <strong>$12.50</strong>
-                    <button class="product-cart" type="button" aria-label="Add Sushi Sampler to cart">
-                      <img src="./assets/Header/cart.svg" alt="" aria-hidden="true" />
-                    </button>
-                  </div>
-                </div>
-              </article>
-
-              <article class="product-card">
-                <div class="product-media">
-                  <img src="./assets/Images/img9.png" alt="Avocado Toast" />
-                  <button class="product-wish" type="button" aria-label="Add Avocado Toast to wishlist">
-                    <img src="./assets/Tab/wishlist.svg" alt="" aria-hidden="true" />
-                  </button>
-                </div>
-                <div class="product-body">
-                  <h3>Avocado Toast</h3>
-                  <p>1 plate • Healthy</p>
-                  <div class="product-meta">
-                    <strong>$6.40</strong>
-                    <button class="product-cart" type="button" aria-label="Add Avocado Toast to cart">
-                      <img src="./assets/Header/cart.svg" alt="" aria-hidden="true" />
-                    </button>
-                  </div>
-                </div>
-              </article>
-
-              <article class="product-card">
-                <div class="product-media">
-                  <img src="./assets/Images/img10.jpg" alt="Cheese Burger" />
-                  <button class="product-wish" type="button" aria-label="Add Cheese Burger to wishlist">
-                    <img src="./assets/Tab/wishlist.svg" alt="" aria-hidden="true" />
-                  </button>
-                </div>
-                <div class="product-body">
-                  <h3>Cheese Burger</h3>
-                  <p>1 burger • Classic</p>
-                  <div class="product-meta">
-                    <strong>$7.25</strong>
-                    <button class="product-cart" type="button" aria-label="Add Cheese Burger to cart">
-                      <img src="./assets/Header/cart.svg" alt="" aria-hidden="true" />
-                    </button>
-                  </div>
-                </div>
-              </article>
-
-              <article class="product-card">
-                <div class="product-media">
-                  <img src="./assets/Images/img11.png" alt="Truffle Gnocchi" />
-                  <button class="product-wish" type="button" aria-label="Add Truffle Gnocchi to wishlist">
-                    <img src="./assets/Tab/wishlist.svg" alt="" aria-hidden="true" />
-                  </button>
-                </div>
-                <div class="product-body">
-                  <h3>Truffle Gnocchi</h3>
-                  <p>Handmade • Creamy</p>
-                  <div class="product-meta">
-                    <strong>$11.80</strong>
-                    <button class="product-cart" type="button" aria-label="Add Truffle Gnocchi to cart">
-                      <img src="./assets/Header/cart.svg" alt="" aria-hidden="true" />
-                    </button>
-                  </div>
-                </div>
-              </article>
-
-              <article class="product-card">
-                <div class="product-media">
-                  <img src="./assets/Images/img12.png" alt="Almond Croissant" />
-                  <button class="product-wish" type="button" aria-label="Add Almond Croissant to wishlist">
-                    <img src="./assets/Tab/wishlist.svg" alt="" aria-hidden="true" />
-                  </button>
-                </div>
-                <div class="product-body">
-                  <h3>Almond Croissant</h3>
-                  <p>1 pc • Fresh baked</p>
-                  <div class="product-meta">
-                    <strong>$3.90</strong>
-                    <button class="product-cart" type="button" aria-label="Add Almond Croissant to cart">
-                      <img src="./assets/Header/cart.svg" alt="" aria-hidden="true" />
-                    </button>
-                  </div>
-                </div>
-              </article>
-            </div>
-          </section>
-
-          <section class="content-section content-section--products" aria-labelledby="restaurants-heading">
-            <div class="section-heading">
-              <div>
-                <h2 id="restaurants-heading">Popular Restaurants</h2>
-                <p>Handpicked top-rated restaurants near you</p>
-              </div>
-              <a class="view-all" href="./restaurants-all.html">View all</a>
             </div>
 
             <div class="restaurant-grid">
               <article class="restaurant-card">
                 <div class="restaurant-media">
-                  <img src="./assets/Images/img13.png" alt="L'Artisan Trattoria" />
+                  <img src="./assets/Images/img13.png" alt="The Emerald Bistro" />
                   <span class="restaurant-offer">20% OFF UPTO $10</span>
-                  <button class="product-wish" type="button" aria-label="Save L'Artisan Trattoria">
+                  <button class="product-wish" type="button" aria-label="Save The Emerald Bistro">
                     <img src="./assets/Tab/wishlist.svg" alt="" aria-hidden="true" />
                   </button>
                   <span class="restaurant-badge">PROMOTED</span>
@@ -383,24 +301,24 @@
                 </div>
                 <div class="restaurant-body">
                   <div class="restaurant-title-row">
-                    <h3>L'Artisan Trattoria</h3>
+                    <h3>The Emerald Bistro</h3>
                     <span class="restaurant-rating">
                       <span class="restaurant-star" aria-hidden="true">★</span>
                       <span class="restaurant-score">4.8</span>
                       <span class="restaurant-count">(1.2k)</span>
                     </span>
                   </div>
-                  <p class="restaurant-desc">Authentic pizzas and handmade pasta</p>
-                  <p class="restaurant-meta">Italian • $$$ • 1.2 miles</p>
+                  <p class="restaurant-desc">Fresh produce and daily essentials</p>
+                  <p class="restaurant-meta">Grocery • $$ • 1.2 miles</p>
                   <strong class="restaurant-fee">$2.99 Delivery</strong>
                 </div>
               </article>
 
               <article class="restaurant-card">
                 <div class="restaurant-media">
-                  <img src="./assets/Images/img14.png" alt="Sakura House" />
+                  <img src="./assets/Images/img14.png" alt="Sakura Premium" />
                   <span class="restaurant-offer">FLAT $15 OFF</span>
-                  <button class="product-wish" type="button" aria-label="Save Sakura House">
+                  <button class="product-wish" type="button" aria-label="Save Sakura Premium">
                     <img src="./assets/Tab/wishlist.svg" alt="" aria-hidden="true" />
                   </button>
                   <span class="restaurant-badge">PROMOTED</span>
@@ -408,24 +326,49 @@
                 </div>
                 <div class="restaurant-body">
                   <div class="restaurant-title-row">
-                    <h3>Sakura House</h3>
+                    <h3>Sakura Premium</h3>
                     <span class="restaurant-rating">
                       <span class="restaurant-star" aria-hidden="true">★</span>
-                      <span class="restaurant-score">4.9</span>
-                      <span class="restaurant-count">(3.4k)</span>
+                      <span class="restaurant-score">4.8</span>
+                      <span class="restaurant-count">(1.2k)</span>
                     </span>
                   </div>
-                  <p class="restaurant-desc">Fresh sushi and Japanese classics</p>
-                  <p class="restaurant-meta">Japanese • $$ • 0.8 miles</p>
-                  <strong class="restaurant-fee">$1.99 Delivery</strong>
+                  <p class="restaurant-desc">Organic goods and gourmet picks</p>
+                  <p class="restaurant-meta">Grocery • $$$ • 1.2 miles</p>
+                  <strong class="restaurant-fee">$2.89 Delivery</strong>
                 </div>
               </article>
 
               <article class="restaurant-card">
                 <div class="restaurant-media">
-                  <img src="./assets/Images/img15.png" alt="Green Bowl Kitchen" />
+                  <img src="./assets/Images/img15.png" alt="Royal Kashmiri Bites" />
                   <span class="restaurant-offer">FLAT $15 OFF</span>
-                  <button class="product-wish" type="button" aria-label="Save Green Bowl Kitchen">
+                  <button class="product-wish" type="button" aria-label="Save Royal Kashmiri Bites">
+                    <img src="./assets/Tab/wishlist.svg" alt="" aria-hidden="true" />
+                  </button>
+                  <span class="restaurant-badge">PROMOTED</span>
+                  <span class="restaurant-time">15-20 MIN</span>
+                </div>
+                <div class="restaurant-body">
+                  <div class="restaurant-title-row">
+                    <h3>Royal Kashmiri Bites</h3>
+                    <span class="restaurant-rating">
+                      <span class="restaurant-star" aria-hidden="true">★</span>
+                      <span class="restaurant-score">4.5</span>
+                      <span class="restaurant-count">(1.2k)</span>
+                    </span>
+                  </div>
+                  <p class="restaurant-desc">Dry fruits, spices, and specialties</p>
+                  <p class="restaurant-meta">Grocery • $$$ • 1.2 miles</p>
+                  <strong class="restaurant-fee restaurant-fee--free">Free Delivery</strong>
+                </div>
+              </article>
+
+              <article class="restaurant-card">
+                <div class="restaurant-media">
+                  <img src="./assets/Images/img16.png" alt="Oceanic Delights" />
+                  <span class="restaurant-offer">FLAT $15 OFF</span>
+                  <button class="product-wish" type="button" aria-label="Save Oceanic Delights">
                     <img src="./assets/Tab/wishlist.svg" alt="" aria-hidden="true" />
                   </button>
                   <span class="restaurant-badge">PROMOTED</span>
@@ -433,41 +376,66 @@
                 </div>
                 <div class="restaurant-body">
                   <div class="restaurant-title-row">
-                    <h3>Green Bowl Kitchen</h3>
+                    <h3>Oceanic Delights</h3>
                     <span class="restaurant-rating">
                       <span class="restaurant-star" aria-hidden="true">★</span>
-                      <span class="restaurant-score">4.7</span>
-                      <span class="restaurant-count">(890)</span>
+                      <span class="restaurant-score">4.8</span>
+                      <span class="restaurant-count">(1.2k)</span>
                     </span>
                   </div>
-                  <p class="restaurant-desc">Healthy bowls and fresh salads</p>
-                  <p class="restaurant-meta">Healthy • $$ • 1.5 miles</p>
-                  <strong class="restaurant-fee">$2.49 Delivery</strong>
+                  <p class="restaurant-desc">Fresh seafood and frozen goods</p>
+                  <p class="restaurant-meta">Grocery • $$$ • 1.2 miles</p>
+                  <strong class="restaurant-fee restaurant-fee--free">Free Delivery</strong>
                 </div>
               </article>
 
               <article class="restaurant-card">
                 <div class="restaurant-media">
-                  <img src="./assets/Images/img16.png" alt="Burger Lab" />
-                  <span class="restaurant-offer">FLAT $15 OFF</span>
-                  <button class="product-wish" type="button" aria-label="Save Burger Lab">
+                  <img src="./assets/Images/img13.png" alt="The Emerald Bistro" />
+                  <span class="restaurant-offer">20% OFF UPTO $10</span>
+                  <button class="product-wish" type="button" aria-label="Save The Emerald Bistro">
                     <img src="./assets/Tab/wishlist.svg" alt="" aria-hidden="true" />
                   </button>
                   <span class="restaurant-badge">PROMOTED</span>
-                  <span class="restaurant-time">10-15 MIN</span>
+                  <span class="restaurant-time">15-20 MIN</span>
                 </div>
                 <div class="restaurant-body">
                   <div class="restaurant-title-row">
-                    <h3>Burger Lab</h3>
+                    <h3>The Emerald Bistro</h3>
                     <span class="restaurant-rating">
                       <span class="restaurant-star" aria-hidden="true">★</span>
-                      <span class="restaurant-score">4.6</span>
-                      <span class="restaurant-count">(2.1k)</span>
+                      <span class="restaurant-score">4.8</span>
+                      <span class="restaurant-count">(1.2k)</span>
                     </span>
                   </div>
-                  <p class="restaurant-desc">Gourmet burgers and crispy fries</p>
-                  <p class="restaurant-meta">American • $$ • 0.5 miles</p>
-                  <strong class="restaurant-fee restaurant-fee--free">Free Delivery</strong>
+                  <p class="restaurant-desc">Fresh produce and daily essentials</p>
+                  <p class="restaurant-meta">Grocery • $$ • 1.2 miles</p>
+                  <strong class="restaurant-fee">$2.99 Delivery</strong>
+                </div>
+              </article>
+
+              <article class="restaurant-card">
+                <div class="restaurant-media">
+                  <img src="./assets/Images/img14.png" alt="Sakura Premium" />
+                  <span class="restaurant-offer">FLAT $15 OFF</span>
+                  <button class="product-wish" type="button" aria-label="Save Sakura Premium">
+                    <img src="./assets/Tab/wishlist.svg" alt="" aria-hidden="true" />
+                  </button>
+                  <span class="restaurant-badge">PROMOTED</span>
+                  <span class="restaurant-time">25-30 MIN</span>
+                </div>
+                <div class="restaurant-body">
+                  <div class="restaurant-title-row">
+                    <h3>Sakura Premium</h3>
+                    <span class="restaurant-rating">
+                      <span class="restaurant-star" aria-hidden="true">★</span>
+                      <span class="restaurant-score">4.8</span>
+                      <span class="restaurant-count">(1.2k)</span>
+                    </span>
+                  </div>
+                  <p class="restaurant-desc">Organic goods and gourmet picks</p>
+                  <p class="restaurant-meta">Grocery • $$$ • 1.2 miles</p>
+                  <strong class="restaurant-fee">$2.89 Delivery</strong>
                 </div>
               </article>
             </div>
