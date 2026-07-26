@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Track your parcel live on SITÙCKA — see real-time location and delivery status."
+    />
+    <title>Track Parcel | SITÙCKA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/theme.css" />
+    <link rel="stylesheet" href="./css/dashboard.css" />
+    <script type="module" src="./js/components/sidebar.js?v=3"></script>
+    <script type="module" src="./js/components/header.js?v=3"></script>
+    <script type="module" src="./js/home.js"></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <app-sidebar active="parcel"></app-sidebar>
+      <button class="mobile-overlay" type="button" aria-label="Close menu"></button>
+
+      <div class="app-main">
+        <app-header></app-header>
+
+        <main class="dashboard-content parcel-track-page">
+          <header class="parcel-track-head">
+            <div class="parcel-track-head__copy">
+              <h1>Track Parcel</h1>
+              <p>Stay updated with your parcel&apos;s live location and delivery status.</p>
+            </div>
+            <button class="parcel-track-head__share" type="button">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <circle cx="18" cy="5" r="3" />
+                <circle cx="6" cy="12" r="3" />
+                <circle cx="18" cy="19" r="3" />
+                <path d="M8.59 13.51 15.42 17.49M15.41 6.51 8.59 10.49" />
+              </svg>
+              Share
+            </button>
+          </header>
+
+          <div class="parcel-track-arrival" role="status">
+            <div class="parcel-track-arrival__left">
+              <span class="parcel-track-arrival__dot" aria-hidden="true"></span>
+              <span>
+                Estimated Arrival:
+                <strong>14:45 PM | Today, 16 May 2024</strong>
+              </span>
+            </div>
+            <span class="parcel-track-arrival__badge">
+              <span class="parcel-track-arrival__badge-dot" aria-hidden="true"></span>
+              On Time
+            </span>
+          </div>
+
+          <div class="parcel-track-layout">
+            <div class="parcel-track-main">
+              <article class="parcel-track-map-card">
+                <div class="parcel-track-map">
+                  <img
+                    src="./assets/map.svg"
+                    alt="Live map showing parcel route and courier location"
+                    width="1293"
+                    height="600"
+                  />
+                </div>
+
+                <div class="parcel-track-stats">
+                  <div class="parcel-track-stat">
+                    <span class="parcel-track-stat__label">Estimated Arrival</span>
+                    <p class="parcel-track-stat__value">
+                      <span class="parcel-track-stat__num">10</span>
+                      <span class="parcel-track-stat__unit">mins</span>
+                    </p>
+                    <p class="parcel-track-stat__hint">Your parcel will arrive at your location.</p>
+                  </div>
+
+                  <div class="parcel-track-stat">
+                    <span class="parcel-track-stat__label">Distance Remaining</span>
+                    <p class="parcel-track-stat__value">
+                      <span class="parcel-track-stat__num">2.4</span>
+                      <span class="parcel-track-stat__unit">miles</span>
+                    </p>
+                    <p class="parcel-track-stat__hint">From current location to delivery address.</p>
+                  </div>
+
+                  <div class="parcel-track-stat parcel-track-stat--driver">
+                    <div class="parcel-track-driver">
+                      <img
+                        class="parcel-track-driver__avatar"
+                        src="./assets/Images/img17.jpg"
+                        alt="Marcus Thompson"
+                        width="52"
+                        height="52"
+                      />
+                      <div class="parcel-track-driver__info">
+                        <strong>Marcus Thompson</strong>
+                        <span class="parcel-track-driver__vehicle">White Honda Civic</span>
+                        <span class="parcel-track-driver__plate">• TX-9021</span>
+                      </div>
+                      <div class="parcel-track-driver__actions">
+                        <button class="parcel-track-driver__btn parcel-track-driver__btn--phone" type="button" aria-label="Call driver">
+                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" stroke-linejoin="round" />
+                          </svg>
+                        </button>
+                        <button class="parcel-track-driver__btn parcel-track-driver__btn--chat" type="button" aria-label="Chat with driver">
+                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" stroke-linejoin="round" />
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="parcel-track-cancel">
+                  <button class="parcel-track-cancel__btn" type="button">
+                    <span class="parcel-track-cancel__icon" aria-hidden="true">✕</span>
+                    Cancel Parcel
+                  </button>
+                  <p class="parcel-track-cancel__note">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                      <rect x="5" y="11" width="14" height="10" rx="2" />
+                      <path d="M8 11V7a4 4 0 0 1 8 0v4" stroke-linecap="round" />
+                    </svg>
+                    Cancellation available until courier arrives.
+                  </p>
+                </div>
+              </article>
+            </div>
+
+            <aside class="parcel-track-sidebar" aria-label="Delivery progress and support">
+              <article class="parcel-track-journey">
+                <h2>Delivery Journey</h2>
+                <ol class="parcel-track-journey__list">
+                  <li class="parcel-track-journey__item parcel-track-journey__item--done">
+                    <span class="parcel-track-journey__marker" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                        <path d="M5 12l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </span>
+                    <div>
+                      <strong>Order Confirmed</strong>
+                      <span>01:30 PM</span>
+                    </div>
+                  </li>
+                  <li class="parcel-track-journey__item parcel-track-journey__item--done">
+                    <span class="parcel-track-journey__marker" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                        <path d="M5 12l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </span>
+                    <div>
+                      <strong>Picked Up</strong>
+                      <span>01:55 PM</span>
+                    </div>
+                  </li>
+                  <li class="parcel-track-journey__item parcel-track-journey__item--active" aria-current="step">
+                    <span class="parcel-track-journey__marker" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M13 2 3 14h9l-1 8 10-12h-9l1-8Z" stroke-linejoin="round" />
+                      </svg>
+                    </span>
+                    <div>
+                      <strong>In Transit</strong>
+                      <span>02:15 PM</span>
+                      <p>Your parcel is on the way to the delivery address.</p>
+                    </div>
+                  </li>
+                  <li class="parcel-track-journey__item">
+                    <span class="parcel-track-journey__marker" aria-hidden="true"></span>
+                    <div>
+                      <strong>Out for Delivery</strong>
+                    </div>
+                  </li>
+                  <li class="parcel-track-journey__item">
+                    <span class="parcel-track-journey__marker" aria-hidden="true"></span>
+                    <div>
+                      <strong>Delivered</strong>
+                    </div>
+                  </li>
+                </ol>
+              </article>
+
+              <article class="parcel-track-support">
+                <img
+                  class="parcel-track-support__icon"
+                  src="./assets/parcel-help-icon.svg"
+                  alt=""
+                  aria-hidden="true"
+                  width="72"
+                  height="72"
+                />
+                <h3>Need Help?</h3>
+                <p>Our support team is here to assist you.</p>
+                <button class="parcel-track-support__btn" type="button">Contact Support</button>
+              </article>
+            </aside>
+          </div>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

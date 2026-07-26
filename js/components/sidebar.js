@@ -7,7 +7,7 @@ const primaryItems = [
     href: "./restaurants.html",
   },
   { key: "groceries", label: "Groceries", icon: "Groseries.svg", href: "#" },
-  { key: "parcel", label: "Parcel", icon: "Parcel.svg", href: "#" },
+  { key: "parcel", label: "Parcel", icon: "Parcel.svg", href: "./parcel.html" },
 ];
 
 const exploreItems = [

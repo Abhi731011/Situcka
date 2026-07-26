@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Enter your parcel details for accurate pricing and smooth delivery on SITÙCKA."
+    />
+    <title>Parcel Details | SITÙCKA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/theme.css" />
+    <link rel="stylesheet" href="./css/dashboard.css" />
+    <script type="module" src="./js/components/sidebar.js?v=3"></script>
+    <script type="module" src="./js/components/header.js?v=3"></script>
+    <script type="module" src="./js/home.js"></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <app-sidebar active="parcel"></app-sidebar>
+      <button class="mobile-overlay" type="button" aria-label="Close menu"></button>
+
+      <div class="app-main">
+        <app-header></app-header>
+
+        <main class="dashboard-content parcel-details-page">
+          <nav class="parcel-details-nav" aria-label="Parcel booking progress">
+            <a class="parcel-details-nav__back" href="./parcel.html">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M15 18l-6-6 6-6" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+              Previous
+            </a>
+            <ol class="parcel-details-nav__steps">
+              <li class="parcel-details-nav__step parcel-details-nav__step--active" aria-current="step">
+                Parcel Details
+              </li>
+              <li class="parcel-details-nav__step">Method</li>
+              <li class="parcel-details-nav__step">Payment</li>
+              <li class="parcel-details-nav__step">Confirmation</li>
+            </ol>
+          </nav>
+
+          <section class="parcel-details-hero" aria-label="Parcel details">
+            <div class="parcel-details-hero__content">
+              <h1>Parcel Details</h1>
+              <p>
+                Tell us about your parcel for a smooth delivery experience. Accuracy helps us
+                provide the best rate.
+              </p>
+            </div>
+            <div class="parcel-details-hero__media">
+              <img
+                src="./assets/parcel-detail.svg"
+                alt="Parcel boxes with delivery route illustration"
+                width="420"
+                height="320"
+              />
+            </div>
+          </section>
+
+          <div class="parcel-details-layout">
+            <article class="parcel-details-card parcel-details-form">
+              <header class="parcel-details-card__head">
+                <span class="parcel-details-card__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <path d="M12 3 4 7v10l8 4 8-4V7l-8-4Z" stroke-linejoin="round" />
+                    <path d="M12 12 4 8M12 12l8-4M12 12v9" />
+                  </svg>
+                </span>
+                <h2>Parcel Information</h2>
+              </header>
+
+              <form class="parcel-details-form__fields" action="#" method="get">
+                <label class="parcel-details-field">
+                  <span>Parcel Name</span>
+                  <input type="text" name="parcel-name" value="Gourmet Gift Box" />
+                </label>
+
+                <div class="parcel-details-field-row">
+                  <label class="parcel-details-field">
+                    <span>Weight</span>
+                    <select name="weight">
+                      <option selected>2 Kg</option>
+                      <option>1 Kg</option>
+                      <option>3 Kg</option>
+                      <option>5 Kg</option>
+                    </select>
+                  </label>
+                  <label class="parcel-details-field">
+                    <span>Size</span>
+                    <select name="size">
+                      <option selected>Medium (30cm)</option>
+                      <option>Small (20cm)</option>
+                      <option>Large (45cm)</option>
+                    </select>
+                  </label>
+                </div>
+
+                <label class="parcel-details-field">
+                  <span>Description (Optional)</span>
+                  <textarea name="description" rows="4">Special gift box with chocolates and dry fruits.</textarea>
+                </label>
+
+                <a class="parcel-details-form__submit" href="./parcel-method.html">
+                  Continue to Method
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+                    <path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </a>
+              </form>
+            </article>
+
+            <article class="parcel-details-card parcel-details-preview">
+              <section class="parcel-details-preview__section">
+                <header class="parcel-details-card__head">
+                  <span class="parcel-details-card__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                      <path d="M2 12s4-6 10-6 10 6 10 6-4 6-10 6-10-6-10-6Z" />
+                      <circle cx="12" cy="12" r="2.5" />
+                    </svg>
+                  </span>
+                  <h2>Parcel Preview</h2>
+                </header>
+                <div class="parcel-details-preview__image">
+                  <img
+                    src="./assets/Images/img10.jpg"
+                    alt="Preview of gourmet gift box with chocolates"
+                  />
+                </div>
+              </section>
+
+              <section class="parcel-details-prohibited">
+                <header class="parcel-details-prohibited__head">
+                  <span class="parcel-details-prohibited__badge" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <circle cx="12" cy="12" r="9" />
+                      <path d="M8 8l8 8M16 8l-8 8" stroke-linecap="round" />
+                    </svg>
+                  </span>
+                  <h3>Prohibited Items</h3>
+                </header>
+                <ul class="parcel-details-prohibited__grid">
+                  <li>
+                    <span class="parcel-details-prohibited__icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                        <path d="M12 3c4 5 4 13 0 18" />
+                        <path d="M8 8c2 2 2 6 0 8M16 8c-2 2-2 6 0 8" />
+                      </svg>
+                    </span>
+                    <span>Liquid</span>
+                  </li>
+                  <li>
+                    <span class="parcel-details-prohibited__icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                        <path d="M4 20l8-16 8 16" stroke-linejoin="round" />
+                        <path d="M8 14h8" />
+                      </svg>
+                    </span>
+                    <span>Sharp</span>
+                  </li>
+                  <li>
+                    <span class="parcel-details-prohibited__icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                        <path d="M8 20h8" />
+                        <path d="M9 20V10l3-4 3 4v10" />
+                      </svg>
+                    </span>
+                    <span>Fragile</span>
+                  </li>
+                  <li>
+                    <span class="parcel-details-prohibited__icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                        <path d="M12 3v4M12 17v4" />
+                        <path d="M8.5 8.5 5 5M15.5 8.5 19 5M8.5 15.5 5 19M15.5 15.5 19 19" />
+                        <circle cx="12" cy="12" r="3" />
+                      </svg>
+                    </span>
+                    <span>Flammable</span>
+                  </li>
+                  <li>
+                    <span class="parcel-details-prohibited__icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                        <rect x="3" y="6" width="18" height="12" rx="2" />
+                        <circle cx="12" cy="12" r="2" />
+                      </svg>
+                    </span>
+                    <span>Cash</span>
+                  </li>
+                </ul>
+              </section>
+            </article>
+
+            <aside class="parcel-details-sidebar" aria-label="Parcel help and policy">
+              <article class="parcel-details-card parcel-details-why">
+                <h2>Why Choose Situcka?</h2>
+                <ul class="parcel-details-why__list">
+                  <li>
+                    <span class="parcel-details-why__icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                      </svg>
+                    </span>
+                    <div>
+                      <strong>Secure Handling</strong>
+                      <p>Your parcel is in safe hands, insured and monitor.</p>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="parcel-details-why__icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                        <circle cx="12" cy="12" r="9" />
+                        <path d="M12 7v5l3 2" stroke-linecap="round" />
+                      </svg>
+                    </span>
+                    <div>
+                      <strong>Real-time Tracking</strong>
+                      <p>Track your parcel live from dispatch to delivery.</p>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="parcel-details-why__icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                        <circle cx="12" cy="12" r="9" />
+                        <path d="M12 7v5l3 2" stroke-linecap="round" />
+                      </svg>
+                    </span>
+                    <div>
+                      <strong>On-time Delivery</strong>
+                      <p>Reliable transit times with 99% punctuality rate.</p>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="parcel-details-why__icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                        <path d="M12 2a7 7 0 0 0-4 12.7V22l4-2 4 2v-7.3A7 7 0 0 0 12 2Z" />
+                      </svg>
+                    </span>
+                    <div>
+                      <strong>24/7 Support</strong>
+                      <p>Our dedicated experts are here to help anytime.</p>
+                    </div>
+                  </li>
+                </ul>
+              </article>
+
+              <article class="parcel-details-policy">
+                <span class="parcel-details-policy__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                  </svg>
+                </span>
+                <p>
+                  For a complete list of prohibited items and packing guidelines, please check
+                  our policy.
+                </p>
+                <a class="parcel-details-policy__btn" href="#">View Guidelines</a>
+              </article>
+            </aside>
+          </div>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

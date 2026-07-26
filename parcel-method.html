@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Choose your parcel delivery method on SITÙCKA."
+    />
+    <title>Delivery Method | SITÙCKA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/theme.css" />
+    <link rel="stylesheet" href="./css/dashboard.css" />
+    <script type="module" src="./js/components/sidebar.js?v=3"></script>
+    <script type="module" src="./js/components/header.js?v=3"></script>
+    <script type="module" src="./js/home.js"></script>
+    <script src="./js/parcel-method.js" defer></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <app-sidebar active="parcel"></app-sidebar>
+      <button class="mobile-overlay" type="button" aria-label="Close menu"></button>
+
+      <div class="app-main">
+        <app-header></app-header>
+
+        <main class="dashboard-content parcel-details-page parcel-method-page">
+          <nav class="parcel-details-nav" aria-label="Parcel booking progress">
+            <a class="parcel-details-nav__back" href="./parcel-details.html">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M15 18l-6-6 6-6" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+              Previous
+            </a>
+            <ol class="parcel-details-nav__steps">
+              <li class="parcel-details-nav__step parcel-details-nav__step--done">Parcel Details</li>
+              <li class="parcel-details-nav__step parcel-details-nav__step--active" aria-current="step">
+                Method
+              </li>
+              <li class="parcel-details-nav__step">Payment</li>
+              <li class="parcel-details-nav__step">Confirmation</li>
+            </ol>
+          </nav>
+
+          <section class="parcel-details-hero" aria-label="Parcel details">
+            <div class="parcel-details-hero__content">
+              <h1>Parcel Details</h1>
+              <p>
+                Tell us about your parcel for a smooth delivery experience. Accuracy helps us
+                provide the best rate.
+              </p>
+            </div>
+            <div class="parcel-details-hero__media">
+              <img
+                src="./assets/parcel-detail.svg"
+                alt="Parcel boxes with delivery route illustration"
+                width="420"
+                height="320"
+              />
+            </div>
+          </section>
+
+          <div class="parcel-method-layout">
+            <section class="parcel-method-main" aria-label="Choose delivery method">
+              <article class="parcel-details-card">
+                <header class="parcel-details-card__head">
+                  <span class="parcel-details-card__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                      <path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z" stroke-linejoin="round" />
+                    </svg>
+                  </span>
+                  <h2>Choose Delivery Method</h2>
+                </header>
+
+                <div class="parcel-method-options">
+                  <label class="parcel-method-option parcel-method-option--active">
+                    <input type="radio" name="delivery-method" id="method-instant" value="instant" checked />
+                    <span class="parcel-method-option__icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                        <path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z" stroke-linejoin="round" />
+                      </svg>
+                    </span>
+                    <span class="parcel-method-option__copy">
+                      <strong>Instant Delivery</strong>
+                      <span>ETA 25-35 min</span>
+                    </span>
+                    <span class="parcel-method-option__price">$5.00</span>
+                    <span class="parcel-method-option__radio" aria-hidden="true"></span>
+                  </label>
+
+                  <label class="parcel-method-option">
+                    <input type="radio" name="delivery-method" id="method-schedule" value="schedule" />
+                    <span class="parcel-method-option__icon parcel-method-option__icon--muted" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                        <rect x="4" y="5" width="16" height="15" rx="2" />
+                        <path d="M8 3v4M16 3v4M4 10h16" />
+                      </svg>
+                    </span>
+                    <span class="parcel-method-option__copy">
+                      <strong>Schedule Delivery</strong>
+                      <span>Choose preferred date &amp; time</span>
+                    </span>
+                    <span class="parcel-method-option__radio" aria-hidden="true"></span>
+                  </label>
+                </div>
+
+                <div class="parcel-method-note parcel-method-note--blue">
+                  <span class="parcel-method-note__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                      <circle cx="12" cy="12" r="9" />
+                      <path d="M12 7v5l3 2" stroke-linecap="round" />
+                    </svg>
+                  </span>
+                  <p>
+                    Can&apos;t find a suitable time? Schedule your parcel for tomorrow or choose a
+                    custom time.
+                  </p>
+                  <button class="parcel-method-note__link" type="button" id="pick-date-time">
+                    Pick Date &amp; Time
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                      <path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </button>
+                </div>
+
+                <div class="parcel-method-note parcel-method-note--green">
+                  <span class="parcel-method-note__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                    </svg>
+                  </span>
+                  <p>
+                    Priority windows are guaranteed within a 15-minute margin. Situcka Elite
+                    couriers follow a temperature-controlled protocol for all perishables.
+                  </p>
+                  <a class="parcel-method-note__text-link" href="#">Learn more</a>
+                </div>
+              </article>
+
+              <div class="parcel-method-actions">
+                <a class="parcel-method-actions__back" href="./parcel-details.html">Back</a>
+                <a class="parcel-method-actions__continue" href="./parcel-payment.html">
+                  Continue to Payment
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+                    <path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </a>
+              </div>
+            </section>
+
+            <aside class="parcel-method-summary" aria-label="Payment summary">
+              <article class="parcel-details-card parcel-summary-card">
+                <h2>Payment Summary</h2>
+
+                <div class="parcel-summary-item">
+                  <img src="./assets/Images/img10.jpg" alt="" aria-hidden="true" />
+                  <div>
+                    <strong>Gourmet Gift Box</strong>
+                    <span>2 Kg, Medium</span>
+                    <span class="parcel-summary-badge" id="summary-delivery-badge">INSTANT DELIVERY</span>
+                  </div>
+                </div>
+
+                <dl class="parcel-summary-lines">
+                  <div>
+                    <dt>Delivery Fee</dt>
+                    <dd>$5.00</dd>
+                  </div>
+                  <div>
+                    <dt>Taxes &amp; Fees</dt>
+                    <dd>$1.45</dd>
+                  </div>
+                  <div class="parcel-summary-lines__subtotal">
+                    <dt>Subtotal</dt>
+                    <dd>$6.45</dd>
+                  </div>
+                  <div class="parcel-summary-lines__total">
+                    <dt>Total Amount</dt>
+                    <dd>$6.45</dd>
+                  </div>
+                </dl>
+
+                <div class="parcel-summary-secure">
+                  <span aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                      <rect x="5" y="11" width="14" height="10" rx="2" />
+                      <path d="M8 11V8a4 4 0 0 1 8 0v3" />
+                    </svg>
+                  </span>
+                  <div>
+                    <strong>Secure &amp; Safe Payments</strong>
+                    <p>Your payment information is encrypted and safe with us.</p>
+                  </div>
+                </div>
+
+                <div class="parcel-summary-promo">
+                  <span aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                      <path d="M4 9h16v6H4z" />
+                      <path d="M8 9V5h8v4M8 15v4h8v-4" />
+                    </svg>
+                  </span>
+                  <div>
+                    <strong>Have a promo code?</strong>
+                    <button type="button">Apply Code</button>
+                  </div>
+                </div>
+              </article>
+            </aside>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <div class="parcel-schedule-modal" id="schedule-modal" hidden>
+      <div class="parcel-schedule-modal__overlay" aria-hidden="true"></div>
+      <div
+        class="parcel-schedule-modal__dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="schedule-modal-title"
+      >
+        <header class="parcel-schedule-modal__head">
+          <div class="parcel-schedule-modal__title-wrap">
+            <span class="parcel-schedule-modal__title-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <rect x="4" y="5" width="16" height="15" rx="2" />
+                <path d="M8 3v4M16 3v4M4 10h16" />
+              </svg>
+            </span>
+            <div>
+              <h2 id="schedule-modal-title">Choose Date &amp; Time</h2>
+              <p>Select your preferred date and time slot for scheduled delivery.</p>
+            </div>
+          </div>
+          <button class="parcel-schedule-modal__close" type="button" aria-label="Close">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M18 6 6 18M6 6l12 12" stroke-linecap="round" />
+            </svg>
+          </button>
+        </header>
+
+        <div class="parcel-schedule-modal__body">
+          <div class="parcel-schedule-calendar">
+            <div class="parcel-schedule-calendar__head">
+              <button type="button" aria-label="Previous month">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M15 18l-6-6 6-6" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </button>
+              <strong>May 2024</strong>
+              <button type="button" aria-label="Next month">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M9 18l6-6-6-6" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </button>
+            </div>
+
+            <div class="parcel-schedule-calendar__weekdays">
+              <span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span>
+            </div>
+
+            <div class="parcel-schedule-calendar__grid">
+              <button type="button" class="parcel-schedule-day parcel-schedule-day--muted">29</button>
+              <button type="button" class="parcel-schedule-day parcel-schedule-day--muted">30</button>
+              <button type="button" class="parcel-schedule-day">1</button>
+              <button type="button" class="parcel-schedule-day">2</button>
+              <button type="button" class="parcel-schedule-day">3</button>
+              <button type="button" class="parcel-schedule-day">4</button>
+              <button type="button" class="parcel-schedule-day">5</button>
+              <button type="button" class="parcel-schedule-day">6</button>
+              <button type="button" class="parcel-schedule-day">7</button>
+              <button type="button" class="parcel-schedule-day">8</button>
+              <button type="button" class="parcel-schedule-day">9</button>
+              <button type="button" class="parcel-schedule-day">10</button>
+              <button type="button" class="parcel-schedule-day">11</button>
+              <button type="button" class="parcel-schedule-day">12</button>
+              <button type="button" class="parcel-schedule-day">13</button>
+              <button type="button" class="parcel-schedule-day">14</button>
+              <button type="button" class="parcel-schedule-day">15</button>
+              <button type="button" class="parcel-schedule-day parcel-schedule-day--active">16</button>
+              <button type="button" class="parcel-schedule-day">17</button>
+              <button type="button" class="parcel-schedule-day">18</button>
+              <button type="button" class="parcel-schedule-day">19</button>
+              <button type="button" class="parcel-schedule-day">20</button>
+              <button type="button" class="parcel-schedule-day">21</button>
+              <button type="button" class="parcel-schedule-day">22</button>
+              <button type="button" class="parcel-schedule-day">23</button>
+              <button type="button" class="parcel-schedule-day">24</button>
+              <button type="button" class="parcel-schedule-day">25</button>
+              <button type="button" class="parcel-schedule-day">26</button>
+              <button type="button" class="parcel-schedule-day">27</button>
+              <button type="button" class="parcel-schedule-day">28</button>
+              <button type="button" class="parcel-schedule-day">29</button>
+              <button type="button" class="parcel-schedule-day">30</button>
+              <button type="button" class="parcel-schedule-day">31</button>
+              <button type="button" class="parcel-schedule-day parcel-schedule-day--muted">1</button>
+              <button type="button" class="parcel-schedule-day parcel-schedule-day--muted">2</button>
+            </div>
+
+            <div class="parcel-schedule-calendar__hint">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                <circle cx="12" cy="12" r="9" />
+                <path d="M12 7v5l3 2" stroke-linecap="round" />
+              </svg>
+              <p>
+                Because you selected Afternoon slot, we&apos;re showing available times for Thu,
+                May 16
+              </p>
+            </div>
+          </div>
+
+          <div class="parcel-schedule-slots">
+            <p class="parcel-schedule-slots__label">Select Time Slot</p>
+
+            <div class="parcel-schedule-period">
+              <button class="parcel-schedule-period__toggle" type="button">
+                <span class="parcel-schedule-period__icon" aria-hidden="true">☀</span>
+                <span class="parcel-schedule-period__copy">
+                  <strong>Morning</strong>
+                  <span>08:00 - 12:00</span>
+                </span>
+                <span class="parcel-schedule-period__left">2 slots left</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </button>
+            </div>
+
+            <div class="parcel-schedule-period parcel-schedule-period--open">
+              <button class="parcel-schedule-period__toggle" type="button">
+                <span class="parcel-schedule-period__icon" aria-hidden="true">🌤</span>
+                <span class="parcel-schedule-period__copy">
+                  <strong>Afternoon</strong>
+                  <span>12:00 - 16:00</span>
+                </span>
+                <span class="parcel-schedule-period__left">4 slots left</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </button>
+              <div class="parcel-schedule-period__slots">
+                <button type="button" class="parcel-schedule-slot" data-slot="12:00 - 12:30">12:00 - 12:30</button>
+                <button type="button" class="parcel-schedule-slot" data-slot="12:30 - 13:00">12:30 - 13:00</button>
+                <button type="button" class="parcel-schedule-slot" data-slot="13:00 - 13:30">13:00 - 13:30</button>
+                <button type="button" class="parcel-schedule-slot parcel-schedule-slot--active" data-slot="14:00 - 14:30">
+                  14:00 - 14:30
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+                    <path d="M5 12l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </button>
+                <button type="button" class="parcel-schedule-slot" data-slot="14:30 - 15:00">14:30 - 15:00</button>
+                <button type="button" class="parcel-schedule-slot" data-slot="15:00 - 15:30">15:00 - 15:30</button>
+                <button type="button" class="parcel-schedule-slot" data-slot="15:30 - 16:00">15:30 - 16:00</button>
+              </div>
+            </div>
+
+            <div class="parcel-schedule-period">
+              <button class="parcel-schedule-period__toggle" type="button">
+                <span class="parcel-schedule-period__icon" aria-hidden="true">🌙</span>
+                <span class="parcel-schedule-period__copy">
+                  <strong>Evening</strong>
+                  <span>16:00 - 20:00</span>
+                </span>
+                <span class="parcel-schedule-period__left">3 slots left</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <footer class="parcel-schedule-modal__foot">
+          <div class="parcel-schedule-modal__timezone">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+              <circle cx="12" cy="12" r="9" />
+              <path d="M12 8v4l3 2" stroke-linecap="round" />
+            </svg>
+            <p>All time slots are in local time (EDT)</p>
+          </div>
+          <button class="parcel-schedule-modal__confirm" type="button">
+            <span data-confirm-label>Confirm Time 14:00 - 14:30</span>
+          </button>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>

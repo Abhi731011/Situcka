@@ -17,11 +17,11 @@
   }
 
   .rider-form-card {
-    @apply overflow-hidden rounded-3xl border border-neutral-100 border-t-[6px] border-t-hero-yellow bg-white p-6 shadow-sm sm:p-8;
+    @apply overflow-hidden rounded-2xl border border-neutral-100 border-t-[6px] border-t-hero-yellow bg-white p-4 shadow-sm xs:rounded-3xl xs:p-6 sm:p-8;
   }
 
   .rider-input {
-    @apply w-full rounded-xl border border-hero-yellow/60 bg-white px-4 py-3 text-sm text-neutral-900 placeholder:text-neutral-400 outline-none transition-colors focus:border-hero-yellow focus:ring-2 focus:ring-hero-yellow/15;
+    @apply w-full rounded-xl border border-hero-yellow/60 bg-white px-3 py-2.5 text-sm text-neutral-900 placeholder:text-neutral-400 outline-none transition-colors focus:border-hero-yellow focus:ring-2 focus:ring-hero-yellow/15 sm:px-4 sm:py-3;
   }
 
   .rider-label {

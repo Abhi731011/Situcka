@@ -1,0 +1,483 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Send parcels with confidence — fast, reliable and secure delivery on SITÙCKA."
+    />
+    <title>Parcel | SITÙCKA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/theme.css" />
+    <link rel="stylesheet" href="./css/dashboard.css" />
+    <script type="module" src="./js/components/sidebar.js?v=3"></script>
+    <script type="module" src="./js/components/header.js?v=3"></script>
+    <script type="module" src="./js/home.js"></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <app-sidebar active="parcel"></app-sidebar>
+      <button class="mobile-overlay" type="button" aria-label="Close menu"></button>
+
+      <div class="app-main">
+        <app-header></app-header>
+
+        <main class="dashboard-content">
+          <section class="parcel-hero" aria-label="Send parcels with confidence">
+            <div class="parcel-hero__content">
+              <h1>Send Parcels With Confidence</h1>
+              <p class="parcel-hero__subtitle">
+                Fast, reliable &amp; secure delivery at your fingertips.
+              </p>
+              <div class="parcel-hero__features">
+                <div class="parcel-hero__feature">
+                  <span class="parcel-hero__feature-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <circle cx="12" cy="12" r="9" />
+                      <path d="M12 10v6M12 7h.01" stroke-linecap="round" />
+                    </svg>
+                  </span>
+                  <div class="parcel-hero__feature-copy">
+                    <strong>Fast Delivery</strong>
+                    <span>On-time, every time</span>
+                  </div>
+                </div>
+                <div class="parcel-hero__feature">
+                  <span class="parcel-hero__feature-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke-linejoin="round" />
+                    </svg>
+                  </span>
+                  <div class="parcel-hero__feature-copy">
+                    <strong>Safe &amp; Secure</strong>
+                    <span>Your parcel, our priority</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="parcel-hero__media">
+              <img
+                src="./assets/parcel-banner-img.svg"
+                alt="Delivery packages and scooter illustration"
+                width="520"
+                height="400"
+              />
+            </div>
+          </section>
+
+          <section class="parcel-booking" aria-label="Book a parcel delivery">
+            <div class="parcel-booking__layout">
+              <div class="parcel-booking__main">
+                <div class="parcel-route">
+                  <article class="parcel-route__card parcel-route__card--pickup">
+                    <div class="parcel-route__head">
+                      <div class="parcel-route__title">
+                        <span class="parcel-route__icon parcel-route__icon--pickup" aria-hidden="true">
+                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 21s7-4.5 7-11a7 7 0 1 0-14 0c0 6.5 7 11 7 11z" />
+                            <circle cx="12" cy="10" r="2.5" fill="currentColor" stroke="none" />
+                          </svg>
+                        </span>
+                        <h2>Pickup from current location</h2>
+                      </div>
+                      <button class="parcel-route__edit" type="button" aria-label="Edit pickup location">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                          <path d="M12 20h9" />
+                          <path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z" />
+                        </svg>
+                      </button>
+                    </div>
+                    <p class="parcel-route__address">
+                      523, Block E, Palam Extension, New Delhi, 110077
+                    </p>
+                    <p class="parcel-route__contact">Ashu rai (8700432424)</p>
+                  </article>
+
+                  <button class="parcel-route__switch" type="button">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                      <path d="M7 16V4M7 4L3 8M7 4l4 4" />
+                      <path d="M17 8v12M17 20l4-4M17 20l-4-4" />
+                    </svg>
+                    Switch
+                  </button>
+
+                  <article class="parcel-route__card parcel-route__card--drop">
+                    <div class="parcel-route__title">
+                      <span class="parcel-route__icon parcel-route__icon--drop" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                          <circle cx="12" cy="12" r="8" />
+                          <circle cx="12" cy="12" r="2.5" fill="currentColor" stroke="none" />
+                        </svg>
+                      </span>
+                      <h2>Drop to</h2>
+                    </div>
+                    <label class="parcel-route__search">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <circle cx="11" cy="11" r="7" />
+                        <path d="m20 20-3-3" />
+                      </svg>
+                      <input type="search" placeholder="Search drop address" aria-label="Search drop address" />
+                    </label>
+                  </article>
+                </div>
+
+                <div class="parcel-delivery-stats" aria-label="Delivery details">
+                  <div class="parcel-delivery-stats__item">
+                    <span>Est. Delivery</span>
+                    <strong>15-20 min</strong>
+                  </div>
+                  <div class="parcel-delivery-stats__item">
+                    <span>Delivery Fee</span>
+                    <strong>$2.99</strong>
+                  </div>
+                  <div class="parcel-delivery-stats__item">
+                    <span>Min. Order</span>
+                    <strong>$15.00</strong>
+                  </div>
+                  <div class="parcel-delivery-stats__item">
+                    <span>Insurance</span>
+                    <strong>Available</strong>
+                  </div>
+                </div>
+
+                <div class="parcel-booking__actions">
+                  <a class="parcel-btn parcel-btn--primary" href="./parcel-details.html">Send a Parcel</a>
+                  <button class="parcel-btn parcel-btn--outline" type="button">Pay my bills</button>
+                </div>
+              </div>
+
+              <aside class="parcel-booking__aside" aria-label="Parcel tools">
+                <article class="parcel-widget">
+                  <h3>Track Your Parcel</h3>
+                  <label class="parcel-widget__field">
+                    <span class="sr-only">Tracking ID</span>
+                    <input type="text" placeholder="Enter tracking ID" />
+                  </label>
+                  <button class="parcel-widget__btn parcel-widget__btn--soft" type="button">Track Now</button>
+                </article>
+
+                <article class="parcel-widget parcel-widget--promo">
+                  <div class="parcel-widget__promo-copy">
+                    <p class="parcel-widget__promo-title">20% OFF</p>
+                    <p class="parcel-widget__promo-text">On your first order</p>
+                    <button class="parcel-widget__btn parcel-widget__btn--primary" type="button">
+                      Apply Coupon
+                    </button>
+                  </div>
+                  <img
+                    class="parcel-widget__promo-art"
+                    src="./assets/parcel-off-icon.svg"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </article>
+
+                <article class="parcel-widget parcel-widget--help">
+                  <div class="parcel-widget__help-copy">
+                    <h3>Need Help?</h3>
+                    <p>We&apos;re here to help 24/7 support</p>
+                    <button class="parcel-widget__btn parcel-widget__btn--outline" type="button">
+                      Contact Support
+                    </button>
+                  </div>
+                  <img
+                    class="parcel-widget__help-icon"
+                    src="./assets/parcel-help-icon.svg"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </article>
+              </aside>
+            </div>
+          </section>
+
+          <section class="parcel-extras" aria-label="Recent addresses and quick tools">
+            <div class="parcel-extras__layout">
+              <div class="parcel-extras__main">
+                <div class="section-heading">
+                  <h2>Recent Addresses</h2>
+                  <a class="view-all" href="#">View all</a>
+                </div>
+
+                <div class="parcel-addresses">
+                  <article class="parcel-address-card">
+                    <span class="parcel-address-card__icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                        <path d="M4 20V8l8-4 8 4v12" stroke-linejoin="round" />
+                        <path d="M9 20v-6h6v6" />
+                        <path d="M9 10h6" />
+                      </svg>
+                    </span>
+                    <h3 class="parcel-address-card__title">Main Office</h3>
+                    <p class="parcel-address-card__line">24th Ave, Chelsea</p>
+                    <footer class="parcel-address-card__footer">
+                      <p class="parcel-address-card__meta">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                          <circle cx="12" cy="12" r="9" />
+                          <path d="M12 7v5l3 2" stroke-linecap="round" />
+                        </svg>
+                        Last sent 2d ago
+                      </p>
+                      <button class="parcel-address-card__menu" type="button" aria-label="Address options">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                          <circle cx="12" cy="5" r="1.5" />
+                          <circle cx="12" cy="12" r="1.5" />
+                          <circle cx="12" cy="19" r="1.5" />
+                        </svg>
+                      </button>
+                    </footer>
+                  </article>
+
+                  <article class="parcel-address-card">
+                    <span class="parcel-address-card__icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                        <path d="M4 20V10l8-6 8 6v10" stroke-linejoin="round" />
+                        <path d="M9 20v-5h6v5" />
+                      </svg>
+                    </span>
+                    <h3 class="parcel-address-card__title">Destination Home</h3>
+                    <p class="parcel-address-card__line">42nd St, Midtown</p>
+                    <footer class="parcel-address-card__footer">
+                      <p class="parcel-address-card__meta">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                          <circle cx="12" cy="12" r="9" />
+                          <path d="M12 7v5l3 2" stroke-linecap="round" />
+                        </svg>
+                        Last sent 1w ago
+                      </p>
+                      <button class="parcel-address-card__menu" type="button" aria-label="Address options">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                          <circle cx="12" cy="5" r="1.5" />
+                          <circle cx="12" cy="12" r="1.5" />
+                          <circle cx="12" cy="19" r="1.5" />
+                        </svg>
+                      </button>
+                    </footer>
+                  </article>
+
+                  <article class="parcel-address-card">
+                    <span class="parcel-address-card__icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                        <path d="M4 20V8l8-4 8 4v12" stroke-linejoin="round" />
+                        <path d="M9 20v-6h6v6" />
+                        <path d="M9 10h6" />
+                      </svg>
+                    </span>
+                    <h3 class="parcel-address-card__title">Main Office</h3>
+                    <p class="parcel-address-card__line">24th Ave, Chelsea</p>
+                    <footer class="parcel-address-card__footer">
+                      <p class="parcel-address-card__meta">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                          <circle cx="12" cy="12" r="9" />
+                          <path d="M12 7v5l3 2" stroke-linecap="round" />
+                        </svg>
+                        Last sent 2d ago
+                      </p>
+                      <button class="parcel-address-card__menu" type="button" aria-label="Address options">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                          <circle cx="12" cy="5" r="1.5" />
+                          <circle cx="12" cy="12" r="1.5" />
+                          <circle cx="12" cy="19" r="1.5" />
+                        </svg>
+                      </button>
+                    </footer>
+                  </article>
+                </div>
+              </div>
+
+              <aside class="parcel-extras__aside" aria-label="Parcel information and shortcuts">
+                <article class="parcel-benefits">
+                  <h3>Why Choose Situcka?</h3>
+                  <ul class="parcel-benefits__list">
+                    <li>
+                      <span class="parcel-benefits__check" aria-hidden="true">
+                        <svg viewBox="0 0 20 20" fill="none">
+                          <circle cx="10" cy="10" r="10" fill="currentColor" />
+                          <path d="M6 10.5 8.5 13 14 7.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                      </span>
+                      Quick &amp; Easy Booking
+                    </li>
+                    <li>
+                      <span class="parcel-benefits__check" aria-hidden="true">
+                        <svg viewBox="0 0 20 20" fill="none">
+                          <circle cx="10" cy="10" r="10" fill="currentColor" />
+                          <path d="M6 10.5 8.5 13 14 7.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                      </span>
+                      Affordable Pricing
+                    </li>
+                    <li>
+                      <span class="parcel-benefits__check" aria-hidden="true">
+                        <svg viewBox="0 0 20 20" fill="none">
+                          <circle cx="10" cy="10" r="10" fill="currentColor" />
+                          <path d="M6 10.5 8.5 13 14 7.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                      </span>
+                      Real-time Tracking
+                    </li>
+                    <li>
+                      <span class="parcel-benefits__check" aria-hidden="true">
+                        <svg viewBox="0 0 20 20" fill="none">
+                          <circle cx="10" cy="10" r="10" fill="currentColor" />
+                          <path d="M6 10.5 8.5 13 14 7.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                      </span>
+                      Secure Deliveries
+                    </li>
+                    <li>
+                      <span class="parcel-benefits__check" aria-hidden="true">
+                        <svg viewBox="0 0 20 20" fill="none">
+                          <circle cx="10" cy="10" r="10" fill="currentColor" />
+                          <path d="M6 10.5 8.5 13 14 7.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                      </span>
+                      24/7 Customer Support
+                    </li>
+                  </ul>
+                </article>
+
+                <article class="parcel-quick-actions">
+                  <h3>Quick Actions</h3>
+                  <div class="parcel-quick-actions__grid">
+                    <button class="parcel-quick-action" type="button">
+                      <span class="parcel-quick-action__icon">
+                        <img src="./assets/Tab/Parcel.svg" alt="" aria-hidden="true" />
+                      </span>
+                      <span class="parcel-quick-action__label">My Parcels</span>
+                    </button>
+                    <button class="parcel-quick-action" type="button">
+                      <span class="parcel-quick-action__icon">
+                        <img src="./assets/Tab/order.svg" alt="" aria-hidden="true" />
+                      </span>
+                      <span class="parcel-quick-action__label">Order History</span>
+                    </button>
+                    <button class="parcel-quick-action" type="button">
+                      <span class="parcel-quick-action__icon">
+                        <img src="./assets/Tab/Address.svg" alt="" aria-hidden="true" />
+                      </span>
+                      <span class="parcel-quick-action__label">Address Book</span>
+                    </button>
+                    <button class="parcel-quick-action" type="button">
+                      <span class="parcel-quick-action__icon">
+                        <img src="./assets/Tab/Payment.svg" alt="" aria-hidden="true" />
+                      </span>
+                      <span class="parcel-quick-action__label">Payments</span>
+                    </button>
+                    <button class="parcel-quick-action" type="button">
+                      <span class="parcel-quick-action__icon">
+                        <img src="./assets/Tab/offer.svg" alt="" aria-hidden="true" />
+                      </span>
+                      <span class="parcel-quick-action__label">Coupons</span>
+                    </button>
+                    <button class="parcel-quick-action" type="button">
+                      <span class="parcel-quick-action__icon">
+                        <img src="./assets/Tab/Help.svg" alt="" aria-hidden="true" />
+                      </span>
+                      <span class="parcel-quick-action__label">Support</span>
+                    </button>
+                  </div>
+                </article>
+              </aside>
+            </div>
+          </section>
+
+          <section class="parcel-bills" aria-label="Bill payment service">
+            <div class="parcel-bills__card">
+              <div class="parcel-bills__layout">
+                <div class="parcel-bills__content">
+                  <span class="parcel-bills__badge">Bills to pay?</span>
+                  <h2>We&apos;ll pick up and pay for you.</h2>
+                  <p>
+                    No time to queue? Hire a SITÙCKA rider to settle your utility bills,
+                    collect payments, or run bank errands.
+                  </p>
+                </div>
+                <div class="parcel-bills__media">
+                  <img
+                    src="./assets/section4-home.svg"
+                    alt="SITÙCKA rider on scooter paying bills at a service window"
+                    width="862"
+                    height="659"
+                  />
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="parcel-tracking" aria-label="Track your parcel in real time">
+            <div class="parcel-tracking__card">
+              <div class="parcel-tracking__layout">
+                <div class="parcel-tracking__media">
+                  <img
+                    src="./assets/track-parcel.svg"
+                    alt="Hand holding a phone showing live parcel tracking on a map"
+                    width="320"
+                    height="320"
+                  />
+                </div>
+
+                <div class="parcel-tracking__content">
+                  <h2>Track your parcel in real-time</h2>
+                  <p>
+                    Get live updates on your parcel status from pickup to delivery at your
+                    doorstep.
+                  </p>
+                </div>
+
+                <ol class="parcel-tracking__steps" aria-label="Delivery progress">
+                  <li class="parcel-tracking__step parcel-tracking__step--active">
+                    <span class="parcel-tracking__step-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                        <path d="M12 3 4 7v10l8 4 8-4V7l-8-4Z" stroke-linejoin="round" />
+                        <path d="M12 12 4 8M12 12l8-4M12 12v9" />
+                      </svg>
+                    </span>
+                    <span class="parcel-tracking__step-num">1</span>
+                    <span class="parcel-tracking__step-label">Picked Up</span>
+                  </li>
+                  <li class="parcel-tracking__step">
+                    <span class="parcel-tracking__step-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                        <path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z" stroke-linejoin="round" />
+                      </svg>
+                    </span>
+                    <span class="parcel-tracking__step-num">2</span>
+                    <span class="parcel-tracking__step-label">In Transit</span>
+                  </li>
+                  <li class="parcel-tracking__step">
+                    <span class="parcel-tracking__step-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                        <path d="M4 9h12M4 9l3-3M4 9l3 3" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M20 15H8M20 15l-3-3M20 15l-3 3" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </span>
+                    <span class="parcel-tracking__step-num">3</span>
+                    <span class="parcel-tracking__step-label">Out for Delivery</span>
+                  </li>
+                  <li class="parcel-tracking__step">
+                    <span class="parcel-tracking__step-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                        <circle cx="8" cy="17" r="2" />
+                        <circle cx="18" cy="17" r="2" />
+                        <path d="M10 17h6M5 17H3v-3l2-5h9l3 5h2v3h-2" stroke-linejoin="round" />
+                      </svg>
+                    </span>
+                    <span class="parcel-tracking__step-num">4</span>
+                    <span class="parcel-tracking__step-label">Delivered</span>
+                  </li>
+                </ol>
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>
