@@ -23,7 +23,7 @@
           <img
             src="./assets/logo-basket.svg"
             alt="SITÙCKA"
-            class="h-10 w-auto xs:h-11 sm:h-12 md:h-14 lg:h-16"
+            class="h-8 w-auto xs:h-10 sm:h-12 md:h-14 lg:h-16"
             width="153"
             height="72"
           />
@@ -39,11 +39,11 @@
 
     <!-- Hero -->
     <section class="relative bg-surface-page">
-      <div class="relative w-full">
+      <div class="relative isolate w-full overflow-hidden lg:overflow-visible">
         <img
           src="./assets/rider-bg.svg"
           alt=""
-          class="block w-full"
+          class="pointer-events-none absolute inset-0 -z-10 h-full w-full object-cover object-top lg:relative lg:z-0 lg:block lg:h-auto lg:w-full"
           width="1920"
           height="899"
           aria-hidden="true"
@@ -51,14 +51,14 @@
 
         <!-- Hero content -->
         <div
-          class="absolute inset-x-0 top-0 px-4 pt-8 xs:px-5 sm:px-6 sm:pt-10 md:px-10 lg:px-12 lg:pt-12"
+          class="relative z-10 px-4 pb-4 pt-8 xs:px-5 sm:px-6 sm:pb-6 sm:pt-10 md:px-10 lg:absolute lg:inset-x-0 lg:top-0 lg:px-12 lg:pb-0 lg:pt-12"
         >
           <div
-            class="mx-auto grid max-w-[1440px] items-center gap-8 lg:grid-cols-2 lg:gap-10 xl:gap-14"
+            class="mx-auto grid max-w-[1440px] items-center gap-6 sm:gap-8 lg:grid-cols-2 lg:gap-10 xl:gap-14"
           >
             <div class="max-w-xl">
               <h1
-                class="mb-4 text-[2rem] font-extrabold leading-[1.15] xs:text-4xl sm:mb-5 sm:text-[2.75rem] lg:text-5xl xl:text-[3.25rem]"
+                class="mb-4 text-[1.75rem] font-extrabold leading-[1.15] xs:text-4xl sm:mb-5 sm:text-[2.75rem] lg:text-5xl xl:text-[3.25rem]"
               >
                 <span class="text-white">Join Our Team of</span><br />
                 <span class="text-neutral-900">Riders.</span>
@@ -109,7 +109,7 @@
               <img
                 src="./assets/section4-home.svg"
                 alt="Delivery rider receiving an order at a pickup window"
-                class="h-auto w-full max-w-sm object-contain sm:max-w-md lg:max-w-lg xl:max-w-xl"
+                class="h-auto w-full max-w-[220px] object-contain xs:max-w-xs sm:max-w-md lg:max-w-lg xl:max-w-xl"
                 width="862"
                 height="659"
               />
@@ -117,12 +117,12 @@
           </div>
         </div>
 
-        <!-- Benefit cards — half on orange shape, half on white -->
+        <!-- Benefit cards — stacked on mobile, overlapping on desktop -->
         <div
-          class="absolute inset-x-0 bottom-0 z-10 translate-y-1/2 px-4 xs:px-5 sm:px-6 md:px-10 lg:px-12"
+          class="relative z-10 mt-2 px-4 pb-10 xs:px-5 sm:mt-4 sm:px-6 sm:pb-12 md:px-10 lg:absolute lg:inset-x-0 lg:bottom-0 lg:mt-0 lg:translate-y-1/2 lg:px-12 lg:pb-0"
         >
           <div
-            class="mx-auto grid max-w-[1440px] grid-cols-1 gap-4 xs:grid-cols-2 sm:gap-5 lg:grid-cols-4"
+            class="mx-auto grid max-w-[1440px] grid-cols-1 gap-3 xs:grid-cols-2 xs:gap-4 sm:gap-5 lg:grid-cols-4"
           >
             <article
               class="rounded-2xl border border-neutral-100 bg-white p-5 shadow-[0_10px_40px_rgba(0,0,0,0.08)] sm:p-6"
@@ -225,11 +225,8 @@
         </div>
       </div>
 
-      <!-- Space for lower half of overlapping cards -->
-      <div
-        class="h-32 xs:h-48 sm:h-36 md:h-36 lg:h-40"
-        aria-hidden="true"
-      ></div>
+      <!-- Space for lower half of overlapping cards (desktop only) -->
+      <div class="hidden h-40 lg:block" aria-hidden="true"></div>
     </section>
 
     <!-- Application form -->
@@ -246,7 +243,7 @@
           <!-- Sidebar -->
           <aside class="mb-8 lg:mb-0 lg:sticky lg:top-6 lg:self-start">
             <div
-              class="rounded-3xl border border-neutral-100 bg-white p-5 shadow-sm sm:p-6"
+              class="overflow-hidden rounded-2xl border border-neutral-100 bg-white p-4 shadow-sm xs:rounded-3xl xs:p-5 sm:p-6"
             >
               <p
                 class="mb-4 text-xs font-extrabold uppercase tracking-wider text-neutral-900 sm:mb-5"
@@ -556,7 +553,7 @@
               <p class="rider-label mb-3">
                 Vehicle Type <span class="text-hero-yellow">*</span>
               </p>
-              <div class="mb-6 grid grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-4">
+              <div class="mb-6 grid grid-cols-2 gap-2 xs:gap-3 sm:mb-6 sm:grid-cols-4 sm:gap-4">
                 <label class="cursor-pointer">
                   <input
                     type="radio"
@@ -566,7 +563,7 @@
                     checked
                   />
                   <span
-                    class="flex flex-col items-center rounded-xl border-2 border-hero-yellow/40 bg-white p-4 text-center transition-colors peer-checked:border-hero-yellow peer-checked:bg-badge-cream"
+                    class="flex flex-col items-center rounded-xl border-2 border-hero-yellow/40 bg-white p-3 text-center transition-colors peer-checked:border-hero-yellow peer-checked:bg-badge-cream xs:p-4"
                   >
                     <img
                       src="./assets/Bicycle.svg"
@@ -588,7 +585,7 @@
                     class="peer sr-only"
                   />
                   <span
-                    class="flex flex-col items-center rounded-xl border-2 border-hero-yellow/40 bg-white p-4 text-center transition-colors peer-checked:border-hero-yellow peer-checked:bg-badge-cream"
+                    class="flex flex-col items-center rounded-xl border-2 border-hero-yellow/40 bg-white p-3 text-center transition-colors peer-checked:border-hero-yellow peer-checked:bg-badge-cream xs:p-4"
                   >
                     <img
                       src="./assets/Motorcycle.svg"
@@ -610,7 +607,7 @@
                     class="peer sr-only"
                   />
                   <span
-                    class="flex flex-col items-center rounded-xl border-2 border-hero-yellow/40 bg-white p-4 text-center transition-colors peer-checked:border-hero-yellow peer-checked:bg-badge-cream"
+                    class="flex flex-col items-center rounded-xl border-2 border-hero-yellow/40 bg-white p-3 text-center transition-colors peer-checked:border-hero-yellow peer-checked:bg-badge-cream xs:p-4"
                   >
                     <img
                       src="./assets/car.svg"
@@ -630,7 +627,7 @@
                     class="peer sr-only"
                   />
                   <span
-                    class="flex flex-col items-center rounded-xl border-2 border-hero-yellow/40 bg-white p-4 text-center transition-colors peer-checked:border-hero-yellow peer-checked:bg-badge-cream"
+                    class="flex flex-col items-center rounded-xl border-2 border-hero-yellow/40 bg-white p-3 text-center transition-colors peer-checked:border-hero-yellow peer-checked:bg-badge-cream xs:p-4"
                   >
                     <img
                       src="./assets/e-bikes.svg"
@@ -703,7 +700,7 @@
                   </p>
                 </div>
               </div>
-              <div class="grid gap-4 sm:grid-cols-3">
+              <div class="grid grid-cols-1 gap-4 xs:grid-cols-2 sm:grid-cols-3">
                 <label
                   class="flex cursor-pointer flex-col items-center justify-center rounded-2xl border-2 border-dashed border-hero-yellow/50 bg-white px-4 py-8 text-center transition-colors hover:border-hero-yellow hover:bg-badge-cream"
                 >
@@ -938,264 +935,5 @@
       </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-footer-dark text-neutral-400">
-      <div
-        class="mx-auto w-full max-w-[1440px] px-4 py-12 xs:px-5 sm:px-6 sm:py-14 md:px-10 md:py-16 lg:px-12"
-      >
-        <div
-          class="space-y-10 lg:grid lg:grid-cols-4 lg:gap-8 lg:space-y-0 xl:gap-12"
-        >
-          <!-- Row 1: Brand -->
-          <div>
-            <a href="./index.html" class="mb-4 inline-block">
-              <span
-                class="text-xl font-extrabold tracking-tight text-white sm:text-2xl"
-                >SITÙCKA</span
-              >
-            </a>
-            <p class="mb-6 max-w-sm text-sm leading-relaxed text-neutral-400">
-              SITÙCKA is reshaping urban logistics by connecting people to
-              everything in their city. Experience the fastest on-demand
-              service.
-            </p>
-            <div class="flex items-center gap-3">
-              <a
-                href="#"
-                class="flex h-10 w-10 items-center justify-center rounded-full bg-neutral-800 text-white transition-colors hover:bg-neutral-700"
-                aria-label="Website"
-              >
-                <svg
-                  class="h-4 w-4"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  aria-hidden="true"
-                >
-                  <circle cx="12" cy="12" r="9" />
-                  <path
-                    d="M3 12h18M12 3c2.5 2.5 4 5.5 4 9s-1.5 6.5-4 9M12 3c-2.5 2.5-4 5.5-4 9s1.5 6.5 4 9"
-                  />
-                </svg>
-              </a>
-              <a
-                href="#"
-                class="flex h-10 w-10 items-center justify-center rounded-full bg-neutral-800 text-white transition-colors hover:bg-neutral-700"
-                aria-label="Announcements"
-              >
-                <svg
-                  class="h-4 w-4"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M3 10v4a1 1 0 0 0 1 1h2l3 5v-14l-3 4H4a1 1 0 0 0-1 1z"
-                  />
-                  <path d="M15 9a4 4 0 0 1 0 6M19 7a7 7 0 0 1 0 10" />
-                </svg>
-              </a>
-              <a
-                href="#"
-                class="relative flex h-10 w-10 items-center justify-center rounded-full bg-neutral-800 text-white transition-colors hover:bg-neutral-700"
-                aria-label="Email"
-              >
-                <svg
-                  class="h-4 w-4"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  aria-hidden="true"
-                >
-                  <rect x="3" y="5" width="18" height="14" rx="2" />
-                  <path d="M3 7l9 6 9-6" />
-                </svg>
-                <span
-                  class="absolute right-2 top-2 h-2 w-2 rounded-full bg-red-500"
-                ></span>
-              </a>
-            </div>
-          </div>
-
-          <!-- Row 2: Company · Services · Support -->
-          <div
-            class="grid grid-cols-2 gap-x-6 gap-y-10 sm:gap-x-8 lg:col-span-3 lg:grid-cols-3 lg:gap-8"
-          >
-            <!-- Company -->
-            <div>
-              <h3
-                class="mb-4 text-sm font-bold uppercase tracking-wide text-white sm:mb-5"
-              >
-                Company
-              </h3>
-              <ul class="space-y-3 text-sm">
-                <li>
-                  <a href="#" class="transition-colors hover:text-white"
-                    >About Us</a
-                  >
-                </li>
-                <li>
-                  <a href="#" class="transition-colors hover:text-white"
-                    >Careers</a
-                  >
-                </li>
-                <li>
-                  <a href="#" class="transition-colors hover:text-white"
-                    >Blog</a
-                  >
-                </li>
-                <li>
-                  <a href="#" class="transition-colors hover:text-white"
-                    >Press Kit</a
-                  >
-                </li>
-                <li>
-                  <a href="#" class="transition-colors hover:text-white"
-                    >Sustainability</a
-                  >
-                </li>
-              </ul>
-            </div>
-
-            <!-- Services -->
-            <div>
-              <h3
-                class="mb-4 text-sm font-bold uppercase tracking-wide text-white sm:mb-5"
-              >
-                Services
-              </h3>
-              <ul class="space-y-3 text-sm">
-                <li>
-                  <a href="#" class="transition-colors hover:text-white"
-                    >Food Delivery</a
-                  >
-                </li>
-                <li>
-                  <a href="#" class="transition-colors hover:text-white"
-                    >Groceries</a
-                  >
-                </li>
-                <li>
-                  <a href="#" class="transition-colors hover:text-white"
-                    >Courier Service</a
-                  >
-                </li>
-                <li>
-                  <a href="#" class="transition-colors hover:text-white"
-                    >Payment Portal</a
-                  >
-                </li>
-                <li>
-                  <a href="#" class="transition-colors hover:text-white"
-                    >Rider Network</a
-                  >
-                </li>
-              </ul>
-            </div>
-
-            <!-- Support & Contact -->
-            <div class="col-span-2 lg:col-span-1">
-              <h3
-                class="mb-4 text-sm font-bold uppercase tracking-wide text-white sm:mb-5"
-              >
-                Support &amp; Contact
-              </h3>
-              <ul class="space-y-4 text-sm">
-                <li class="flex items-center gap-3">
-                  <span
-                    class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-neutral-800 text-white"
-                  >
-                    <svg
-                      class="h-4 w-4"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      aria-hidden="true"
-                    >
-                      <path
-                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"
-                      />
-                    </svg>
-                  </span>
-                  <a
-                    href="tel:+34123456789"
-                    class="transition-colors hover:text-white"
-                    >+34 123 456 789</a
-                  >
-                </li>
-                <li class="flex items-center gap-3">
-                  <span
-                    class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-neutral-800 text-white"
-                  >
-                    <svg
-                      class="h-4 w-4"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      aria-hidden="true"
-                    >
-                      <circle cx="12" cy="12" r="4" />
-                      <path
-                        d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-3.92 7.94"
-                      />
-                    </svg>
-                  </span>
-                  <a
-                    href="mailto:support@stucka.com"
-                    class="transition-colors hover:text-white"
-                    >support@stucka.com</a
-                  >
-                </li>
-                <li class="flex items-start gap-3">
-                  <span
-                    class="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-neutral-800 text-white"
-                  >
-                    <svg
-                      class="h-4 w-4"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      aria-hidden="true"
-                    >
-                      <path d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-3" />
-                      <path d="M9 9v.01M9 12v.01M9 15v.01M9 18v.01" />
-                    </svg>
-                  </span>
-                  <span>Calle de la Princesa, Madrid, Spain</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- Bottom bar -->
-        <div class="mt-10 border-t border-neutral-800 pt-6 sm:mt-12 sm:pt-8">
-          <ul
-            class="flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-sm sm:gap-x-10"
-          >
-            <li>
-              <a href="#" class="transition-colors hover:text-white"
-                >Terms of Service</a
-              >
-            </li>
-            <li>
-              <a href="#" class="transition-colors hover:text-white"
-                >Privacy Policy</a
-              >
-            </li>
-            <li>
-              <a href="#" class="transition-colors hover:text-white">Cookies</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </footer>
   </body>
 </html>

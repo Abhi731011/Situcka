@@ -78,5 +78,5 @@ window.addEventListener("keydown", (event) => {
 });
 
 window.addEventListener("resize", () => {
-  if (window.innerWidth >= 1000) closeFilters();
+  if (window.innerWidth >= 1200) closeFilters();
 });
