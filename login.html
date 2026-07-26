@@ -188,7 +188,7 @@
       const eyeIcon = document.getElementById("eye-icon");
 
       toggleBtn.addEventListener("click", () => {
-        const isHidden = passwordInput.type === "password";
+        const isHidden = passwordInput.type === "password" ;
         passwordInput.type = isHidden ? "text" : "password";
         toggleBtn.setAttribute("aria-label", isHidden ? "Hide password" : "Show password");
         eyeIcon.innerHTML = isHidden
