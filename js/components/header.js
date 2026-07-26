@@ -12,7 +12,7 @@ class AppHeader extends HTMLElement {
           <span></span><span></span><span></span>
         </button>
 
-        <a class="header-brand" href="./home.html" aria-label="SITÙCKA home">
+        <a class="header-brand" href="./dashboard.html" aria-label="SITÙCKA home">
           <img src="./assets/logo-basket.svg" alt="SITÙCKA" />
         </a>
 

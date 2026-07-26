@@ -1,5 +1,5 @@
 const primaryItems = [
-  { key: "home", label: "Home", icon: "Home.svg", href: "./home.html" },
+  { key: "home", label: "Home", icon: "Home.svg", href: "./dashboard.html" },
   {
     key: "restaurants",
     label: "Restaurants",
@@ -29,7 +29,7 @@ function getActiveKey(host) {
 
   if (!file || file === "index.html") return "home";
   if (file.includes("restaurant")) return "restaurants";
-  if (file.includes("home")) return "home";
+  if (file.includes("dashboard") || file.includes("home")) return "home";
   if (file.includes("grocer")) return "groceries";
   if (file.includes("parcel")) return "parcel";
   return "home";
@@ -54,7 +54,7 @@ class AppSidebar extends HTMLElement {
     this.innerHTML = `
       <aside class="app-sidebar" aria-label="Main sidebar">
         <div class="sidebar-brand">
-          <a href="./home.html" aria-label="SITÙCKA home">
+          <a href="./dashboard.html" aria-label="SITÙCKA home">
             <img src="./assets/logo-basket.svg" alt="SITÙCKA" />
           </a>
           <button class="sidebar-close" type="button" aria-label="Close menu">
