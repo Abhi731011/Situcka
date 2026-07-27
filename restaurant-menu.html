@@ -1,0 +1,552 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Browse the full menu at L'Artisan Trattoria on SITÙCKA."
+    />
+    <title>Menu | L'Artisan Trattoria | SITÙCKA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/theme.css" />
+    <link rel="stylesheet" href="./css/dashboard.css" />
+    <script type="module" src="./js/components/sidebar.js"></script>
+    <script type="module" src="./js/components/header.js"></script>
+    <script type="module" src="./js/home.js"></script>
+    <script type="module" src="./js/restaurant-menu.js"></script>
+  </head>
+  <body class="menu-page">
+    <div class="app-shell">
+      <app-sidebar active="restaurants"></app-sidebar>
+      <button class="mobile-overlay" type="button" aria-label="Close menu"></button>
+
+      <div class="app-main">
+        <app-header></app-header>
+
+        <main class="menu-content">
+          <nav class="detail-breadcrumb" aria-label="Breadcrumb">
+            <a href="./dashboard.html">Home</a>
+            <span aria-hidden="true">›</span>
+            <a href="./restaurants.html">Restaurants</a>
+            <span aria-hidden="true">›</span>
+            <a href="./restaurant-detail.html">The Emerald Bistro</a>
+            <span aria-hidden="true">›</span>
+            <span aria-current="page">Menu</span>
+          </nav>
+
+          <div class="menu-layout">
+            <aside class="menu-side" aria-label="Restaurant and categories">
+              <article class="menu-resto-card">
+                <div class="menu-resto-card__media">
+                  <img src="./assets/Images/img13.png" alt="L'Artisan Trattoria" />
+                  <span class="menu-resto-card__offer">20% OFF UPTO $10</span>
+                  <button class="product-wish" type="button" aria-label="Save restaurant">
+                    <img src="./assets/Tab/wishlist.svg" alt="" aria-hidden="true" />
+                  </button>
+                  <span class="menu-resto-card__badge">PROMOTED</span>
+                  <span class="menu-resto-card__time">15-20 MIN</span>
+                </div>
+                <div class="menu-resto-card__body">
+                  <h1>L'Artisan Trattoria</h1>
+                  <p class="menu-resto-card__desc">Authentic pizzas and handmade pasta</p>
+                  <p class="menu-resto-card__row">
+                    <span class="menu-resto-card__rating">
+                      <span class="menu-resto-card__star" aria-hidden="true">★</span>
+                      <strong>4.9</strong>
+                      <span>(1.2K+ reviews)</span>
+                    </span>
+                    <span class="menu-resto-card__dot" aria-hidden="true">•</span>
+                    <span>0.8 miles away</span>
+                  </p>
+                  <p class="menu-resto-card__row menu-resto-card__row--open">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" /><path d="M12 7v5l3 2" /></svg>
+                    <strong>Open Now</strong>
+                    <span class="menu-resto-card__dot" aria-hidden="true">•</span>
+                    <span>Closes 10 PM</span>
+                  </p>
+                  <p class="menu-resto-card__row">
+                    <span class="menu-resto-card__flag" aria-hidden="true">🇮🇹</span>
+                    <span>Italian</span>
+                    <span class="menu-resto-card__dot" aria-hidden="true">•</span>
+                    <span>Fine Dining</span>
+                  </p>
+                  <p class="menu-resto-card__row">
+                    <span>$$$$</span>
+                    <span class="menu-resto-card__dot" aria-hidden="true">•</span>
+                    <span>25–35 min</span>
+                  </p>
+                </div>
+              </article>
+
+              <nav class="menu-cats" aria-labelledby="menu-cats-title">
+                <h2 id="menu-cats-title">Categories</h2>
+                <ul>
+                  <li>
+                    <a class="menu-cats__item is-active" href="#chefs-specials" data-cat="chefs-specials">
+                      <span class="menu-cats__icon" aria-hidden="true">⭐</span>
+                      <span class="menu-cats__label">Chef's Specials</span>
+                      <span class="menu-cats__count">12 items</span>
+                      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 6 6-6 6" /></svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="menu-cats__item" href="#pizzas" data-cat="pizzas">
+                      <span class="menu-cats__icon" aria-hidden="true">🍕</span>
+                      <span class="menu-cats__label">Pizzas</span>
+                      <span class="menu-cats__count">18 items</span>
+                      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 6 6-6 6" /></svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="menu-cats__item" href="#pastas" data-cat="pastas">
+                      <span class="menu-cats__icon" aria-hidden="true">🍝</span>
+                      <span class="menu-cats__label">Pastas</span>
+                      <span class="menu-cats__count">14 items</span>
+                      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 6 6-6 6" /></svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="menu-cats__item" href="#salads" data-cat="salads">
+                      <span class="menu-cats__icon" aria-hidden="true">🥗</span>
+                      <span class="menu-cats__label">Salads</span>
+                      <span class="menu-cats__count">8 items</span>
+                      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 6 6-6 6" /></svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="menu-cats__item" href="#appetizers" data-cat="appetizers">
+                      <span class="menu-cats__icon" aria-hidden="true">🍤</span>
+                      <span class="menu-cats__label">Appetizers</span>
+                      <span class="menu-cats__count">10 items</span>
+                      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 6 6-6 6" /></svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="menu-cats__item" href="#main-course" data-cat="main-course">
+                      <span class="menu-cats__icon" aria-hidden="true">🥩</span>
+                      <span class="menu-cats__label">Main Course</span>
+                      <span class="menu-cats__count">16 items</span>
+                      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 6 6-6 6" /></svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="menu-cats__item" href="#desserts" data-cat="desserts">
+                      <span class="menu-cats__icon" aria-hidden="true">🍰</span>
+                      <span class="menu-cats__label">Desserts</span>
+                      <span class="menu-cats__count">9 items</span>
+                      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 6 6-6 6" /></svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="menu-cats__item" href="#beverages" data-cat="beverages">
+                      <span class="menu-cats__icon" aria-hidden="true">🥤</span>
+                      <span class="menu-cats__label">Beverages</span>
+                      <span class="menu-cats__count">12 items</span>
+                      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 6 6-6 6" /></svg>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </aside>
+
+            <div class="menu-main">
+              <section class="menu-section" id="chefs-specials" aria-labelledby="chefs-specials-title">
+                <div class="section-heading">
+                  <div>
+                    <h2 id="chefs-specials-title">Chef's Specials</h2>
+                    <p>Handpicked favorites from our kitchen</p>
+                  </div>
+                  <a class="view-all" href="#">View all</a>
+                </div>
+                <div class="menu-grid">
+                  <article class="product-card">
+                    <div class="product-media">
+                      <img src="./assets/Images/img7.png" alt="Truffle Risotto" />
+                      <button class="product-wish" type="button" aria-label="Wishlist Truffle Risotto">
+                        <img src="./assets/Tab/wishlist.svg" alt="" aria-hidden="true" />
+                      </button>
+                    </div>
+                    <div class="product-body">
+                      <h3>Truffle Risotto</h3>
+                      <p>Creamy • Black truffle</p>
+                      <div class="product-meta">
+                        <strong>$18.49</strong>
+                        <button class="product-cart" type="button" aria-label="Add Truffle Risotto">
+                          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg>
+                        </button>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="product-card">
+                    <div class="product-media">
+                      <img src="./assets/Images/img8.png" alt="Lobster Linguine" />
+                      <button class="product-wish" type="button" aria-label="Wishlist Lobster Linguine">
+                        <img src="./assets/Tab/wishlist.svg" alt="" aria-hidden="true" />
+                      </button>
+                    </div>
+                    <div class="product-body">
+                      <h3>Lobster Linguine</h3>
+                      <p>Fresh lobster • Garlic</p>
+                      <div class="product-meta">
+                        <strong>$24.99</strong>
+                        <button class="product-cart" type="button" aria-label="Add Lobster Linguine">
+                          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg>
+                        </button>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="product-card">
+                    <div class="product-media">
+                      <img src="./assets/Images/img9.png" alt="Osso Buco" />
+                      <button class="product-wish" type="button" aria-label="Wishlist Osso Buco">
+                        <img src="./assets/Tab/wishlist.svg" alt="" aria-hidden="true" />
+                      </button>
+                    </div>
+                    <div class="product-body">
+                      <h3>Osso Buco</h3>
+                      <p>Braised veal • Gremolata</p>
+                      <div class="product-meta">
+                        <strong>$28.00</strong>
+                        <button class="product-cart" type="button" aria-label="Add Osso Buco">
+                          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg>
+                        </button>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="product-card">
+                    <div class="product-media">
+                      <img src="./assets/Images/img11.png" alt="Sea Bass Crudo" />
+                      <button class="product-wish" type="button" aria-label="Wishlist Sea Bass Crudo">
+                        <img src="./assets/Tab/wishlist.svg" alt="" aria-hidden="true" />
+                      </button>
+                    </div>
+                    <div class="product-body">
+                      <h3>Sea Bass Crudo</h3>
+                      <p>Citrus • Chili oil</p>
+                      <div class="product-meta">
+                        <strong>$16.50</strong>
+                        <button class="product-cart" type="button" aria-label="Add Sea Bass Crudo">
+                          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg>
+                        </button>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+              </section>
+
+              <section class="menu-section" id="pizzas" aria-labelledby="pizzas-title">
+                <div class="section-heading">
+                  <div>
+                    <h2 id="pizzas-title">Pizzas</h2>
+                    <p>Wood-fired classics and signatures</p>
+                  </div>
+                  <a class="view-all" href="#">View all</a>
+                </div>
+                <div class="menu-grid">
+                  <article class="product-card">
+                    <div class="product-media">
+                      <img src="./assets/Images/img7.png" alt="Cheese Pizza" />
+                      <button class="product-wish" type="button" aria-label="Wishlist Cheese Pizza">
+                        <img src="./assets/Tab/wishlist.svg" alt="" aria-hidden="true" />
+                      </button>
+                    </div>
+                    <div class="product-body">
+                      <h3>Cheese Pizza</h3>
+                      <p>6 slices • Cheese</p>
+                      <div class="product-meta">
+                        <strong>$3.49</strong>
+                        <button class="product-cart" type="button" aria-label="Add Cheese Pizza">
+                          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg>
+                        </button>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="product-card">
+                    <div class="product-media">
+                      <img src="./assets/Images/img10.jpg" alt="Pepperoni Pizza" />
+                      <button class="product-wish" type="button" aria-label="Wishlist Pepperoni Pizza">
+                        <img src="./assets/Tab/wishlist.svg" alt="" aria-hidden="true" />
+                      </button>
+                    </div>
+                    <div class="product-body">
+                      <h3>Pepperoni Pizza</h3>
+                      <p>8 slices • Spicy</p>
+                      <div class="product-meta">
+                        <strong>$4.99</strong>
+                        <button class="product-cart" type="button" aria-label="Add Pepperoni Pizza">
+                          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg>
+                        </button>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="product-card">
+                    <div class="product-media">
+                      <img src="./assets/Images/img14.png" alt="Margherita" />
+                      <button class="product-wish" type="button" aria-label="Wishlist Margherita">
+                        <img src="./assets/Tab/wishlist.svg" alt="" aria-hidden="true" />
+                      </button>
+                    </div>
+                    <div class="product-body">
+                      <h3>Margherita</h3>
+                      <p>Fresh basil • Mozzarella</p>
+                      <div class="product-meta">
+                        <strong>$5.49</strong>
+                        <button class="product-cart" type="button" aria-label="Add Margherita">
+                          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg>
+                        </button>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="product-card">
+                    <div class="product-media">
+                      <img src="./assets/Images/img15.png" alt="Quattro Formaggi" />
+                      <button class="product-wish" type="button" aria-label="Wishlist Quattro Formaggi">
+                        <img src="./assets/Tab/wishlist.svg" alt="" aria-hidden="true" />
+                      </button>
+                    </div>
+                    <div class="product-body">
+                      <h3>Quattro Formaggi</h3>
+                      <p>4 cheeses • Creamy</p>
+                      <div class="product-meta">
+                        <strong>$6.29</strong>
+                        <button class="product-cart" type="button" aria-label="Add Quattro Formaggi">
+                          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg>
+                        </button>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+              </section>
+
+              <section class="menu-section" id="pastas" aria-labelledby="pastas-title">
+                <div class="section-heading">
+                  <div>
+                    <h2 id="pastas-title">Pastas</h2>
+                    <p>Handmade pasta tossed to order</p>
+                  </div>
+                  <a class="view-all" href="#">View all</a>
+                </div>
+                <div class="menu-grid">
+                  <article class="product-card">
+                    <div class="product-media">
+                      <img src="./assets/Images/img11.png" alt="Cacio e Pepe" />
+                      <button class="product-wish" type="button" aria-label="Wishlist Cacio e Pepe">
+                        <img src="./assets/Tab/wishlist.svg" alt="" aria-hidden="true" />
+                      </button>
+                    </div>
+                    <div class="product-body">
+                      <h3>Cacio e Pepe</h3>
+                      <p>Pecorino • Black pepper</p>
+                      <div class="product-meta">
+                        <strong>$14.49</strong>
+                        <button class="product-cart" type="button" aria-label="Add Cacio e Pepe">
+                          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg>
+                        </button>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="product-card">
+                    <div class="product-media">
+                      <img src="./assets/Images/img12.png" alt="Carbonara" />
+                      <button class="product-wish" type="button" aria-label="Wishlist Carbonara">
+                        <img src="./assets/Tab/wishlist.svg" alt="" aria-hidden="true" />
+                      </button>
+                    </div>
+                    <div class="product-body">
+                      <h3>Carbonara</h3>
+                      <p>Guanciale • Egg yolk</p>
+                      <div class="product-meta">
+                        <strong>$15.99</strong>
+                        <button class="product-cart" type="button" aria-label="Add Carbonara">
+                          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg>
+                        </button>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="product-card">
+                    <div class="product-media">
+                      <img src="./assets/Images/img8.png" alt="Pesto Genovese" />
+                      <button class="product-wish" type="button" aria-label="Wishlist Pesto Genovese">
+                        <img src="./assets/Tab/wishlist.svg" alt="" aria-hidden="true" />
+                      </button>
+                    </div>
+                    <div class="product-body">
+                      <h3>Pesto Genovese</h3>
+                      <p>Basil • Pine nuts</p>
+                      <div class="product-meta">
+                        <strong>$13.49</strong>
+                        <button class="product-cart" type="button" aria-label="Add Pesto Genovese">
+                          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg>
+                        </button>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="product-card">
+                    <div class="product-media">
+                      <img src="./assets/Images/img9.png" alt="Bolognese" />
+                      <button class="product-wish" type="button" aria-label="Wishlist Bolognese">
+                        <img src="./assets/Tab/wishlist.svg" alt="" aria-hidden="true" />
+                      </button>
+                    </div>
+                    <div class="product-body">
+                      <h3>Bolognese</h3>
+                      <p>Slow-cooked ragù</p>
+                      <div class="product-meta">
+                        <strong>$16.29</strong>
+                        <button class="product-cart" type="button" aria-label="Add Bolognese">
+                          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg>
+                        </button>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+              </section>
+
+              <nav class="listing-pagination" aria-label="Menu pagination">
+                <button type="button" disabled aria-label="Previous page">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 18 9 12l6-6" /></svg>
+                </button>
+                <a class="is-active" href="#" aria-current="page">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <span aria-hidden="true">…</span>
+                <a href="#">10</a>
+                <button type="button" aria-label="Next page">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 6 6-6 6" /></svg>
+                </button>
+              </nav>
+            </div>
+
+            <aside class="menu-order" aria-labelledby="order-heading">
+              <div class="menu-order__head">
+                <h2 id="order-heading">Your Order <span>(4)</span></h2>
+                <button class="menu-order__clear" type="button">Clear Cart</button>
+              </div>
+
+              <ul class="menu-order__list">
+                <li class="menu-order__item">
+                  <img src="./assets/Images/img7.png" alt="" />
+                  <div class="menu-order__content">
+                    <div class="menu-order__top">
+                      <div class="menu-order__info">
+                        <strong>Cheese Pizza</strong>
+                        <span>$3.49</span>
+                      </div>
+                      <button class="menu-order__remove" type="button" aria-label="Remove item">
+                        <img src="./assets/delete.svg" alt="" aria-hidden="true" />
+                      </button>
+                    </div>
+                    <div class="menu-order__qty" data-qty="1">
+                      <button type="button" aria-label="Decrease quantity">−</button>
+                      <span>1</span>
+                      <button type="button" aria-label="Increase quantity">+</button>
+                    </div>
+                  </div>
+                </li>
+                <li class="menu-order__item">
+                  <img src="./assets/Images/img8.png" alt="" />
+                  <div class="menu-order__content">
+                    <div class="menu-order__top">
+                      <div class="menu-order__info">
+                        <strong>Sushi Sampler</strong>
+                        <span>$4.49</span>
+                      </div>
+                      <button class="menu-order__remove" type="button" aria-label="Remove item">
+                        <img src="./assets/delete.svg" alt="" aria-hidden="true" />
+                      </button>
+                    </div>
+                    <div class="menu-order__qty" data-qty="2">
+                      <button type="button" aria-label="Decrease quantity">−</button>
+                      <span>2</span>
+                      <button type="button" aria-label="Increase quantity">+</button>
+                    </div>
+                  </div>
+                </li>
+                <li class="menu-order__item">
+                  <img src="./assets/Images/img10.jpg" alt="" />
+                  <div class="menu-order__content">
+                    <div class="menu-order__top">
+                      <div class="menu-order__info">
+                        <strong>Cheese Burger</strong>
+                        <span>$4.49</span>
+                      </div>
+                      <button class="menu-order__remove" type="button" aria-label="Remove item">
+                        <img src="./assets/delete.svg" alt="" aria-hidden="true" />
+                      </button>
+                    </div>
+                    <div class="menu-order__qty" data-qty="1">
+                      <button type="button" aria-label="Decrease quantity">−</button>
+                      <span>1</span>
+                      <button type="button" aria-label="Increase quantity">+</button>
+                    </div>
+                  </div>
+                </li>
+                <li class="menu-order__item">
+                  <img src="./assets/Images/img11.png" alt="" />
+                  <div class="menu-order__content">
+                    <div class="menu-order__top">
+                      <div class="menu-order__info">
+                        <strong>Truffle Gnocchi</strong>
+                        <span>$4.49</span>
+                      </div>
+                      <button class="menu-order__remove" type="button" aria-label="Remove item">
+                        <img src="./assets/delete.svg" alt="" aria-hidden="true" />
+                      </button>
+                    </div>
+                    <div class="menu-order__qty" data-qty="1">
+                      <button type="button" aria-label="Decrease quantity">−</button>
+                      <span>1</span>
+                      <button type="button" aria-label="Increase quantity">+</button>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+
+              <label class="menu-order__note">
+                <span>Add a note for the restaurant</span>
+                <textarea rows="3" placeholder="e.g. Extra napkins, no onions..."></textarea>
+              </label>
+
+              <dl class="menu-order__summary">
+                <div>
+                  <dt>Subtotal</dt>
+                  <dd>$64.99</dd>
+                </div>
+                <div>
+                  <dt>Delivery Fee</dt>
+                  <dd>$2.99</dd>
+                </div>
+                <div>
+                  <dt>Taxes &amp; Charges</dt>
+                  <dd>$9.49</dd>
+                </div>
+              </dl>
+
+              <div class="menu-order__total">
+                <span>Total</span>
+                <strong>$77.47</strong>
+              </div>
+
+              <p class="menu-order__savings">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" /><path d="m8.5 12.5 2.5 2.5 4.5-5" /></svg>
+                You saved $6.00 on this order
+              </p>
+
+              <button class="menu-order__checkout" type="button">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2" /><path d="M8 11V8a4 4 0 0 1 8 0v3" /></svg>
+                Proceed to Checkout
+              </button>
+            </aside>
+          </div>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

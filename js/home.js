@@ -5,6 +5,13 @@ overlay?.addEventListener("click", () => {
   document.querySelector(".menu-button")?.setAttribute("aria-expanded", "false");
 });
 
+document.querySelectorAll(".restaurant-card-link .product-wish").forEach((btn) => {
+  btn.addEventListener("click", (event) => {
+    event.preventDefault();
+    event.stopPropagation();
+  });
+});
+
 window.addEventListener("keydown", (event) => {
   if (event.key === "Escape") {
     document.body.classList.remove("sidebar-open");

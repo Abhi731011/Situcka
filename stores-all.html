@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Browse all restaurants near you on SITÙCKA."
+      content="Browse all grocery stores near you on SITÙCKA."
     />
-    <title>All Restaurants | SITÙCKA</title>
+    <title>All Stores | SITÙCKA</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -23,7 +23,7 @@
   </head>
   <body class="listing-page">
     <div class="app-shell">
-      <app-sidebar active="restaurants"></app-sidebar>
+      <app-sidebar active="groceries"></app-sidebar>
       <button class="mobile-overlay" type="button" aria-label="Close menu"></button>
       <button class="filters-overlay" type="button" aria-label="Close filters"></button>
 
@@ -31,7 +31,7 @@
         <app-header></app-header>
 
         <div class="listing-layout">
-          <aside class="filters-panel" aria-label="Restaurant filters">
+          <aside class="filters-panel" aria-label="Store filters">
             <div class="filters-panel__head">
               <h2>Filters</h2>
               <button class="filters-clear" type="button">Clear all</button>
@@ -42,31 +42,31 @@
 
             <details class="filter-group" open>
               <summary>
-                <span>Cuisine</span>
+                <span>Category</span>
                 <svg viewBox="0 0 24 24" aria-hidden="true">
                   <path d="m7 10 5 5 5-5" />
                 </svg>
               </summary>
               <div class="filter-options">
                 <label class="filter-check">
-                  <input type="checkbox" name="cuisine" value="italian" />
-                  <span>Italian</span>
+                  <input type="checkbox" name="category" value="produce" />
+                  <span>Produce</span>
                 </label>
                 <label class="filter-check">
-                  <input type="checkbox" name="cuisine" value="chinese" />
-                  <span>Chinese</span>
+                  <input type="checkbox" name="category" value="dairy" />
+                  <span>Dairy</span>
                 </label>
                 <label class="filter-check">
-                  <input type="checkbox" name="cuisine" value="indian" checked />
-                  <span>Indian</span>
+                  <input type="checkbox" name="category" value="meats" checked />
+                  <span>Meats</span>
                 </label>
                 <label class="filter-check">
-                  <input type="checkbox" name="cuisine" value="mexican" />
-                  <span>Mexican</span>
+                  <input type="checkbox" name="category" value="beverages" />
+                  <span>Beverages</span>
                 </label>
                 <label class="filter-check">
-                  <input type="checkbox" name="cuisine" value="american" />
-                  <span>American</span>
+                  <input type="checkbox" name="category" value="snacks" />
+                  <span>Snacks</span>
                 </label>
                 <button class="filter-more" type="button">+ More</button>
               </div>
@@ -150,12 +150,12 @@
           <main class="listing-content">
             <div class="listing-toolbar">
               <div class="listing-toolbar__left">
-                <a class="listing-back" href="./restaurants.html" aria-label="Go back">
+                <a class="listing-back" href="./groceries.html" aria-label="Go back">
                   <svg viewBox="0 0 24 24" aria-hidden="true">
                     <path d="M15 18 9 12l6-6" />
                   </svg>
                 </a>
-                <h1>120+ restaurants found</h1>
+                <h1>120+ stores found</h1>
               </div>
 
               <div class="listing-toolbar__right">
@@ -164,7 +164,7 @@
                 </button>
                 <label class="listing-sort">
                   <span>Sort by:</span>
-                  <select aria-label="Sort restaurants">
+                  <select aria-label="Sort stores">
                     <option selected>Popular</option>
                     <option>Rating</option>
                     <option>Delivery time</option>
@@ -175,7 +175,7 @@
             </div>
 
             <div class="listing-grid">
-              <a class="restaurant-card-link" href="./restaurant-detail.html"><article class="restaurant-card">
+              <a class="restaurant-card-link" href="./store-detail.html"><article class="restaurant-card">
                 <div class="restaurant-media">
                   <img src="./assets/Images/img13.png" alt="The Emerald Bistro" />
                   <span class="restaurant-offer">20% OFF UPTO $10</span>
@@ -194,13 +194,13 @@
                       <span class="restaurant-count">(1.2k)</span>
                     </span>
                   </div>
-                  <p class="restaurant-desc">Authentic pizzas and handmade pasta</p>
-                  <p class="restaurant-meta">Italian • $$$ • 1.2 miles</p>
+                  <p class="restaurant-desc">Fresh produce and daily essentials</p>
+                  <p class="restaurant-meta">Grocery • $$$ • 1.2 miles</p>
                   <strong class="restaurant-fee">$2.99 Delivery</strong>
                 </div>
               </article></a>
 
-              <a class="restaurant-card-link" href="./restaurant-detail.html"><article class="restaurant-card">
+              <a class="restaurant-card-link" href="./store-detail.html"><article class="restaurant-card">
                 <div class="restaurant-media">
                   <img src="./assets/Images/img14.png" alt="Sakura Premium" />
                   <span class="restaurant-offer">FLAT $15 OFF</span>
@@ -219,13 +219,13 @@
                       <span class="restaurant-count">(1.2k)</span>
                     </span>
                   </div>
-                  <p class="restaurant-desc">Authentic pizzas and handmade pasta</p>
-                  <p class="restaurant-meta">Italian • $$$ • 1.2 miles</p>
+                  <p class="restaurant-desc">Fresh produce and daily essentials</p>
+                  <p class="restaurant-meta">Grocery • $$$ • 1.2 miles</p>
                   <strong class="restaurant-fee">$2.99 Delivery</strong>
                 </div>
               </article></a>
 
-              <a class="restaurant-card-link" href="./restaurant-detail.html"><article class="restaurant-card">
+              <a class="restaurant-card-link" href="./store-detail.html"><article class="restaurant-card">
                 <div class="restaurant-media">
                   <img src="./assets/Images/img15.png" alt="Royal Kashmiri Bites" />
                   <span class="restaurant-offer">FLAT $15 OFF</span>
@@ -244,13 +244,13 @@
                       <span class="restaurant-count">(1.2k)</span>
                     </span>
                   </div>
-                  <p class="restaurant-desc">Authentic pizzas and handmade pasta</p>
-                  <p class="restaurant-meta">Italian • $$$ • 1.2 miles</p>
+                  <p class="restaurant-desc">Fresh produce and daily essentials</p>
+                  <p class="restaurant-meta">Grocery • $$$ • 1.2 miles</p>
                   <strong class="restaurant-fee restaurant-fee--free">Free Delivery</strong>
                 </div>
               </article></a>
 
-              <a class="restaurant-card-link" href="./restaurant-detail.html"><article class="restaurant-card">
+              <a class="restaurant-card-link" href="./store-detail.html"><article class="restaurant-card">
                 <div class="restaurant-media">
                   <img src="./assets/Images/img16.png" alt="Oceanic Delights" />
                   <span class="restaurant-offer">FLAT $15 OFF</span>
@@ -269,13 +269,13 @@
                       <span class="restaurant-count">(1.2k)</span>
                     </span>
                   </div>
-                  <p class="restaurant-desc">Authentic pizzas and handmade pasta</p>
-                  <p class="restaurant-meta">Italian • $$$ • 1.2 miles</p>
+                  <p class="restaurant-desc">Fresh produce and daily essentials</p>
+                  <p class="restaurant-meta">Grocery • $$$ • 1.2 miles</p>
                   <strong class="restaurant-fee restaurant-fee--free">Free Delivery</strong>
                 </div>
               </article></a>
 
-              <a class="restaurant-card-link" href="./restaurant-detail.html"><article class="restaurant-card">
+              <a class="restaurant-card-link" href="./store-detail.html"><article class="restaurant-card">
                 <div class="restaurant-media">
                   <img src="./assets/Images/img13.png" alt="The Emerald Bistro" />
                   <span class="restaurant-offer">20% OFF UPTO $10</span>
@@ -294,13 +294,13 @@
                       <span class="restaurant-count">(1.2k)</span>
                     </span>
                   </div>
-                  <p class="restaurant-desc">Authentic pizzas and handmade pasta</p>
-                  <p class="restaurant-meta">Italian • $$$ • 1.2 miles</p>
+                  <p class="restaurant-desc">Fresh produce and daily essentials</p>
+                  <p class="restaurant-meta">Grocery • $$$ • 1.2 miles</p>
                   <strong class="restaurant-fee">$2.99 Delivery</strong>
                 </div>
               </article></a>
 
-              <a class="restaurant-card-link" href="./restaurant-detail.html"><article class="restaurant-card">
+              <a class="restaurant-card-link" href="./store-detail.html"><article class="restaurant-card">
                 <div class="restaurant-media">
                   <img src="./assets/Images/img14.png" alt="Sakura Premium" />
                   <span class="restaurant-offer">FLAT $15 OFF</span>
@@ -319,13 +319,13 @@
                       <span class="restaurant-count">(1.2k)</span>
                     </span>
                   </div>
-                  <p class="restaurant-desc">Authentic pizzas and handmade pasta</p>
-                  <p class="restaurant-meta">Italian • $$$ • 1.2 miles</p>
+                  <p class="restaurant-desc">Fresh produce and daily essentials</p>
+                  <p class="restaurant-meta">Grocery • $$$ • 1.2 miles</p>
                   <strong class="restaurant-fee">$2.99 Delivery</strong>
                 </div>
               </article></a>
 
-              <a class="restaurant-card-link" href="./restaurant-detail.html"><article class="restaurant-card">
+              <a class="restaurant-card-link" href="./store-detail.html"><article class="restaurant-card">
                 <div class="restaurant-media">
                   <img src="./assets/Images/img15.png" alt="Royal Kashmiri Bites" />
                   <span class="restaurant-offer">FLAT $15 OFF</span>
@@ -344,13 +344,13 @@
                       <span class="restaurant-count">(1.2k)</span>
                     </span>
                   </div>
-                  <p class="restaurant-desc">Authentic pizzas and handmade pasta</p>
-                  <p class="restaurant-meta">Italian • $$$ • 1.2 miles</p>
+                  <p class="restaurant-desc">Fresh produce and daily essentials</p>
+                  <p class="restaurant-meta">Grocery • $$$ • 1.2 miles</p>
                   <strong class="restaurant-fee restaurant-fee--free">Free Delivery</strong>
                 </div>
               </article></a>
 
-              <a class="restaurant-card-link" href="./restaurant-detail.html"><article class="restaurant-card">
+              <a class="restaurant-card-link" href="./store-detail.html"><article class="restaurant-card">
                 <div class="restaurant-media">
                   <img src="./assets/Images/img16.png" alt="Oceanic Delights" />
                   <span class="restaurant-offer">FLAT $15 OFF</span>
@@ -369,13 +369,13 @@
                       <span class="restaurant-count">(1.2k)</span>
                     </span>
                   </div>
-                  <p class="restaurant-desc">Authentic pizzas and handmade pasta</p>
-                  <p class="restaurant-meta">Italian • $$$ • 1.2 miles</p>
+                  <p class="restaurant-desc">Fresh produce and daily essentials</p>
+                  <p class="restaurant-meta">Grocery • $$$ • 1.2 miles</p>
                   <strong class="restaurant-fee restaurant-fee--free">Free Delivery</strong>
                 </div>
               </article></a>
 
-              <a class="restaurant-card-link" href="./restaurant-detail.html"><article class="restaurant-card">
+              <a class="restaurant-card-link" href="./store-detail.html"><article class="restaurant-card">
                 <div class="restaurant-media">
                   <img src="./assets/Images/img13.png" alt="The Emerald Bistro" />
                   <span class="restaurant-offer">20% OFF UPTO $10</span>
@@ -394,13 +394,13 @@
                       <span class="restaurant-count">(1.2k)</span>
                     </span>
                   </div>
-                  <p class="restaurant-desc">Authentic pizzas and handmade pasta</p>
-                  <p class="restaurant-meta">Italian • $$$ • 1.2 miles</p>
+                  <p class="restaurant-desc">Fresh produce and daily essentials</p>
+                  <p class="restaurant-meta">Grocery • $$$ • 1.2 miles</p>
                   <strong class="restaurant-fee">$2.99 Delivery</strong>
                 </div>
               </article></a>
 
-              <a class="restaurant-card-link" href="./restaurant-detail.html"><article class="restaurant-card">
+              <a class="restaurant-card-link" href="./store-detail.html"><article class="restaurant-card">
                 <div class="restaurant-media">
                   <img src="./assets/Images/img14.png" alt="Sakura Premium" />
                   <span class="restaurant-offer">FLAT $15 OFF</span>
@@ -419,13 +419,13 @@
                       <span class="restaurant-count">(1.2k)</span>
                     </span>
                   </div>
-                  <p class="restaurant-desc">Authentic pizzas and handmade pasta</p>
-                  <p class="restaurant-meta">Italian • $$$ • 1.2 miles</p>
+                  <p class="restaurant-desc">Fresh produce and daily essentials</p>
+                  <p class="restaurant-meta">Grocery • $$$ • 1.2 miles</p>
                   <strong class="restaurant-fee">$2.99 Delivery</strong>
                 </div>
               </article></a>
 
-              <a class="restaurant-card-link" href="./restaurant-detail.html"><article class="restaurant-card">
+              <a class="restaurant-card-link" href="./store-detail.html"><article class="restaurant-card">
                 <div class="restaurant-media">
                   <img src="./assets/Images/img15.png" alt="Royal Kashmiri Bites" />
                   <span class="restaurant-offer">FLAT $15 OFF</span>
@@ -444,13 +444,13 @@
                       <span class="restaurant-count">(1.2k)</span>
                     </span>
                   </div>
-                  <p class="restaurant-desc">Authentic pizzas and handmade pasta</p>
-                  <p class="restaurant-meta">Italian • $$$ • 1.2 miles</p>
+                  <p class="restaurant-desc">Fresh produce and daily essentials</p>
+                  <p class="restaurant-meta">Grocery • $$$ • 1.2 miles</p>
                   <strong class="restaurant-fee restaurant-fee--free">Free Delivery</strong>
                 </div>
               </article></a>
 
-              <a class="restaurant-card-link" href="./restaurant-detail.html"><article class="restaurant-card">
+              <a class="restaurant-card-link" href="./store-detail.html"><article class="restaurant-card">
                 <div class="restaurant-media">
                   <img src="./assets/Images/img16.png" alt="Oceanic Delights" />
                   <span class="restaurant-offer">FLAT $15 OFF</span>
@@ -469,8 +469,8 @@
                       <span class="restaurant-count">(1.2k)</span>
                     </span>
                   </div>
-                  <p class="restaurant-desc">Authentic pizzas and handmade pasta</p>
-                  <p class="restaurant-meta">Italian • $$$ • 1.2 miles</p>
+                  <p class="restaurant-desc">Fresh produce and daily essentials</p>
+                  <p class="restaurant-meta">Grocery • $$$ • 1.2 miles</p>
                   <strong class="restaurant-fee restaurant-fee--free">Free Delivery</strong>
                 </div>
               </article></a>

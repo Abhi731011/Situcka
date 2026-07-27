@@ -1,0 +1,589 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="L'Artisan Trattoria — authentic Italian dining on SITÙCKA."
+    />
+    <title>L'Artisan Trattoria | SITÙCKA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/theme.css" />
+    <link rel="stylesheet" href="./css/dashboard.css" />
+    <script type="module" src="./js/components/sidebar.js"></script>
+    <script type="module" src="./js/components/header.js"></script>
+    <script type="module" src="./js/home.js"></script>
+    <script type="module" src="./js/restaurant-detail.js"></script>
+  </head>
+  <body class="detail-page">
+    <div class="app-shell">
+      <app-sidebar active="restaurants"></app-sidebar>
+      <button class="mobile-overlay" type="button" aria-label="Close menu"></button>
+
+      <div class="app-main">
+        <app-header></app-header>
+
+        <main class="detail-content">
+          <nav class="detail-breadcrumb" aria-label="Breadcrumb">
+            <a href="./dashboard.html">Home</a>
+            <span aria-hidden="true">›</span>
+            <a href="./restaurants.html">Restaurants</a>
+            <span aria-hidden="true">›</span>
+            <span aria-current="page">L'Artisan Trattoria</span>
+          </nav>
+
+          <section class="detail-hero" aria-labelledby="restaurant-title">
+            <div class="detail-gallery">
+              <div class="detail-gallery__main">
+                <img
+                  id="detail-main-image"
+                  src="./assets/Images/img13.png"
+                  alt="L'Artisan Trattoria interior"
+                />
+                <span class="detail-gallery__badge">Editor's Choice</span>
+                <button class="detail-gallery__nav detail-gallery__nav--prev" type="button" aria-label="Previous image">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 18 9 12l6-6" /></svg>
+                </button>
+                <button class="detail-gallery__nav detail-gallery__nav--next" type="button" aria-label="Next image">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 6 6-6 6" /></svg>
+                </button>
+              </div>
+              <div class="detail-gallery__thumbs" role="list">
+                <button class="detail-thumb is-active" type="button" data-src="./assets/Images/img13.png" aria-label="View image 1">
+                  <img src="./assets/Images/img13.png" alt="" />
+                </button>
+                <button class="detail-thumb" type="button" data-src="./assets/Images/img7.png" aria-label="View image 2">
+                  <img src="./assets/Images/img7.png" alt="" />
+                </button>
+                <button class="detail-thumb" type="button" data-src="./assets/Images/img8.png" aria-label="View image 3">
+                  <img src="./assets/Images/img8.png" alt="" />
+                </button>
+                <button class="detail-thumb" type="button" data-src="./assets/Images/img11.png" aria-label="View image 4">
+                  <img src="./assets/Images/img11.png" alt="" />
+                </button>
+                <button class="detail-thumb detail-thumb--more" type="button" data-src="./assets/Images/img14.png" aria-label="View more images">
+                  <img src="./assets/Images/img14.png" alt="" />
+                  <span>+8 View More</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="detail-summary">
+              <div class="detail-summary__head">
+                <h1 id="restaurant-title">L'Artisan Trattoria</h1>
+                <div class="detail-summary__actions">
+                  <button type="button" aria-label="Add to favorites">
+                    <img src="./assets/Tab/wishlist.svg" alt="" aria-hidden="true" />
+                  </button>
+                  <button type="button" aria-label="Share restaurant">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M4 12v7a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-7" />
+                      <path d="M16 6 12 2 8 6" />
+                      <path d="M12 2v13" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+
+              <div class="detail-meta">
+                <p class="detail-meta__rating">
+                  <span class="restaurant-star" aria-hidden="true">★</span>
+                  <strong>4.9</strong>
+                  <span>(1.2k+ reviews)</span>
+                </p>
+              </div>
+
+              <div class="detail-meta detail-meta--info">
+                <p>
+                  <img src="./assets/Header/location.svg" alt="" aria-hidden="true" />
+                  <span>0.8 miles away • Artisan District</span>
+                </p>
+                <p>
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="2" /><path d="M3 10h18" /></svg>
+                  <span>$$$$ • Italian, Fine Dining</span>
+                </p>
+                <p class="detail-meta__open">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" /><path d="M12 7v5l3 2" /></svg>
+                  <span><strong>Open Now</strong> • Closes 10 PM</span>
+                </p>
+              </div>
+
+              <div class="detail-stats">
+                <div class="detail-stat">
+                  <span class="detail-stat__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><path d="M3 7h11v10H3z" /><path d="M14 10h4l3 3v4h-7z" /><circle cx="7" cy="18" r="2" /><circle cx="17" cy="18" r="2" /></svg>
+                  </span>
+                  <small>Delivery Time</small>
+                  <strong>25-35 min</strong>
+                </div>
+                <div class="detail-stat">
+                  <span class="detail-stat__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><path d="M12 3 4 8v2h16V8L12 3z" /><path d="M6 10v8h12v-8" /></svg>
+                  </span>
+                  <small>Min. Order</small>
+                  <strong>30 XAF</strong>
+                </div>
+                <div class="detail-stat">
+                  <span class="detail-stat__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><path d="M3 7h11v10H3z" /><path d="M14 10h4l3 3v4h-7z" /><circle cx="7" cy="18" r="2" /><circle cx="17" cy="18" r="2" /></svg>
+                  </span>
+                  <small>Delivery Fees</small>
+                  <strong>2.99 XAF</strong>
+                </div>
+                <div class="detail-stat">
+                  <span class="detail-stat__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><path d="M12 3 14.5 9H21l-5 4 2 7-6-4-6 4 2-7-5-4h6.5z" /></svg>
+                  </span>
+                  <small>Special Offer</small>
+                  <strong>20% OFF</strong>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <div class="detail-body">
+            <div class="detail-main">
+              <section class="detail-about" aria-labelledby="about-heading">
+                <h2 id="about-heading">About</h2>
+                <p>
+                  Experience the authentic taste of Italy at L'Artisan Trattoria. Our chefs craft every dish with
+                  passion using imported ingredients and traditional recipes passed down through generations. From
+                  handmade pasta to wood-fired pizzas, every plate tells a story of Italian culinary excellence.
+                </p>
+                <p>
+                  Nestled in the heart of the Artisan District, our warm ambiance and exceptional service create the
+                  perfect setting for memorable dining experiences. Whether you're celebrating a special occasion or
+                  enjoying a casual meal, we welcome you to our trattoria.
+                </p>
+                <p>
+                  Nestled in the heart of the Artisan District, our warm ambiance and exceptional service create the
+                  perfect setting for memorable dining experiences. Whether you're celebrating a special occasion or
+                  enjoying a casual meal, we welcome you to our trattoria.
+                </p>
+                <div class="detail-tags">
+                  <span class="detail-tag">Free Wi-Fi</span>
+                  <span class="detail-tag">Valet Parking</span>
+                  <span class="detail-tag">Outdoor Seating</span>
+                  <span class="detail-tag">Wheelchair Accessible</span>
+                  <span class="detail-tag">Wine Cellar</span>
+                </div>
+              </section>
+
+              <section class="content-section content-section--products" aria-labelledby="dishes-heading">
+                <div class="section-heading">
+                  <div>
+                    <h2 id="dishes-heading">Popular Dishes</h2>
+                    <p>Customer favorites from our kitchen</p>
+                  </div>
+                  <a class="view-all" href="#">View all</a>
+                </div>
+
+                <div class="product-scroller detail-dishes">
+                  <article class="product-card">
+                    <div class="product-media">
+                      <img src="./assets/Images/img7.png" alt="Cheese Pizza" />
+                      <button class="product-wish" type="button" aria-label="Add Cheese Pizza to wishlist">
+                        <img src="./assets/Tab/wishlist.svg" alt="" aria-hidden="true" />
+                      </button>
+                    </div>
+                    <div class="product-body">
+                      <h3>Cheese Pizza</h3>
+                      <p>6 slices • Cheese</p>
+                      <div class="product-meta">
+                        <strong>$4.49</strong>
+                        <button class="product-cart" type="button" aria-label="Add Cheese Pizza to cart">
+                          <img src="./assets/Header/cart.svg" alt="" aria-hidden="true" />
+                        </button>
+                      </div>
+                    </div>
+                  </article>
+
+                  <article class="product-card">
+                    <div class="product-media">
+                      <img src="./assets/Images/img8.png" alt="Sushi Sampler" />
+                      <button class="product-wish" type="button" aria-label="Add Sushi Sampler to wishlist">
+                        <img src="./assets/Tab/wishlist.svg" alt="" aria-hidden="true" />
+                      </button>
+                    </div>
+                    <div class="product-body">
+                      <h3>Sushi Sampler</h3>
+                      <p>12 pcs • Fresh</p>
+                      <div class="product-meta">
+                        <strong>$4.49</strong>
+                        <button class="product-cart" type="button" aria-label="Add Sushi Sampler to cart">
+                          <img src="./assets/Header/cart.svg" alt="" aria-hidden="true" />
+                        </button>
+                      </div>
+                    </div>
+                  </article>
+
+                  <article class="product-card">
+                    <div class="product-media">
+                      <img src="./assets/Images/img9.png" alt="Avocado Toast" />
+                      <button class="product-wish" type="button" aria-label="Add Avocado Toast to wishlist">
+                        <img src="./assets/Tab/wishlist.svg" alt="" aria-hidden="true" />
+                      </button>
+                    </div>
+                    <div class="product-body">
+                      <h3>Avocado Toast</h3>
+                      <p>1 plate • Healthy</p>
+                      <div class="product-meta">
+                        <strong>$4.49</strong>
+                        <button class="product-cart" type="button" aria-label="Add Avocado Toast to cart">
+                          <img src="./assets/Header/cart.svg" alt="" aria-hidden="true" />
+                        </button>
+                      </div>
+                    </div>
+                  </article>
+
+                  <article class="product-card">
+                    <div class="product-media">
+                      <img src="./assets/Images/img10.jpg" alt="Cheese Burger" />
+                      <button class="product-wish" type="button" aria-label="Add Cheese Burger to wishlist">
+                        <img src="./assets/Tab/wishlist.svg" alt="" aria-hidden="true" />
+                      </button>
+                    </div>
+                    <div class="product-body">
+                      <h3>Cheese Burger</h3>
+                      <p>1 burger • Classic</p>
+                      <div class="product-meta">
+                        <strong>$4.49</strong>
+                        <button class="product-cart" type="button" aria-label="Add Cheese Burger to cart">
+                          <img src="./assets/Header/cart.svg" alt="" aria-hidden="true" />
+                        </button>
+                      </div>
+                    </div>
+                  </article>
+
+                  <article class="product-card">
+                    <div class="product-media">
+                      <img src="./assets/Images/img11.png" alt="Truffle Gnocchi" />
+                      <button class="product-wish" type="button" aria-label="Add Truffle Gnocchi to wishlist">
+                        <img src="./assets/Tab/wishlist.svg" alt="" aria-hidden="true" />
+                      </button>
+                    </div>
+                    <div class="product-body">
+                      <h3>Truffle Gnocchi</h3>
+                      <p>Handmade • Creamy</p>
+                      <div class="product-meta">
+                        <strong>$4.49</strong>
+                        <button class="product-cart" type="button" aria-label="Add Truffle Gnocchi to cart">
+                          <img src="./assets/Header/cart.svg" alt="" aria-hidden="true" />
+                        </button>
+                      </div>
+                    </div>
+                  </article>
+
+                  <article class="product-card">
+                    <div class="product-media">
+                      <img src="./assets/Images/img12.png" alt="Almond Croissant" />
+                      <button class="product-wish" type="button" aria-label="Add Almond Croissant to wishlist">
+                        <img src="./assets/Tab/wishlist.svg" alt="" aria-hidden="true" />
+                      </button>
+                    </div>
+                    <div class="product-body">
+                      <h3>Almond Croissant</h3>
+                      <p>1 pc • Fresh baked</p>
+                      <div class="product-meta">
+                        <strong>$3.90</strong>
+                        <button class="product-cart" type="button" aria-label="Add Almond Croissant to cart">
+                          <img src="./assets/Header/cart.svg" alt="" aria-hidden="true" />
+                        </button>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+              </section>
+            </div>
+
+            <aside class="detail-aside">
+              <section class="detail-map-card" aria-label="Restaurant location">
+                <div class="detail-map-card__media">
+                  <img src="./assets/map.svg" alt="Map showing restaurant location" />
+                </div>
+                <p>128 Elite Plaza, Via Toscana, Artisan District, NY</p>
+                <a class="detail-map-card__btn" href="#" target="_blank" rel="noopener noreferrer">
+                  Get Directions
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7" /></svg>
+                </a>
+              </section>
+
+              <section class="detail-menu-cats" aria-labelledby="menu-cats-heading">
+                <div class="section-heading">
+                  <div>
+                    <h2 id="menu-cats-heading">Menu Categories</h2>
+                  </div>
+                  <a class="view-all" href="./restaurant-menu.html">View all</a>
+                </div>
+                <ul>
+                  <li>
+                    <a href="./restaurant-menu.html#pastas">
+                      <span class="detail-menu-cats__icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24"><path d="M4 12h16M7 8c2 2 2 6 0 8M17 8c-2 2-2 6 0 8M12 6v12" /></svg>
+                      </span>
+                      <span>
+                        <strong>Signature Pasta</strong>
+                        <small>12 items</small>
+                      </span>
+                      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 6 6-6 6" /></svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="./restaurant-menu.html#appetizers">
+                      <span class="detail-menu-cats__icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24"><path d="M4 10h16l-2 10H6L4 10z" /><path d="M8 10V7a4 4 0 0 1 8 0v3" /></svg>
+                      </span>
+                      <span>
+                        <strong>Antipasti &amp; Crudo</strong>
+                        <small>8 items</small>
+                      </span>
+                      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 6 6-6 6" /></svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="./restaurant-menu.html#pizzas">
+                      <span class="detail-menu-cats__icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8" /><circle cx="12" cy="12" r="3" /></svg>
+                      </span>
+                      <span>
+                        <strong>Wood-Fired Pizza</strong>
+                        <small>10 items</small>
+                      </span>
+                      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 6 6-6 6" /></svg>
+                    </a>
+                  </li>
+                </ul>
+              </section>
+            </aside>
+          </div>
+
+              <section class="detail-comments" aria-labelledby="comments-heading">
+                <div class="section-heading">
+                  <div>
+                    <h2 id="comments-heading">Latest Comments</h2>
+                  </div>
+                  <a class="view-all" href="#">View all reviews</a>
+                </div>
+
+                <div class="detail-comments__grid">
+                  <article class="comment-card">
+                    <div class="comment-card__head">
+                      <img src="./assets/Header/img.jpg" alt="" />
+                      <div>
+                        <strong>Sarah Mitchell</strong>
+                        <span class="comment-card__stars" aria-label="5 stars">★★★★★</span>
+                      </div>
+                      <time>2 days ago</time>
+                    </div>
+                    <p>
+                      Absolutely fantastic! The handmade pasta was incredible and the service was top-notch. Will
+                      definitely be coming back soon.
+                    </p>
+                    <div class="comment-card__actions">
+                      <button type="button">Helpful</button>
+                      <button type="button">Report</button>
+                    </div>
+                  </article>
+
+                  <article class="comment-card">
+                    <div class="comment-card__head">
+                      <img src="./assets/Header/img.jpg" alt="" />
+                      <div>
+                        <strong>James Chen</strong>
+                        <span class="comment-card__stars" aria-label="5 stars">★★★★★</span>
+                      </div>
+                      <time>5 days ago</time>
+                    </div>
+                    <p>
+                      Best Italian food in the city! The wood-fired pizza and tiramisu are must-tries. Highly
+                      recommend for date nights.
+                    </p>
+                    <div class="comment-card__actions">
+                      <button type="button">Helpful</button>
+                      <button type="button">Report</button>
+                    </div>
+                  </article>
+
+                  <article class="comment-card">
+                    <div class="comment-card__head">
+                      <img src="./assets/Header/img.jpg" alt="" />
+                      <div>
+                        <strong>Emily Rodriguez</strong>
+                        <span class="comment-card__stars" aria-label="4 stars">★★★★☆</span>
+                      </div>
+                      <time>1 week ago</time>
+                    </div>
+                    <p>
+                      Lovely atmosphere and authentic flavors. The wait was a bit long on Saturday, but the food made
+                      it worth it.
+                    </p>
+                    <div class="comment-card__actions">
+                      <button type="button">Helpful</button>
+                      <button type="button">Report</button>
+                    </div>
+                  </article>
+                </div>
+
+                <div class="detail-comments__dots" aria-hidden="true">
+                  <span class="is-active"></span><span></span><span></span>
+                </div>
+              </section>
+
+              <section class="content-section content-section--products detail-explore" aria-labelledby="explore-heading">
+                <div class="section-heading">
+                  <div>
+                    <h2 id="explore-heading">Explore More Restaurants</h2>
+                    <p>Discover similar places near you</p>
+                  </div>
+                  <a class="view-all" href="./restaurants-all.html">View all</a>
+                </div>
+
+                <div class="restaurant-grid">
+                  <a class="restaurant-card-link" href="./restaurant-detail.html">
+                    <article class="restaurant-card">
+                      <div class="restaurant-media">
+                        <img src="./assets/Images/img13.png" alt="The Emerald Bistro" />
+                        <span class="restaurant-offer">20% OFF UPTO $10</span>
+                        <span class="restaurant-badge">PROMOTED</span>
+                        <span class="restaurant-time">15-20 MIN</span>
+                      </div>
+                      <div class="restaurant-body">
+                        <div class="restaurant-title-row">
+                          <h3>The Emerald Bistro</h3>
+                          <span class="restaurant-rating">
+                            <span class="restaurant-star" aria-hidden="true">★</span>
+                            <span class="restaurant-score">4.8</span>
+                            <span class="restaurant-count">(1.2k)</span>
+                          </span>
+                        </div>
+                        <p class="restaurant-desc">Authentic pizzas and handmade pasta</p>
+                        <p class="restaurant-meta">Italian • $$$ • 1.2 miles</p>
+                        <strong class="restaurant-fee">$2.99 Delivery</strong>
+                      </div>
+                    </article>
+                  </a>
+
+                  <a class="restaurant-card-link" href="./restaurant-detail.html">
+                    <article class="restaurant-card">
+                      <div class="restaurant-media">
+                        <img src="./assets/Images/img14.png" alt="Sakura Premium" />
+                        <span class="restaurant-offer">FLAT $15 OFF</span>
+                        <span class="restaurant-badge">PROMOTED</span>
+                        <span class="restaurant-time">15-20 MIN</span>
+                      </div>
+                      <div class="restaurant-body">
+                        <div class="restaurant-title-row">
+                          <h3>Sakura Premium</h3>
+                          <span class="restaurant-rating">
+                            <span class="restaurant-star" aria-hidden="true">★</span>
+                            <span class="restaurant-score">4.8</span>
+                            <span class="restaurant-count">(1.2k)</span>
+                          </span>
+                        </div>
+                        <p class="restaurant-desc">Fresh sushi and Japanese classics</p>
+                        <p class="restaurant-meta">Japanese • $$ • 0.8 miles</p>
+                        <strong class="restaurant-fee">$2.89 Delivery</strong>
+                      </div>
+                    </article>
+                  </a>
+
+                  <a class="restaurant-card-link" href="./restaurant-detail.html">
+                    <article class="restaurant-card">
+                      <div class="restaurant-media">
+                        <img src="./assets/Images/img15.png" alt="Royal Kashmiri Bites" />
+                        <span class="restaurant-offer">FLAT $15 OFF</span>
+                        <span class="restaurant-badge">PROMOTED</span>
+                        <span class="restaurant-time">15-20 MIN</span>
+                      </div>
+                      <div class="restaurant-body">
+                        <div class="restaurant-title-row">
+                          <h3>Royal Kashmiri Bites</h3>
+                          <span class="restaurant-rating">
+                            <span class="restaurant-star" aria-hidden="true">★</span>
+                            <span class="restaurant-score">4.5</span>
+                            <span class="restaurant-count">(1.2k)</span>
+                          </span>
+                        </div>
+                        <p class="restaurant-desc">Rich spices and hearty classics</p>
+                        <p class="restaurant-meta">Indian • $$$ • 1.2 miles</p>
+                        <strong class="restaurant-fee restaurant-fee--free">Free Delivery</strong>
+                      </div>
+                    </article>
+                  </a>
+
+                  <a class="restaurant-card-link" href="./restaurant-detail.html">
+                    <article class="restaurant-card">
+                      <div class="restaurant-media">
+                        <img src="./assets/Images/img16.png" alt="Oceanic Delights" />
+                        <span class="restaurant-offer">FLAT $15 OFF</span>
+                        <span class="restaurant-badge">PROMOTED</span>
+                        <span class="restaurant-time">20-25 MIN</span>
+                      </div>
+                      <div class="restaurant-body">
+                        <div class="restaurant-title-row">
+                          <h3>Oceanic Delights</h3>
+                          <span class="restaurant-rating">
+                            <span class="restaurant-star" aria-hidden="true">★</span>
+                            <span class="restaurant-score">4.8</span>
+                            <span class="restaurant-count">(1.2k)</span>
+                          </span>
+                        </div>
+                        <p class="restaurant-desc">Fresh seafood and coastal flavors</p>
+                        <p class="restaurant-meta">Seafood • $$$ • 1.2 miles</p>
+                        <strong class="restaurant-fee restaurant-fee--free">Free Delivery</strong>
+                      </div>
+                    </article>
+                  </a>
+
+                  <a class="restaurant-card-link" href="./restaurant-detail.html">
+                    <article class="restaurant-card">
+                      <div class="restaurant-media">
+                        <img src="./assets/Images/img13.png" alt="The Emerald Bistro" />
+                        <span class="restaurant-offer">20% OFF UPTO $10</span>
+                        <span class="restaurant-badge">PROMOTED</span>
+                        <span class="restaurant-time">15-20 MIN</span>
+                      </div>
+                      <div class="restaurant-body">
+                        <div class="restaurant-title-row">
+                          <h3>The Emerald Bistro</h3>
+                          <span class="restaurant-rating">
+                            <span class="restaurant-star" aria-hidden="true">★</span>
+                            <span class="restaurant-score">4.8</span>
+                            <span class="restaurant-count">(1.2k)</span>
+                          </span>
+                        </div>
+                        <p class="restaurant-desc">Authentic pizzas and handmade pasta</p>
+                        <p class="restaurant-meta">Italian • $$$ • 1.2 miles</p>
+                        <strong class="restaurant-fee">$2.99 Delivery</strong>
+                      </div>
+                    </article>
+                  </a>
+                </div>
+              </section>
+        </main>
+      </div>
+
+      <div class="detail-order-bar" role="region" aria-label="Order summary">
+        <div class="detail-order-bar__inner">
+          <div class="detail-order-bar__total">
+            <small>Subtotal (0 items)</small>
+            <strong>0.00 XAF</strong>
+          </div>
+          <a class="detail-order-bar__btn" href="./restaurant-menu.html">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M6 7h12l-1 12H7L6 7z" />
+              <path d="M9 7V5a3 3 0 0 1 6 0v2" />
+            </svg>
+            Order Food Now
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

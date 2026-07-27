@@ -30,8 +30,9 @@ function getActiveKey(host) {
 
   if (!file || file === "index.html") return "home";
   if (file.includes("restaurant")) return "restaurants";
+  if (file.includes("menu")) return "restaurants";
   if (file.includes("dashboard") || file.includes("home")) return "home";
-  if (file.includes("grocer")) return "groceries";
+  if (file.includes("grocer") || file.includes("stores-all") || file.includes("store-detail")) return "groceries";
   if (file.includes("parcel")) return "parcel";
   return "home";
 }

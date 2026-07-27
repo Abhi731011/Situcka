@@ -1,3 +1,10 @@
+document.querySelectorAll(".restaurant-card-link .product-wish").forEach((btn) => {
+  btn.addEventListener("click", (event) => {
+    event.preventDefault();
+    event.stopPropagation();
+  });
+});
+
 function closeFilters() {
   document.body.classList.remove("filters-open");
   document.querySelector(".filters-open")?.setAttribute("aria-expanded", "false");
