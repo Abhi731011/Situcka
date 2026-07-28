@@ -1,0 +1,643 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Organic Hass Avocados (2 Pack) — fresh from Fresh Market Express on SITÙCKA."
+    />
+    <title>Organic Hass Avocados (2 Pack) | SITÙCKA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/theme.css" />
+    <link rel="stylesheet" href="./css/dashboard.css" />
+    <script type="module" src="./js/components/sidebar.js"></script>
+    <script type="module" src="./js/components/header.js"></script>
+    <script type="module" src="./js/home.js"></script>
+    <script type="module" src="./js/restaurant-detail.js"></script>
+    <script type="module" src="./js/product-detail.js"></script>
+  </head>
+  <body class="detail-page product-detail-page">
+    <div class="app-shell">
+      <app-sidebar active="groceries"></app-sidebar>
+      <button class="mobile-overlay" type="button" aria-label="Close menu"></button>
+
+      <div class="app-main">
+        <app-header></app-header>
+
+        <main class="detail-content product-detail-content">
+          <nav class="detail-breadcrumb" aria-label="Breadcrumb">
+            <a href="./dashboard.html">Home</a>
+            <span aria-hidden="true">›</span>
+            <a href="./groceries.html">Groceries</a>
+            <span aria-hidden="true">›</span>
+            <a href="./store-detail.html">Fruit &amp; Vegetables</a>
+            <span aria-hidden="true">›</span>
+            <span aria-current="page">Organic Hass Avocados (2 Pack)</span>
+          </nav>
+
+          <section class="product-hero" aria-labelledby="product-title">
+            <div class="detail-gallery">
+              <div class="detail-gallery__main">
+                <img
+                  id="detail-main-image"
+                  src="./assets/Images/img1.png"
+                  alt="Organic Hass Avocados"
+                />
+                <span class="detail-gallery__badge">Editor's Choice</span>
+                <button class="detail-gallery__nav detail-gallery__nav--prev" type="button" aria-label="Previous image">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 18 9 12l6-6" /></svg>
+                </button>
+                <button class="detail-gallery__nav detail-gallery__nav--next" type="button" aria-label="Next image">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 6 6-6 6" /></svg>
+                </button>
+              </div>
+              <div class="detail-gallery__thumbs" role="list">
+                <button class="detail-thumb is-active" type="button" data-src="./assets/Images/img1.png" aria-label="View image 1">
+                  <img src="./assets/Images/img1.png" alt="" />
+                </button>
+                <button class="detail-thumb" type="button" data-src="./assets/Images/img2.png" aria-label="View image 2">
+                  <img src="./assets/Images/img2.png" alt="" />
+                </button>
+                <button class="detail-thumb" type="button" data-src="./assets/Images/img6.jpg" aria-label="View image 3">
+                  <img src="./assets/Images/img6.jpg" alt="" />
+                </button>
+                <button class="detail-thumb" type="button" data-src="./assets/Images/img25.png" aria-label="View image 4">
+                  <img src="./assets/Images/img25.png" alt="" />
+                </button>
+                <button class="detail-thumb detail-thumb--more" type="button" data-src="./assets/Images/img26.png" aria-label="View more images">
+                  <img src="./assets/Images/img26.png" alt="" />
+                  <span>+2 More</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="product-summary">
+              <div class="product-summary__top">
+                <div class="store-pills" aria-label="Product tags">
+                  <span class="store-pill store-pill--organic">Organic</span>
+                  <span class="store-pill store-pill--local">Local</span>
+                  <span class="store-pill store-pill--gourmet">Gourmet</span>
+                </div>
+                <div class="detail-summary__actions">
+                  <button type="button" aria-label="Add to wishlist">
+                    <img src="./assets/Tab/wishlist.svg" alt="" aria-hidden="true" />
+                  </button>
+                  <button type="button" aria-label="Share product">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M4 12v7a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-7" />
+                      <path d="M16 6 12 2 8 6" />
+                      <path d="M12 2v13" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+
+              <h1 id="product-title">Organic Hass Avocados (2 Pack)</h1>
+
+              <div class="product-summary__meta">
+                <span class="product-summary__rating">
+                  <span class="restaurant-star" aria-hidden="true">★</span>
+                  <strong>4.9</strong>
+                  <span>(1.2k+ reviews)</span>
+                </span>
+                <span class="product-summary__sep" aria-hidden="true"></span>
+                <span class="product-summary__meta-item">
+                  <img src="./assets/Header/location.svg" alt="" aria-hidden="true" />
+                  0.8 miles away
+                </span>
+                <span class="product-summary__sep" aria-hidden="true"></span>
+                <span class="product-summary__meta-item">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" /><path d="M12 7v5l3 2" /></svg>
+                  15-20 mins
+                </span>
+              </div>
+
+              <div class="product-action-card">
+                <div class="product-action-card__row">
+                  <div class="product-summary__price">
+                    <div class="product-summary__price-main">
+                      <strong>4.99 XAF</strong>
+                      <s>5.50 XAF</s>
+                    </div>
+                    <small>$2.50 / each</small>
+                  </div>
+                  <div class="product-summary__buy">
+                    <div class="product-qty" data-qty="1">
+                      <button type="button" aria-label="Decrease quantity">−</button>
+                      <span>1</span>
+                      <button class="product-qty__plus" type="button" aria-label="Increase quantity">+</button>
+                    </div>
+                    <button class="product-add-cart" type="button">
+                      <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M6 7h12l-1 12H7L6 7z" />
+                        <path d="M9 7V5a3 3 0 0 1 6 0v2" />
+                      </svg>
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+                <button class="product-buy-now" type="button">Buy Now</button>
+              </div>
+
+              <div class="product-quick-stats">
+                <div class="product-quick-stat">
+                  <span class="product-quick-stat__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z" /></svg>
+                  </span>
+                  <strong>Free Delivery</strong>
+                  <small>Over $50</small>
+                </div>
+                <div class="product-quick-stat">
+                  <span class="product-quick-stat__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><path d="M6 7h12l-1 12H7L6 7z" /><path d="M9 7V5a3 3 0 0 1 6 0v2" /></svg>
+                  </span>
+                  <strong>Min. Order</strong>
+                  <small>$15.00</small>
+                </div>
+                <div class="product-quick-stat">
+                  <span class="product-quick-stat__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><path d="M12 21s7-5.2 7-11a7 7 0 1 0-14 0c0 5.8 7 11 7 11z" /><circle cx="12" cy="10" r="2.5" /></svg>
+                  </span>
+                  <strong>Delivery Fee</strong>
+                  <small>$2.99</small>
+                </div>
+                <div class="product-quick-stat">
+                  <span class="product-quick-stat__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><path d="M20.6 12.8 12.8 20.6a2 2 0 0 1-2.8 0L3.4 14a2 2 0 0 1 0-2.8l7.8-7.8a2 2 0 0 1 1.4-.6H19a2 2 0 0 1 2 2v6.4a2 2 0 0 1-.6 1.4z" /><circle cx="16.5" cy="7.5" r="1.2" /></svg>
+                  </span>
+                  <strong>Special Offers</strong>
+                  <small>20% OFF above $30</small>
+                </div>
+              </div>
+
+              <div class="product-store-card">
+                <div class="product-store-card__info">
+                  <img src="./assets/Images/img13.png" alt="" />
+                  <div>
+                    <strong>Fresh Market Express</strong>
+                    <small>0.8 miles away</small>
+                  </div>
+                </div>
+                <a class="product-store-card__link" href="./store-detail.html">View Store</a>
+              </div>
+            </div>
+          </section>
+
+          <div class="product-about-layout">
+            <section class="product-about" aria-labelledby="about-product-heading">
+              <h2 id="about-product-heading">About The Product</h2>
+              <p>
+                Creamy, nutrient-rich Organic Hass Avocados perfect for toast, salads, and smoothies. Grown with care
+                and harvested at peak ripeness, this 2-pack brings farm-fresh quality straight to your kitchen — ideal
+                for everyday healthy eating.
+                Creamy, nutrient-rich Organic Hass Avocados perfect for toast, salads, and smoothies. Grown with care
+                and harvested at peak ripeness, this 2-pack brings farm-fresh quality straight to your kitchen — ideal
+                for everyday healthy eating.
+              </p>
+              <div class="product-about-facts">
+                <div class="product-about-fact">
+                  <span class="product-about-fact__icon" aria-hidden="true">
+                    <img src="./assets/storage.svg" alt="" />
+                  </span>
+                  <div>
+                    <strong>Storage</strong>
+                    <small>Cool, dry place</small>
+                  </div>
+                </div>
+                <div class="product-about-fact">
+                  <span class="product-about-fact__icon" aria-hidden="true">
+                    <img src="./assets/origin.svg" alt="" />
+                  </span>
+                  <div>
+                    <strong>Origin</strong>
+                    <small>California, USA</small>
+                  </div>
+                </div>
+                <div class="product-about-fact">
+                  <span class="product-about-fact__icon" aria-hidden="true">
+                    <img src="./assets/sourced.svg" alt="" />
+                  </span>
+                  <div>
+                    <strong>Sustainably Sourced</strong>
+                    <small>Picked-up from local organic farms.</small>
+                  </div>
+                </div>
+                <div class="product-about-fact">
+                  <span class="product-about-fact__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" /><path d="M12 7v5l3 2" /></svg>
+                  </span>
+                  <div>
+                    <strong>Operating Hours</strong>
+                    <small>Daily: 9:00 AM - 11:00 PM</small>
+                  </div>
+                </div>
+                <div class="product-about-fact">
+                  <span class="product-about-fact__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><path d="M3 7h11v10H3z" /><path d="M14 10h4l3 3v4h-7z" /><circle cx="7" cy="18" r="2" /><circle cx="17" cy="18" r="2" /></svg>
+                  </span>
+                  <div>
+                    <strong>Delivery Info</strong>
+                    <small>Free over $50 • 15-30 min</small>
+                  </div>
+                </div>
+                <div class="product-about-fact">
+                  <span class="product-about-fact__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><path d="M12 21s7-5.2 7-11a7 7 0 1 0-14 0c0 5.8 7 11 7 11z" /><circle cx="12" cy="10" r="2.5" /></svg>
+                  </span>
+                  <div>
+                    <strong>Location</strong>
+                    <small>88 Emerald Way, Bistro District</small>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <aside class="product-ingredients" aria-labelledby="ingredients-heading">
+              <h2 id="ingredients-heading">Ingredients</h2>
+              <ul>
+                <li>
+                  <span class="product-ingredients__icon" aria-hidden="true">
+                    <img src="./assets/calories.svg" alt="" />
+                  </span>
+                  <div>
+                    <strong>Calories</strong>
+                    <small>160 kcal</small>
+                  </div>
+                </li>
+                <li>
+                  <span class="product-ingredients__icon" aria-hidden="true">
+                    <img src="./assets/carbs.svg" alt="" />
+                  </span>
+                  <div>
+                    <strong>Carbs</strong>
+                    <small>9 gram</small>
+                  </div>
+                </li>
+                <li>
+                  <span class="product-ingredients__icon" aria-hidden="true">
+                    <img src="./assets/fat.svg" alt="" />
+                  </span>
+                  <div>
+                    <strong>Fats</strong>
+                    <small>15 gram</small>
+                  </div>
+                </li>
+              </ul>
+            </aside>
+          </div>
+
+          <section class="detail-comments" aria-labelledby="comments-heading">
+            <div class="section-heading">
+              <div>
+                <h2 id="comments-heading">Latest Comments</h2>
+              </div>
+              <a class="view-all" href="#">View all reviews</a>
+            </div>
+
+            <div class="detail-comments__grid">
+              <article class="comment-card">
+                <div class="comment-card__head">
+                  <img src="./assets/Header/img.jpg" alt="" />
+                  <div>
+                    <strong>Sarah Miller</strong>
+                    <span class="comment-card__stars" aria-label="5 stars">★★★★★</span>
+                  </div>
+                  <time>2 days ago</time>
+                </div>
+                <p>
+                  Perfectly ripe avocados and arrived fresh. Great value for a 2-pack — will order again.
+                </p>
+                <div class="comment-card__actions">
+                  <button class="comment-card__helpful" type="button">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 11v9H4a1 1 0 0 1-1-1v-6a1 1 0 0 1 1-1h3zm0 0 4-7a2 2 0 0 1 2 2v3h5.2a2 2 0 0 1 2 2.3l-1 5A2 2 0 0 1 17.2 20H7" /></svg>
+                    Helpful (24)
+                  </button>
+                  <button class="comment-card__report" type="button">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 21V4h10l-1.5 4L20 12H5" /></svg>
+                    Report
+                  </button>
+                </div>
+              </article>
+
+              <article class="comment-card">
+                <div class="comment-card__head">
+                  <img src="./assets/Header/img.jpg" alt="" />
+                  <div>
+                    <strong>James Chen</strong>
+                    <span class="comment-card__stars" aria-label="5 stars">★★★★★</span>
+                  </div>
+                  <time>5 days ago</time>
+                </div>
+                <p>
+                  Creamy texture and excellent quality. Packaging kept them safe during delivery.
+                </p>
+                <div class="comment-card__actions">
+                  <button class="comment-card__helpful" type="button">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 11v9H4a1 1 0 0 1-1-1v-6a1 1 0 0 1 1-1h3zm0 0 4-7a2 2 0 0 1 2 2v3h5.2a2 2 0 0 1 2 2.3l-1 5A2 2 0 0 1 17.2 20H7" /></svg>
+                    Helpful (18)
+                  </button>
+                  <button class="comment-card__report" type="button">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 21V4h10l-1.5 4L20 12H5" /></svg>
+                    Report
+                  </button>
+                </div>
+              </article>
+
+              <article class="comment-card">
+                <div class="comment-card__head">
+                  <img src="./assets/Header/img.jpg" alt="" />
+                  <div>
+                    <strong>Emily Rodriguez</strong>
+                    <span class="comment-card__stars" aria-label="4 stars">★★★★☆</span>
+                  </div>
+                  <time>1 week ago</time>
+                </div>
+                <p>
+                  Good size and taste. One was slightly firmer but ripened overnight — solid organic pick.
+                </p>
+                <div class="comment-card__actions">
+                  <button class="comment-card__helpful" type="button">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 11v9H4a1 1 0 0 1-1-1v-6a1 1 0 0 1 1-1h3zm0 0 4-7a2 2 0 0 1 2 2v3h5.2a2 2 0 0 1 2 2.3l-1 5A2 2 0 0 1 17.2 20H7" /></svg>
+                    Helpful (12)
+                  </button>
+                  <button class="comment-card__report" type="button">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 21V4h10l-1.5 4L20 12H5" /></svg>
+                    Report
+                  </button>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <section class="content-section content-section--products" aria-labelledby="essentials-heading">
+            <div class="section-heading">
+              <div>
+                <h2 id="essentials-heading">Store Essentials</h2>
+                <p>Daily needs delivered fresh to your door</p>
+              </div>
+              <a class="view-all" href="./store-detail.html">View all</a>
+            </div>
+
+            <div class="product-scroller detail-dishes">
+              <a class="product-card-link" href="./product-detail.html">
+                <article class="product-card">
+                  <div class="product-media">
+                    <img src="./assets/Images/img2.png" alt="Fresh Oranges" />
+                    <button class="product-wish" type="button" aria-label="Add Fresh Oranges to wishlist">
+                      <img src="./assets/Tab/wishlist.svg" alt="" aria-hidden="true" />
+                    </button>
+                  </div>
+                  <div class="product-body">
+                    <h3>Fresh Oranges</h3>
+                    <p>1kg • Fresh</p>
+                    <div class="product-meta">
+                      <strong>3.00 XAF</strong>
+                      <button class="product-cart" type="button" aria-label="Add Fresh Oranges to cart">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg>
+                      </button>
+                    </div>
+                  </div>
+                </article>
+              </a>
+
+              <a class="product-card-link" href="./product-detail.html">
+                <article class="product-card">
+                  <div class="product-media">
+                    <img src="./assets/Images/img3.jpg" alt="Artisan Sourdough" />
+                    <button class="product-wish" type="button" aria-label="Add Artisan Sourdough to wishlist">
+                      <img src="./assets/Tab/wishlist.svg" alt="" aria-hidden="true" />
+                    </button>
+                  </div>
+                  <div class="product-body">
+                    <h3>Artisan Sourdough</h3>
+                    <p>1 loaf • Fresh baked</p>
+                    <div class="product-meta">
+                      <strong>4.50 XAF</strong>
+                      <button class="product-cart" type="button" aria-label="Add Artisan Sourdough to cart">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg>
+                      </button>
+                    </div>
+                  </div>
+                </article>
+              </a>
+
+              <a class="product-card-link" href="./product-detail.html">
+                <article class="product-card">
+                  <div class="product-media">
+                    <img src="./assets/Images/img4.png" alt="Peanut Butter" />
+                    <button class="product-wish" type="button" aria-label="Add Peanut Butter to wishlist">
+                      <img src="./assets/Tab/wishlist.svg" alt="" aria-hidden="true" />
+                    </button>
+                  </div>
+                  <div class="product-body">
+                    <h3>Peanut Butter</h3>
+                    <p>500g • Creamy</p>
+                    <div class="product-meta">
+                      <strong>5.20 XAF</strong>
+                      <button class="product-cart" type="button" aria-label="Add Peanut Butter to cart">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg>
+                      </button>
+                    </div>
+                  </div>
+                </article>
+              </a>
+
+              <a class="product-card-link" href="./product-detail.html">
+                <article class="product-card">
+                  <div class="product-media">
+                    <img src="./assets/Images/img5.png" alt="Choco Ice-cream" />
+                    <button class="product-wish" type="button" aria-label="Add Choco Ice-cream to wishlist">
+                      <img src="./assets/Tab/wishlist.svg" alt="" aria-hidden="true" />
+                    </button>
+                  </div>
+                  <div class="product-body">
+                    <h3>Choco Ice-cream</h3>
+                    <p>500ml • Frozen</p>
+                    <div class="product-meta">
+                      <strong>6.75 XAF</strong>
+                      <button class="product-cart" type="button" aria-label="Add Choco Ice-cream to cart">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg>
+                      </button>
+                    </div>
+                  </div>
+                </article>
+              </a>
+
+              <a class="product-card-link" href="./product-detail.html">
+                <article class="product-card">
+                  <div class="product-media">
+                    <img src="./assets/Images/img6.jpg" alt="Pomegranate" />
+                    <button class="product-wish" type="button" aria-label="Add Pomegranate to wishlist">
+                      <img src="./assets/Tab/wishlist.svg" alt="" aria-hidden="true" />
+                    </button>
+                  </div>
+                  <div class="product-body">
+                    <h3>Pomegranate</h3>
+                    <p>1kg • Fresh</p>
+                    <div class="product-meta">
+                      <strong>4.25 XAF</strong>
+                      <button class="product-cart" type="button" aria-label="Add Pomegranate to cart">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg>
+                      </button>
+                    </div>
+                  </div>
+                </article>
+              </a>
+
+              <a class="product-card-link" href="./product-detail.html">
+                <article class="product-card">
+                  <div class="product-media">
+                    <img src="./assets/Images/img1.png" alt="Fresh Avocados" />
+                    <button class="product-wish" type="button" aria-label="Add Fresh Avocados to wishlist">
+                      <img src="./assets/Tab/wishlist.svg" alt="" aria-hidden="true" />
+                    </button>
+                  </div>
+                  <div class="product-body">
+                    <h3>Fresh Avocados</h3>
+                    <p>1kg • Organic</p>
+                    <div class="product-meta">
+                      <strong>3.49 XAF</strong>
+                      <button class="product-cart" type="button" aria-label="Add Fresh Avocados to cart">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg>
+                      </button>
+                    </div>
+                  </div>
+                </article>
+                <a class="product-card-link" href="./product-detail.html">
+                  <article class="product-card">
+                    <div class="product-media">
+                      <img src="./assets/Images/img2.png" alt="Fresh Oranges" />
+                      <button class="product-wish" type="button" aria-label="Add Fresh Oranges to wishlist">
+                        <img src="./assets/Tab/wishlist.svg" alt="" aria-hidden="true" />
+                      </button>
+                    </div>
+                    <div class="product-body">
+                      <h3>Fresh Oranges</h3>
+                      <p>1kg • Fresh</p>
+                      <div class="product-meta">
+                        <strong>3.00 XAF</strong>
+                        <button class="product-cart" type="button" aria-label="Add Fresh Oranges to cart">
+                          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg>
+                        </button>
+                      </div>
+                    </div>
+                  </article>
+                </a>
+  
+                <a class="product-card-link" href="./product-detail.html">
+                  <article class="product-card">
+                    <div class="product-media">
+                      <img src="./assets/Images/img3.jpg" alt="Artisan Sourdough" />
+                      <button class="product-wish" type="button" aria-label="Add Artisan Sourdough to wishlist">
+                        <img src="./assets/Tab/wishlist.svg" alt="" aria-hidden="true" />
+                      </button>
+                    </div>
+                    <div class="product-body">
+                      <h3>Artisan Sourdough</h3>
+                      <p>1 loaf • Fresh baked</p>
+                      <div class="product-meta">
+                        <strong>4.50 XAF</strong>
+                        <button class="product-cart" type="button" aria-label="Add Artisan Sourdough to cart">
+                          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg>
+                        </button>
+                      </div>
+                    </div>
+                  </article>
+                </a>
+  
+                <a class="product-card-link" href="./product-detail.html">
+                  <article class="product-card">
+                    <div class="product-media">
+                      <img src="./assets/Images/img4.png" alt="Peanut Butter" />
+                      <button class="product-wish" type="button" aria-label="Add Peanut Butter to wishlist">
+                        <img src="./assets/Tab/wishlist.svg" alt="" aria-hidden="true" />
+                      </button>
+                    </div>
+                    <div class="product-body">
+                      <h3>Peanut Butter</h3>
+                      <p>500g • Creamy</p>
+                      <div class="product-meta">
+                        <strong>5.20 XAF</strong>
+                        <button class="product-cart" type="button" aria-label="Add Peanut Butter to cart">
+                          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg>
+                        </button>
+                      </div>
+                    </div>
+                  </article>
+                </a>
+  
+                <a class="product-card-link" href="./product-detail.html">
+                  <article class="product-card">
+                    <div class="product-media">
+                      <img src="./assets/Images/img5.png" alt="Choco Ice-cream" />
+                      <button class="product-wish" type="button" aria-label="Add Choco Ice-cream to wishlist">
+                        <img src="./assets/Tab/wishlist.svg" alt="" aria-hidden="true" />
+                      </button>
+                    </div>
+                    <div class="product-body">
+                      <h3>Choco Ice-cream</h3>
+                      <p>500ml • Frozen</p>
+                      <div class="product-meta">
+                        <strong>6.75 XAF</strong>
+                        <button class="product-cart" type="button" aria-label="Add Choco Ice-cream to cart">
+                          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg>
+                        </button>
+                      </div>
+                    </div>
+                  </article>
+                </a>
+  
+                <a class="product-card-link" href="./product-detail.html">
+                  <article class="product-card">
+                    <div class="product-media">
+                      <img src="./assets/Images/img6.jpg" alt="Pomegranate" />
+                      <button class="product-wish" type="button" aria-label="Add Pomegranate to wishlist">
+                        <img src="./assets/Tab/wishlist.svg" alt="" aria-hidden="true" />
+                      </button>
+                    </div>
+                    <div class="product-body">
+                      <h3>Pomegranate</h3>
+                      <p>1kg • Fresh</p>
+                      <div class="product-meta">
+                        <strong>4.25 XAF</strong>
+                        <button class="product-cart" type="button" aria-label="Add Pomegranate to cart">
+                          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg>
+                        </button>
+                      </div>
+                    </div>
+                  </article>
+                </a>
+  
+                <a class="product-card-link" href="./product-detail.html">
+                  <article class="product-card">
+                    <div class="product-media">
+                      <img src="./assets/Images/img1.png" alt="Fresh Avocados" />
+                      <button class="product-wish" type="button" aria-label="Add Fresh Avocados to wishlist">
+                        <img src="./assets/Tab/wishlist.svg" alt="" aria-hidden="true" />
+                      </button>
+                    </div>
+                    <div class="product-body">
+                      <h3>Fresh Avocados</h3>
+                      <p>1kg • Organic</p>
+                      <div class="product-meta">
+                        <strong>3.49 XAF</strong>
+                        <button class="product-cart" type="button" aria-label="Add Fresh Avocados to cart">
+                          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg>
+                        </button>
+                      </div>
+                    </div>
+                  </article>
+              </a>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

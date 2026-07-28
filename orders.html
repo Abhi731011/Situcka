@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="My Orders — track and manage your SITÙCKA orders." />
+    <title>My Orders | SITÙCKA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/theme.css" />
+    <link rel="stylesheet" href="./css/dashboard.css" />
+    <script type="module" src="./js/components/sidebar.js"></script>
+    <script type="module" src="./js/components/header.js"></script>
+    <script type="module" src="./js/home.js"></script>
+    <script type="module" src="./js/orders.js"></script>
+  </head>
+  <body class="orders-page">
+    <div class="app-shell">
+      <app-sidebar active="orders"></app-sidebar>
+      <button class="mobile-overlay" type="button" aria-label="Close menu"></button>
+
+      <div class="app-main">
+        <app-header></app-header>
+
+        <main class="orders-content">
+          <div class="orders-layout">
+            <div class="orders-main">
+              <header class="orders-header">
+                <h1>My Orders</h1>
+                <p>Track, view and manage all your orders in one place.</p>
+              </header>
+
+              <div class="orders-tabs" role="tablist" aria-label="Order status">
+                <button class="orders-tab is-active" type="button" role="tab" data-status="all" aria-selected="true">
+                  All Orders <span>56</span>
+                </button>
+                <button class="orders-tab" type="button" role="tab" data-status="active" aria-selected="false">
+                  Active <span>2</span>
+                </button>
+                <button class="orders-tab" type="button" role="tab" data-status="completed" aria-selected="false">
+                  Completed <span>42</span>
+                </button>
+                <button class="orders-tab" type="button" role="tab" data-status="cancelled" aria-selected="false">
+                  Cancelled <span>12</span>
+                </button>
+              </div>
+
+              <div class="orders-toolbar">
+                <label class="orders-search">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <circle cx="11" cy="11" r="7" />
+                    <path d="m20 20-3.5-3.5" />
+                  </svg>
+                  <input type="search" placeholder="Search by restaurant, store or order ID..." />
+                </label>
+                <button class="orders-select" type="button">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <rect x="3" y="5" width="18" height="16" rx="2" />
+                    <path d="M3 10h18M8 3v4M16 3v4" />
+                  </svg>
+                  Last 3 Months
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg>
+                </button>
+                <button class="orders-select" type="button">
+                  All Services
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg>
+                </button>
+                <button class="orders-filters" type="button">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M4 5h16l-6 7v5l-4 2v-7L4 5z" />
+                  </svg>
+                  Filters
+                </button>
+              </div>
+
+              <ul class="orders-list">
+                <li class="order-card" data-status="completed" data-search="emerald grocer ord-84561 groceries">
+                  <img class="order-card__media" src="./assets/Images/img14.png" alt="The Emerald Grocer" />
+                  <div class="order-card__info">
+                    <span class="order-card__service order-card__service--groceries">GROCERIES</span>
+                    <h3>The Emerald Grocer</h3>
+                    <p>2 Items • Order ID: #ORD-84561</p>
+                    <div class="order-card__meta">
+                      <span class="order-card__rating"><span aria-hidden="true">★</span> 4.7</span>
+                      <span>May 22, 2024 • 11:20 AM</span>
+                    </div>
+                  </div>
+                  <div class="order-card__amount">
+                    <span>TOTAL AMOUNT</span>
+                    <strong>$124.30</strong>
+                    <p>SITUCKA Prepaid</p>
+                  </div>
+                  <div class="order-card__status">
+                    <span class="order-card__badge order-card__badge--delivered">Delivered</span>
+                    <p>May 22, 12:05 PM</p>
+                  </div>
+                  <div class="order-card__actions">
+                    <button class="order-card__btn order-card__btn--primary" type="button">View Details</button>
+                    <button class="order-card__btn" type="button">Reorder</button>
+                  </div>
+                </li>
+
+                <li class="order-card" data-status="completed" data-search="bella napoli pizza ord-84520 food">
+                  <img class="order-card__media" src="./assets/Images/img7.png" alt="Bella Napoli Pizza" />
+                  <div class="order-card__info">
+                    <span class="order-card__service order-card__service--food">FOOD</span>
+                    <h3>Bella Napoli Pizza</h3>
+                    <p>3 Items • Order ID: #ORD-84520</p>
+                    <div class="order-card__meta">
+                      <span class="order-card__rating"><span aria-hidden="true">★</span> 4.8</span>
+                      <span>May 20, 2024 • 7:45 PM</span>
+                    </div>
+                  </div>
+                  <div class="order-card__amount">
+                    <span>TOTAL AMOUNT</span>
+                    <strong>$42.80</strong>
+                    <p>Card **** 4242</p>
+                  </div>
+                  <div class="order-card__status">
+                    <span class="order-card__badge order-card__badge--delivered">Delivered</span>
+                    <p>May 20, 8:18 PM</p>
+                  </div>
+                  <div class="order-card__actions">
+                    <button class="order-card__btn order-card__btn--primary" type="button">View Details</button>
+                    <button class="order-card__btn" type="button">Reorder</button>
+                  </div>
+                </li>
+
+                <li class="order-card" data-status="completed" data-search="healthplus pharmacy ord-84490 pharmacy">
+                  <img class="order-card__media" src="./assets/Images/img20.jpg" alt="HealthPlus Pharmacy" />
+                  <div class="order-card__info">
+                    <span class="order-card__service order-card__service--pharmacy">PHARMACY</span>
+                    <h3>HealthPlus Pharmacy</h3>
+                    <p>1 Item • Order ID: #ORD-84490</p>
+                    <div class="order-card__meta">
+                      <span class="order-card__rating"><span aria-hidden="true">★</span> 4.6</span>
+                      <span>May 18, 2024 • 3:10 PM</span>
+                    </div>
+                  </div>
+                  <div class="order-card__amount">
+                    <span>TOTAL AMOUNT</span>
+                    <strong>$18.50</strong>
+                    <p>SITUCKA Prepaid</p>
+                  </div>
+                  <div class="order-card__status">
+                    <span class="order-card__badge order-card__badge--delivered">Delivered</span>
+                    <p>May 18, 3:55 PM</p>
+                  </div>
+                  <div class="order-card__actions">
+                    <button class="order-card__btn order-card__btn--primary" type="button">View Details</button>
+                    <button class="order-card__btn" type="button">Reorder</button>
+                  </div>
+                </li>
+
+                <li class="order-card" data-status="active" data-search="fresh market express ord-84610 groceries" hidden>
+                  <img class="order-card__media" src="./assets/Images/img1.png" alt="Fresh Market Express" />
+                  <div class="order-card__info">
+                    <span class="order-card__service order-card__service--groceries">GROCERIES</span>
+                    <h3>Fresh Market Express</h3>
+                    <p>5 Items • Order ID: #ORD-84610</p>
+                    <div class="order-card__meta">
+                      <span class="order-card__rating"><span aria-hidden="true">★</span> 4.9</span>
+                      <span>Today • 12:40 PM</span>
+                    </div>
+                  </div>
+                  <div class="order-card__amount">
+                    <span>TOTAL AMOUNT</span>
+                    <strong>$56.20</strong>
+                    <p>SITUCKA Prepaid</p>
+                  </div>
+                  <div class="order-card__status">
+                    <span class="order-card__badge order-card__badge--active">On the way</span>
+                    <p>ETA 15–20 min</p>
+                  </div>
+                  <div class="order-card__actions">
+                    <button class="order-card__btn order-card__btn--primary" type="button">Track Order</button>
+                    <button class="order-card__btn" type="button">View Details</button>
+                  </div>
+                </li>
+
+                <li class="order-card" data-status="active" data-search="livrigiiano pizzeria ord-84605 food" hidden>
+                  <img class="order-card__media" src="./assets/Images/img6.jpg" alt="Livrigiiano Pizzeria" />
+                  <div class="order-card__info">
+                    <span class="order-card__service order-card__service--food">FOOD</span>
+                    <h3>Livrigiiano Pizzeria</h3>
+                    <p>2 Items • Order ID: #ORD-84605</p>
+                    <div class="order-card__meta">
+                      <span class="order-card__rating"><span aria-hidden="true">★</span> 4.6</span>
+                      <span>Today • 11:55 AM</span>
+                    </div>
+                  </div>
+                  <div class="order-card__amount">
+                    <span>TOTAL AMOUNT</span>
+                    <strong>$31.00</strong>
+                    <p>Card **** 4242</p>
+                  </div>
+                  <div class="order-card__status">
+                    <span class="order-card__badge order-card__badge--active">Preparing</span>
+                    <p>ETA 25–30 min</p>
+                  </div>
+                  <div class="order-card__actions">
+                    <button class="order-card__btn order-card__btn--primary" type="button">Track Order</button>
+                    <button class="order-card__btn" type="button">View Details</button>
+                  </div>
+                </li>
+
+                <li class="order-card" data-status="cancelled" data-search="emerald bistro ord-84310 food" hidden>
+                  <img class="order-card__media" src="./assets/Images/img3.jpg" alt="The Emerald Bistro" />
+                  <div class="order-card__info">
+                    <span class="order-card__service order-card__service--food">FOOD</span>
+                    <h3>The Emerald Bistro</h3>
+                    <p>4 Items • Order ID: #ORD-84310</p>
+                    <div class="order-card__meta">
+                      <span class="order-card__rating"><span aria-hidden="true">★</span> 4.5</span>
+                      <span>May 12, 2024 • 6:30 PM</span>
+                    </div>
+                  </div>
+                  <div class="order-card__amount">
+                    <span>TOTAL AMOUNT</span>
+                    <strong>$67.40</strong>
+                    <p>Refunded</p>
+                  </div>
+                  <div class="order-card__status">
+                    <span class="order-card__badge order-card__badge--cancelled">Cancelled</span>
+                    <p>May 12, 6:42 PM</p>
+                  </div>
+                  <div class="order-card__actions">
+                    <button class="order-card__btn order-card__btn--primary" type="button">View Details</button>
+                    <button class="order-card__btn" type="button">Reorder</button>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <aside class="orders-side" aria-label="Orders overview">
+              <section class="orders-summary">
+                <h2>Order Summary</h2>
+                <ul>
+                  <li>
+                    <span class="orders-summary__icon" aria-hidden="true">
+                      <img src="./assets/active.svg" alt="" />
+                    </span>
+                    <span>Active Orders</span>
+                    <strong>2</strong>
+                  </li>
+                  <li>
+                    <span class="orders-summary__icon" aria-hidden="true">
+                      <img src="./assets/complete.svg" alt="" />
+                    </span>
+                    <span>Completed Orders</span>
+                    <strong>42</strong>
+                  </li>
+                  <li>
+                    <span class="orders-summary__icon" aria-hidden="true">
+                      <img src="./assets/cancelled.svg" alt="" />
+                    </span>
+                    <span>Cancelled Orders</span>
+                    <strong>12</strong>
+                  </li>
+                  <li class="orders-summary__total">
+                    <span class="orders-summary__icon" aria-hidden="true">
+                      <img src="./assets/total.svg" alt="" />
+                    </span>
+                    <span>Total Orders</span>
+                    <strong>56</strong>
+                  </li>
+                </ul>
+              </section>
+
+              <section class="orders-spent">
+                <p class="orders-spent__label">TOTAL SPENT THIS MONTH</p>
+                <strong class="orders-spent__amount">$182.45</strong>
+                <p class="orders-spent__trend">
+                  <span class="orders-spent__trend-up">▲ 12%</span>
+                  <span>from last month</span>
+                </p>
+                <div class="orders-spent__chart" aria-hidden="true">
+                  <span class="orders-spent__bar orders-spent__bar--1" style="--h: 28%"></span>
+                  <span class="orders-spent__bar orders-spent__bar--2" style="--h: 48%"></span>
+                  <span class="orders-spent__bar orders-spent__bar--3" style="--h: 62%"></span>
+                  <span class="orders-spent__bar orders-spent__bar--4" style="--h: 100%"></span>
+                  <span class="orders-spent__bar orders-spent__bar--5" style="--h: 46%"></span>
+                  <span class="orders-spent__bar orders-spent__bar--6" style="--h: 86%"></span>
+                  <span class="orders-spent__bar orders-spent__bar--7" style="--h: 70%"></span>
+                </div>
+              </section>
+
+              <section class="orders-promo">
+                <div class="orders-promo__copy">
+                  <h2>Unlock more savings</h2>
+                  <p>Check out the best offers and save big on your next order!</p>
+                  <a class="orders-promo__btn" href="#">Explore Offers</a>
+                </div>
+                <img src="./assets/Images/img34.jpg" alt="" aria-hidden="true" />
+              </section>
+
+              <section class="orders-suggest">
+                <div class="orders-suggest__head">
+                  <h2>You Might Like</h2>
+                  <a href="./restaurants.html">View All</a>
+                </div>
+                <ul>
+                  <li>
+                    <img src="./assets/Images/img7.png" alt="" />
+                    <div>
+                      <strong>Bella Napoli Pizza</strong>
+                      <span><span aria-hidden="true">★</span> 4.8 • 15-25 min</span>
+                    </div>
+                    <button type="button" aria-label="Add Bella Napoli Pizza">+</button>
+                  </li>
+                  <li>
+                    <img src="./assets/Images/img14.png" alt="" />
+                    <div>
+                      <strong>The Emerald Grocer</strong>
+                      <span><span aria-hidden="true">★</span> 4.7 • Free Delivery</span>
+                    </div>
+                    <button type="button" aria-label="Add The Emerald Grocer">+</button>
+                  </li>
+                  <li>
+                    <img src="./assets/Images/img20.jpg" alt="" />
+                    <div>
+                      <strong>HealthPlus Pharmacy</strong>
+                      <span><span aria-hidden="true">★</span> 4.6 • 20-30 min</span>
+                    </div>
+                    <button type="button" aria-label="Add HealthPlus Pharmacy">+</button>
+                  </li>
+                </ul>
+              </section>
+
+              <section class="orders-help">
+                <h2>Need Help?</h2>
+                <p>Our support team is here to help you 24/7.</p>
+                <div class="orders-help__actions">
+                  <button class="orders-help__chat" type="button">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <path
+                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"
+                      />
+                    </svg>
+                    Live Chat
+                  </button>
+                  <button class="orders-help__faqs" type="button">View FAQs</button>
+                </div>
+              </section>
+            </aside>
+          </div>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

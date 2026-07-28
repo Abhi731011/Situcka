@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="My Wishlist — saved favorites on SITÙCKA." />
+    <title>My Wishlist | SITÙCKA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/theme.css" />
+    <link rel="stylesheet" href="./css/dashboard.css" />
+    <script type="module" src="./js/components/sidebar.js"></script>
+    <script type="module" src="./js/components/header.js"></script>
+    <script type="module" src="./js/home.js"></script>
+    <script type="module" src="./js/wishlist.js"></script>
+  </head>
+  <body class="wishlist-page">
+    <div class="app-shell">
+      <app-sidebar active="wishlist"></app-sidebar>
+      <button class="mobile-overlay" type="button" aria-label="Close menu"></button>
+
+      <div class="app-main">
+        <app-header></app-header>
+
+        <main class="wishlist-content">
+          <div class="wishlist-layout">
+            <div class="wishlist-main">
+              <header class="wishlist-header">
+                <h1>My Wishlist</h1>
+                <p>All your favorite items, saved in one place.</p>
+              </header>
+
+              <div class="wishlist-tabs" role="tablist" aria-label="Wishlist categories">
+                <button
+                  class="wishlist-tab is-active"
+                  type="button"
+                  role="tab"
+                  aria-selected="true"
+                  data-tab="products"
+                >
+                  <span class="wishlist-tab__icon wishlist-tab__icon--heart" aria-hidden="true"></span>
+                  Saved Products <span>(3)</span>
+                </button>
+                <button
+                  class="wishlist-tab"
+                  type="button"
+                  role="tab"
+                  aria-selected="false"
+                  data-tab="places"
+                >
+                  <span class="wishlist-tab__icon wishlist-tab__icon--location" aria-hidden="true"></span>
+                  Saved Places <span>(0)</span>
+                </button>
+              </div>
+
+              <section
+                class="wishlist-panel is-active"
+                id="wishlist-products"
+                role="tabpanel"
+                aria-label="Saved products"
+              >
+                <div class="wishlist-panel__head">
+                  <h2>Saved Items <span>(3)</span></h2>
+                  <button class="wishlist-clear" type="button">Clear All</button>
+                </div>
+
+                <ul class="wishlist-list">
+                  <li class="wishlist-item">
+                    <div class="wishlist-item__media">
+                      <img src="./assets/Images/img7.png" alt="Gourmet Truffle Pizza" />
+                      <span class="wishlist-item__badge">PROMOTED</span>
+                      <button class="wishlist-item__heart" type="button" aria-label="Remove from wishlist">
+                        <img src="./assets/heart.svg" alt="" aria-hidden="true" />
+                      </button>
+                    </div>
+                    <div class="wishlist-item__body">
+                      <div class="wishlist-item__top">
+                        <div>
+                          <h3>Gourmet Truffle Pizza</h3>
+                          <p>Livrigiiano Pizzeria</p>
+                          <span class="wishlist-item__rating">
+                            <span aria-hidden="true">★</span>
+                            <b>4.6</b> (120 reviews)
+                          </span>
+                        </div>
+                        <strong>$24.00</strong>
+                      </div>
+                      <div class="wishlist-item__actions">
+                        <button class="wishlist-item__cart" type="button">
+                          <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M6 7h12l-1 12H7L6 7z" />
+                            <path d="M9 7V5a3 3 0 0 1 6 0v2" />
+                          </svg>
+                          Move to Cart
+                        </button>
+                        <button class="wishlist-item__remove" type="button" aria-label="Remove item">
+                          <img src="./assets/delete.svg" alt="" aria-hidden="true" />
+                        </button>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li class="wishlist-item">
+                    <div class="wishlist-item__media">
+                      <img src="./assets/Images/img1.png" alt="Organic Hass Avocados" />
+                      <span class="wishlist-item__badge">PROMOTED</span>
+                      <button class="wishlist-item__heart" type="button" aria-label="Remove from wishlist">
+                        <img src="./assets/heart.svg" alt="" aria-hidden="true" />
+                      </button>
+                    </div>
+                    <div class="wishlist-item__body">
+                      <div class="wishlist-item__top">
+                        <div>
+                          <h3>Organic Hass Avocados (2 Pack)</h3>
+                          <p>Fresh Market Express</p>
+                          <span class="wishlist-item__rating">
+                            <span aria-hidden="true">★</span>
+                            <b>4.9</b> (1.2k reviews)
+                          </span>
+                        </div>
+                        <strong>$4.99</strong>
+                      </div>
+                      <div class="wishlist-item__actions">
+                        <button class="wishlist-item__cart" type="button">
+                          <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M6 7h12l-1 12H7L6 7z" />
+                            <path d="M9 7V5a3 3 0 0 1 6 0v2" />
+                          </svg>
+                          Move to Cart
+                        </button>
+                        <button class="wishlist-item__remove" type="button" aria-label="Remove item">
+                          <img src="./assets/delete.svg" alt="" aria-hidden="true" />
+                        </button>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li class="wishlist-item">
+                    <div class="wishlist-item__media">
+                      <img src="./assets/Images/img3.jpg" alt="Artisan Sourdough" />
+                      <span class="wishlist-item__badge">PROMOTED</span>
+                      <button class="wishlist-item__heart" type="button" aria-label="Remove from wishlist">
+                        <img src="./assets/heart.svg" alt="" aria-hidden="true" />
+                      </button>
+                    </div>
+                    <div class="wishlist-item__body">
+                      <div class="wishlist-item__top">
+                        <div>
+                          <h3>Artisan Sourdough Loaf</h3>
+                          <p>The Emerald Bistro</p>
+                          <span class="wishlist-item__rating">
+                            <span aria-hidden="true">★</span>
+                            <b>4.8</b> (86 reviews)
+                          </span>
+                        </div>
+                        <strong>$4.50</strong>
+                      </div>
+                      <div class="wishlist-item__actions">
+                        <button class="wishlist-item__cart" type="button">
+                          <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M6 7h12l-1 12H7L6 7z" />
+                            <path d="M9 7V5a3 3 0 0 1 6 0v2" />
+                          </svg>
+                          Move to Cart
+                        </button>
+                        <button class="wishlist-item__remove" type="button" aria-label="Remove item">
+                          <img src="./assets/delete.svg" alt="" aria-hidden="true" />
+                        </button>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </section>
+
+              <section
+                class="wishlist-panel"
+                id="wishlist-places"
+                role="tabpanel"
+                aria-label="Saved places"
+                hidden
+              >
+                <div class="wishlist-empty">
+                  <p>No saved places yet.</p>
+                  <a href="./restaurants.html">Browse restaurants</a>
+                </div>
+              </section>
+            </div>
+
+            <aside class="wishlist-side" aria-label="Wishlist tips">
+              <article class="wishlist-promo">
+                <div class="wishlist-promo__copy">
+                  <h3>Everything you need, delivered with care</h3>
+                  <p>From food to bills, groceries to parcels — Stücka has you covered.</p>
+                </div>
+                <img src="./assets/Images/img33.png" alt="" aria-hidden="true" />
+              </article>
+
+              <div class="wishlist-features">
+                <article class="wishlist-feature">
+                  <span class="wishlist-feature__icon" aria-hidden="true">
+                    <img src="./assets/wide.svg" alt="" />
+                  </span>
+                  <div>
+                    <strong>Wide Selection</strong>
+                    <p>Choose from thousands of products and services.</p>
+                  </div>
+                </article>
+                <article class="wishlist-feature">
+                  <span class="wishlist-feature__icon" aria-hidden="true">
+                    <img src="./assets/best.svg" alt="" />
+                  </span>
+                  <div>
+                    <strong>Best Quality</strong>
+                    <p>Handpicked quality you can trust, every time.</p>
+                  </div>
+                </article>
+                <article class="wishlist-feature">
+                  <span class="wishlist-feature__icon" aria-hidden="true">
+                    <img src="./assets/Become-Rider-icon.svg" alt="" />
+                  </span>
+                  <div>
+                    <strong>Fast Delivery</strong>
+                    <p>Quick and reliable delivery at your doorstep.</p>
+                  </div>
+                </article>
+                <article class="wishlist-feature">
+                  <span class="wishlist-feature__icon wishlist-feature__icon--green" aria-hidden="true">
+                    <img src="./assets/secure.svg" alt="" />
+                  </span>
+                  <div>
+                    <strong>Secure Payments</strong>
+                    <p>100% safe and secure payments for your peace of mind.</p>
+                  </div>
+                </article>
+              </div>
+
+              <article class="wishlist-cta">
+                <div class="wishlist-cta__copy">
+                  <h3>Hungry? Don't wait!</h3>
+                  <p>Add your favorites to cart and place your order now.</p>
+                  <a class="wishlist-cta__btn" href="./dashboard.html">Start Ordering</a>
+                </div>
+                <img src="./assets/Images/img34.png" alt="" aria-hidden="true" />
+              </article>
+
+              <article class="wishlist-help">
+                <h3>Need help with your order?</h3>
+                <p>Our support team is here to assist you 24/7.</p>
+                <div class="wishlist-help__actions">
+                  <button type="button">
+                    <img src="./assets/Header/message.svg" alt="" aria-hidden="true" />
+                    Chat with us
+                  </button>
+                  <button type="button">View FAQs</button>
+                </div>
+              </article>
+            </aside>
+          </div>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

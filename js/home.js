@@ -5,7 +5,7 @@ overlay?.addEventListener("click", () => {
   document.querySelector(".menu-button")?.setAttribute("aria-expanded", "false");
 });
 
-document.querySelectorAll(".restaurant-card-link .product-wish").forEach((btn) => {
+document.querySelectorAll(".restaurant-card-link .product-wish, .product-card-link .product-wish, .product-card-link .product-cart").forEach((btn) => {
   btn.addEventListener("click", (event) => {
     event.preventDefault();
     event.stopPropagation();
