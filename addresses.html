@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Saved Addresses — manage delivery locations on SITÙCKA." />
+    <title>Saved Addresses | SITÙCKA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/theme.css" />
+    <link rel="stylesheet" href="./css/dashboard.css" />
+    <script type="module" src="./js/components/sidebar.js"></script>
+    <script type="module" src="./js/components/header.js"></script>
+    <script type="module" src="./js/home.js"></script>
+    <script type="module" src="./js/addresses.js"></script>
+  </head>
+  <body class="addresses-page">
+    <div class="app-shell">
+      <app-sidebar active="addresses"></app-sidebar>
+      <button class="mobile-overlay" type="button" aria-label="Close menu"></button>
+
+      <div class="app-main">
+        <app-header></app-header>
+
+        <main class="addresses-content">
+          <div class="addresses-layout">
+            <div class="addresses-main">
+              <header class="addresses-header">
+                <div>
+                  <h1>Saved Addresses</h1>
+                  <p>Manage your delivery locations for a seamless boutique experience.</p>
+                </div>
+                <a class="addresses-add-btn" href="./add-address.html">+ Add New Address</a>
+              </header>
+
+              <div class="addresses-toolbar">
+                <label class="addresses-search">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <circle cx="11" cy="11" r="7" />
+                    <path d="m20 20-3.5-3.5" />
+                  </svg>
+                  <input type="search" placeholder="Search address by name or location..." />
+                </label>
+                <button class="addresses-select" type="button">
+                  All Locations
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg>
+                </button>
+              </div>
+
+              <ul class="addresses-list">
+                <li class="address-card address-card--home is-default" data-search="home 128 knightsbridge belgravia london">
+                  <div class="address-card__tools">
+                    <button type="button" aria-label="Edit address">
+                      <img src="./assets/Address/editgrey.svg" alt="" />
+                    </button>
+                    <button type="button" aria-label="Favorite address">
+                      <img src="./assets/Address/star.svg" alt="" />
+                    </button>
+                    <button type="button" aria-label="Delete address">
+                      <img src="./assets/Address/delete.svg" alt="" />
+                    </button>
+                  </div>
+
+                  <div class="address-card__layout">
+                    <div class="address-card__body">
+                      <div class="address-card__head">
+                        <span class="address-card__icon" aria-hidden="true">
+                          <img src="./assets/Address/home.svg" alt="" />
+                        </span>
+                        <div class="address-card__info">
+                          <h3>
+                            Home
+                            <span class="address-card__badge">DEFAULT</span>
+                          </h3>
+                          <p class="address-card__line1">128 Knightsbridge, Apartment 4B</p>
+                          <p class="address-card__line2">Belgravia, London SW1X 7PA, United Kingdom</p>
+
+                          <p class="address-card__phone">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                              <path
+                                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"
+                              />
+                            </svg>
+                            +44 20 7946 0123
+                          </p>
+
+                          <p class="address-card__notes">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                              <path d="M14 2v6h6M8 13h8M8 17h6" />
+                            </svg>
+                            <span>
+                              <strong>Delivery Notes:</strong>
+                              Ring the bell twice. Leave at the door if no response.
+                            </span>
+                          </p>
+
+                          <div class="address-card__actions">
+                            <button class="address-card__btn address-card__btn--default is-active" type="button">
+                              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>
+                              Set as Default
+                            </button>
+                            <button class="address-card__btn" type="button">
+                              <img src="./assets/Address/map.svg" alt="" aria-hidden="true" />
+                              View on Map
+                            </button>
+                            <button class="address-card__btn" type="button">
+                              <img src="./assets/Address/edit.svg" alt="" aria-hidden="true" />
+                              Edit
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="address-card__media">
+                      <img src="./assets/map.svg" alt="Home location map" />
+                      <p>Last used: Today, 12:45 PM</p>
+                    </div>
+                  </div>
+                </li>
+
+                <li class="address-card address-card--office" data-search="office 88 madison avenue midtown ny 10016">
+                  <div class="address-card__tools">
+                    <button type="button" aria-label="Edit address">
+                      <img src="./assets/Address/editgrey.svg" alt="" />
+                    </button>
+                    <button type="button" aria-label="Favorite address">
+                      <img src="./assets/Address/star.svg" alt="" />
+                    </button>
+                    <button type="button" aria-label="Delete address">
+                      <img src="./assets/Address/delete.svg" alt="" />
+                    </button>
+                  </div>
+
+                  <div class="address-card__layout">
+                    <div class="address-card__body">
+                      <div class="address-card__head">
+                        <span class="address-card__icon" aria-hidden="true">
+                          <img src="./assets/Address/office.svg" alt="" />
+                        </span>
+                        <div class="address-card__info">
+                          <h3>Office</h3>
+                          <p class="address-card__line1">88 Madison Avenue, Floor 12</p>
+                          <p class="address-card__line2">Midtown, NY 10016, United States</p>
+
+                          <p class="address-card__phone">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                              <path
+                                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"
+                              />
+                            </svg>
+                            +1 (212) 555-0192
+                          </p>
+
+                          <p class="address-card__notes">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                              <path d="M14 2v6h6M8 13h8M8 17h6" />
+                            </svg>
+                            <span>
+                              <strong>Delivery Notes:</strong>
+                              Reception desk on 12th floor. Ask for John Doe.
+                            </span>
+                          </p>
+
+                          <div class="address-card__actions">
+                            <button class="address-card__btn address-card__btn--default" type="button">
+                              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>
+                              Set as Default
+                            </button>
+                            <button class="address-card__btn" type="button">
+                              <img src="./assets/Address/map.svg" alt="" aria-hidden="true" />
+                              View on Map
+                            </button>
+                            <button class="address-card__btn" type="button">
+                              <img src="./assets/Address/edit.svg" alt="" aria-hidden="true" />
+                              Edit
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="address-card__media">
+                      <img src="./assets/Address/img1.png" alt="Office location" />
+                      <p>Last used: Yesterday, 6:20 PM</p>
+                    </div>
+                  </div>
+                </li>
+
+                <li class="address-card address-card--other" data-search="weekend apartment 42 riverside drive brooklyn ny 11201">
+                  <div class="address-card__tools">
+                    <button type="button" aria-label="Edit address">
+                      <img src="./assets/Address/editgrey.svg" alt="" />
+                    </button>
+                    <button type="button" aria-label="Favorite address">
+                      <img src="./assets/Address/star.svg" alt="" />
+                    </button>
+                    <button type="button" aria-label="Delete address">
+                      <img src="./assets/Address/delete.svg" alt="" />
+                    </button>
+                  </div>
+
+                  <div class="address-card__layout">
+                    <div class="address-card__body">
+                      <div class="address-card__head">
+                        <span class="address-card__icon" aria-hidden="true">
+                          <img src="./assets/Address/other.svg" alt="" />
+                        </span>
+                        <div class="address-card__info">
+                          <h3>Weekend Apartment</h3>
+                          <p class="address-card__line1">42 Riverside Drive, Unit 8</p>
+                          <p class="address-card__line2">Brooklyn, NY 11201, United States</p>
+
+                          <p class="address-card__phone">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                              <path
+                                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"
+                              />
+                            </svg>
+                            +1 (718) 555-0163
+                          </p>
+
+                          <p class="address-card__notes">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                              <path d="M14 2v6h6M8 13h8M8 17h6" />
+                            </svg>
+                            <span>
+                              <strong>Delivery Notes:</strong>
+                              Call on arrival. Building code 4821#.
+                            </span>
+                          </p>
+
+                          <div class="address-card__actions">
+                            <button class="address-card__btn address-card__btn--default" type="button">
+                              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>
+                              Set as Default
+                            </button>
+                            <button class="address-card__btn" type="button">
+                              <img src="./assets/Address/map.svg" alt="" aria-hidden="true" />
+                              View on Map
+                            </button>
+                            <button class="address-card__btn" type="button">
+                              <img src="./assets/Address/edit.svg" alt="" aria-hidden="true" />
+                              Edit
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="address-card__media">
+                      <img src="./assets/Address/img.png" alt="Weekend apartment location" />
+                      <p>Last used: May 18, 2024</p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+
+              <article class="addresses-empty-add">
+                <div class="addresses-empty-add__copy">
+                  <span class="addresses-empty-add__plus" aria-hidden="true">+</span>
+                  <div>
+                    <h2>Add New Address</h2>
+                    <p>Save another delivery location for faster checkout next time.</p>
+                  </div>
+                </div>
+                <a class="addresses-add-btn" href="./add-address.html">+ Add Address</a>
+              </article>
+            </div>
+
+            <aside class="addresses-side" aria-label="Address overview">
+              <section class="addresses-panel">
+                <h2>Address Summary</h2>
+                <ul class="addresses-summary">
+                  <li>
+                    <img src="./assets/Address/total.svg" alt="" aria-hidden="true" />
+                    <span>Total Addresses</span>
+                    <strong>06</strong>
+                  </li>
+                  <li>
+                    <img src="./assets/Address/deafult.svg" alt="" aria-hidden="true" />
+                    <span>Default Address</span>
+                    <strong>Home</strong>
+                  </li>
+                  <li>
+                    <img src="./assets/Address/most.svg" alt="" aria-hidden="true" />
+                    <span>Most Used</span>
+                    <strong>Home</strong>
+                  </li>
+                  <li>
+                    <img src="./assets/Address/area.svg" alt="" aria-hidden="true" />
+                    <span>Areas Covered</span>
+                    <strong>3 Locations</strong>
+                  </li>
+                </ul>
+              </section>
+
+              <section class="addresses-panel">
+                <h2>Delivery Preferences</h2>
+                <ul class="addresses-prefs">
+                  <li>
+                    <img src="./assets/Address/call.svg" alt="" aria-hidden="true" />
+                    <span>Contact Number</span>
+                    <strong>+44 20 7946 0123</strong>
+                  </li>
+                  <li>
+                    <img src="./assets/Address/time.svg" alt="" aria-hidden="true" />
+                    <span>Preferred Delivery Time</span>
+                    <strong>Anytime</strong>
+                  </li>
+                  <li>
+                    <img src="./assets/Address/homegrey.svg" alt="" aria-hidden="true" />
+                    <span>Leave at Door</span>
+                    <strong>Yes</strong>
+                  </li>
+                  <li>
+                    <img src="./assets/Address/bell.svg" alt="" aria-hidden="true" />
+                    <span>Ring Bell</span>
+                    <strong>Yes</strong>
+                  </li>
+                  <li>
+                    <img src="./assets/Address/call.svg" alt="" aria-hidden="true" />
+                    <span>Call on Arrival</span>
+                    <strong>No</strong>
+                  </li>
+                </ul>
+              </section>
+
+              <section class="addresses-panel">
+                <h2>Delivery Coverage</h2>
+                <ul class="addresses-coverage">
+                  <li>
+                    <span class="addresses-coverage__icon" aria-hidden="true">
+                      <img src="./assets/Address/food.svg" alt="" />
+                    </span>
+                    <span>Food Delivery</span>
+                    <em>AVAILABLE</em>
+                  </li>
+                  <li>
+                    <span class="addresses-coverage__icon" aria-hidden="true">
+                      <img src="./assets/Address/grocery.svg" alt="" />
+                    </span>
+                    <span>Grocery Delivery</span>
+                    <em>AVAILABLE</em>
+                  </li>
+                  <li>
+                    <span class="addresses-coverage__icon" aria-hidden="true">
+                      <img src="./assets/Address/parcel.svg" alt="" />
+                    </span>
+                    <span>Parcel Delivery</span>
+                    <em>AVAILABLE</em>
+                  </li>
+                  <li>
+                    <span class="addresses-coverage__icon" aria-hidden="true">
+                      <img src="./assets/Address/bill.svg" alt="" />
+                    </span>
+                    <span>Bill Payment Service</span>
+                    <em>AVAILABLE</em>
+                  </li>
+                </ul>
+              </section>
+
+              <section class="addresses-panel addresses-nearby">
+                <div class="addresses-nearby__head">
+                  <h2>Nearby Services (From Home)</h2>
+                  <a href="./restaurants.html">View All</a>
+                </div>
+                <ul>
+                  <li>
+                    <img src="./assets/Images/img7.png" alt="" />
+                    <strong>Bella Napoli Pizza</strong>
+                    <span>300 m</span>
+                  </li>
+                  <li>
+                    <img src="./assets/Images/img14.png" alt="" />
+                    <strong>FreshMart Grocery</strong>
+                    <span>450 m</span>
+                  </li>
+                  <li>
+                    <img src="./assets/Images/img20.jpg" alt="" />
+                    <strong>HealthPlus Pharmacy</strong>
+                    <span>600 m</span>
+                  </li>
+                </ul>
+              </section>
+
+              <section class="addresses-help">
+                <h2>Need Help?</h2>
+                <p>Our support team is here to help you 24/7.</p>
+                <div class="addresses-help__actions">
+                  <button class="addresses-help__chat" type="button">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <path
+                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"
+                      />
+                    </svg>
+                    Live Chat
+                  </button>
+                  <button class="addresses-help__faqs" type="button">View FAQs</button>
+                </div>
+              </section>
+            </aside>
+          </div>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

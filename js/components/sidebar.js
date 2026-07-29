@@ -12,10 +12,10 @@ const primaryItems = [
 ];
 
 const exploreItems = [
-  { key: "offers", label: "Offers", icon: "offer.svg", href: "#" },
+  // { key: "offers", label: "Offers", icon: "offer.svg", href: "#" },
   { key: "orders", label: "Orders", icon: "order.svg", href: "./orders.html" },
   { key: "wishlist", label: "Wishlist", icon: "wishlist.svg", href: "./wishlist.html" },
-  { key: "addresses", label: "Addresses", icon: "Address.svg", href: "#" },
+  { key: "addresses", label: "Addresses", icon: "Address.svg", href: "./addresses.html" },
   { key: "payments", label: "Payments", icon: "Payment.svg", href: "#" },
   { key: "help", label: "Help & Support", icon: "Help.svg", href: "#" },
   { key: "settings", label: "Settings", icon: "Setting.svg", href: "#" },
@@ -35,6 +35,7 @@ function getActiveKey(host) {
   if (file.includes("grocer") || file.includes("stores-all") || file.includes("store-detail") || file.includes("product-detail")) return "groceries";
   if (file.includes("wishlist")) return "wishlist";
   if (file.includes("order")) return "orders";
+  if (file.includes("address")) return "addresses";
   if (file.includes("parcel")) return "parcel";
   return "home";
 }

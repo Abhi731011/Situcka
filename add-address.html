@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Add a new delivery address on SITÙCKA." />
+    <title>Add New Address | SITÙCKA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/theme.css" />
+    <link rel="stylesheet" href="./css/dashboard.css" />
+    <script type="module" src="./js/components/sidebar.js"></script>
+    <script type="module" src="./js/components/header.js"></script>
+    <script type="module" src="./js/home.js"></script>
+    <script type="module" src="./js/add-address.js"></script>
+  </head>
+  <body class="add-address-page">
+    <div class="app-shell">
+      <app-sidebar active="addresses"></app-sidebar>
+      <button class="mobile-overlay" type="button" aria-label="Close menu"></button>
+
+      <div class="app-main">
+        <app-header></app-header>
+
+        <main class="add-address-content">
+          <header class="add-address-header">
+            <a class="add-address-back" href="./addresses.html" aria-label="Back to addresses">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 18 9 12l6-6" /></svg>
+            </a>
+            <div>
+              <h1>Add New Address</h1>
+              <p>Enter your address details below and save the location.</p>
+            </div>
+          </header>
+
+          <div class="add-address-layout">
+            <form class="add-address-form" id="add-address-form">
+              <div class="add-address-field">
+                <label class="add-address-label">Address Type</label>
+                <div class="add-address-types" role="group" aria-label="Address type">
+                  <button class="add-address-type is-active" type="button" data-type="home">
+                    <span class="add-address-type__icon" aria-hidden="true"></span>
+                    Home
+                  </button>
+                  <button class="add-address-type" type="button" data-type="office">
+                    <span class="add-address-type__icon" aria-hidden="true"></span>
+                    Office
+                  </button>
+                  <button class="add-address-type" type="button" data-type="other">
+                    <span class="add-address-type__icon" aria-hidden="true"></span>
+                    Other
+                  </button>
+                </div>
+              </div>
+
+              <div class="add-address-field">
+                <label class="add-address-label">Address Details</label>
+                <button class="add-address-location" type="button">
+                  <img src="./assets/Address/location.svg" alt="" aria-hidden="true" />
+                  Use Current Location
+                </button>
+              </div>
+
+              <div class="add-address-field">
+                <label class="add-address-label" for="street">Street Address Line 1</label>
+                <input
+                  id="street"
+                  name="street"
+                  type="text"
+                  value="128 Knightsbridge, Apartment 4B"
+                  placeholder="Enter street address"
+                />
+              </div>
+
+              <div class="add-address-field">
+                <label class="add-address-label" for="landmark">Landmark (Optional)</label>
+                <input
+                  id="landmark"
+                  name="landmark"
+                  type="text"
+                  placeholder="e.g. Near Harrods Shopping Centre"
+                />
+              </div>
+
+              <div class="add-address-row">
+                <div class="add-address-field">
+                  <label class="add-address-label" for="city">City/Town</label>
+                  <input id="city" name="city" type="text" value="London" placeholder="City" />
+                </div>
+                <div class="add-address-field">
+                  <label class="add-address-label" for="zip">Zip/Postal Code</label>
+                  <input id="zip" name="zip" type="text" value="SW1X 7PA" placeholder="Postal code" />
+                </div>
+              </div>
+
+              <div class="add-address-row">
+                <div class="add-address-field">
+                  <label class="add-address-label" for="state">State/Province</label>
+                  <input id="state" name="state" type="text" value="England" placeholder="State" />
+                </div>
+                <div class="add-address-field">
+                  <label class="add-address-label" for="country">Country</label>
+                  <div class="add-address-select-wrap">
+                    <select id="country" name="country">
+                      <option value="United Kingdom" selected>United Kingdom</option>
+                      <option value="United States">United States</option>
+                      <option value="Canada">Canada</option>
+                      <option value="India">India</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="add-address-default">
+                <div>
+                  <strong>Set as default address</strong>
+                  <p>This address will be selected automatically for all future orders.</p>
+                </div>
+                <button
+                  class="add-address-toggle is-on"
+                  type="button"
+                  role="switch"
+                  aria-checked="true"
+                  aria-label="Set as default address"
+                >
+                  <span></span>
+                </button>
+              </div>
+
+              <div class="add-address-actions">
+                <a class="add-address-cancel" href="./addresses.html">Cancel</a>
+                <button class="add-address-save" type="submit">Save Address</button>
+              </div>
+            </form>
+
+            <aside class="add-address-preview" aria-label="Live address preview">
+              <img class="add-address-preview__art" src="./assets/Address/img3.png" alt="" aria-hidden="true" />
+              <span class="add-address-preview__badge">LIVE PREVIEW</span>
+              <div class="add-address-preview__body">
+                <img src="./assets/Address/map.svg" alt="" aria-hidden="true" />
+                <div>
+                  <strong id="preview-line1">128 Knightsbridge, Apartment 4B</strong>
+                  <p id="preview-line2">Belgravia, London SW1X 7PA, United Kingdom</p>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>
