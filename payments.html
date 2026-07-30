@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="SITUCKA Prepaid — wallet balance and payment history." />
+    <title>SITUCKA Prepaid | SITÙCKA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/theme.css" />
+    <link rel="stylesheet" href="./css/dashboard.css" />
+    <script type="module" src="./js/components/sidebar.js"></script>
+    <script type="module" src="./js/components/header.js"></script>
+    <script type="module" src="./js/home.js"></script>
+    <script type="module" src="./js/payments.js"></script>
+  </head>
+  <body class="payments-page">
+    <div class="app-shell">
+      <app-sidebar active="payments"></app-sidebar>
+      <button class="mobile-overlay" type="button" aria-label="Close menu"></button>
+
+      <div class="app-main">
+        <app-header></app-header>
+
+        <main class="payments-content">
+          <header class="payments-header">
+            <h1>Situcka Prepaid</h1>
+            <p>Add funds to your wallet and make faster, safer payments.</p>
+          </header>
+
+          <div class="payments-layout">
+            <div class="payments-main">
+              <section class="payments-balance">
+                <div class="payments-balance__copy">
+                  <p class="payments-balance__label">AVAILABLE BALANCE</p>
+                  <strong>1,250.00 XAF</strong>
+                  <button class="payments-balance__btn" type="button">+ Add Funds</button>
+                </div>
+                <img src="./assets/Payment/payment.png" alt="" aria-hidden="true" />
+              </section>
+
+              <section class="payments-history">
+                <div class="payments-history__head">
+                  <h2>History</h2>
+                  <button class="payments-filter" type="button">
+                    <img src="./assets/Payment/filter.svg" alt="" aria-hidden="true" />
+                    Filter
+                  </button>
+                </div>
+
+                <div class="payments-tabs" role="tablist" aria-label="Transaction type">
+                  <button class="payments-tab is-active" type="button" role="tab" data-tab="credited" aria-selected="true">
+                    Credited
+                  </button>
+                  <button class="payments-tab" type="button" role="tab" data-tab="debited" aria-selected="false">
+                    Debited
+                  </button>
+                </div>
+
+                <ul class="payments-list" data-panel="credited">
+                  <li class="payments-item">
+                    <span class="payments-item__icon" aria-hidden="true">
+                      <img src="./assets/Payment/refund.svg" alt="" />
+                    </span>
+                    <div class="payments-item__info">
+                      <strong>Refund for Order #1</strong>
+                      <p>
+                        May 12, 2024
+                        <em class="payments-tag">Refund</em>
+                        TRX-9821
+                      </p>
+                    </div>
+                    <div class="payments-item__amount">
+                      <b>+ 345.00 XAF</b>
+                      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 6 6-6 6" /></svg>
+                    </div>
+                  </li>
+                  <li class="payments-item">
+                    <span class="payments-item__icon" aria-hidden="true">
+                      <img src="./assets/Payment/bonus.svg" alt="" />
+                    </span>
+                    <div class="payments-item__info">
+                      <strong>Referral Bonus</strong>
+                      <p>
+                        May 10, 2024
+                        <em class="payments-tag payments-tag--promo">Promotional</em>
+                        TRX-9810
+                      </p>
+                    </div>
+                    <div class="payments-item__amount">
+                      <b>+ 50.00 XAF</b>
+                      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 6 6-6 6" /></svg>
+                    </div>
+                  </li>
+                  <li class="payments-item">
+                    <span class="payments-item__icon" aria-hidden="true">
+                      <img src="./assets/Payment/balance.svg" alt="" />
+                    </span>
+                    <div class="payments-item__info">
+                      <strong>Balance Top-up</strong>
+                      <p>
+                        May 08, 2024
+                        <em class="payments-tag payments-tag--promo">Promotional</em>
+                        TRX-9798
+                      </p>
+                    </div>
+                    <div class="payments-item__amount">
+                      <b>+ 500.00 XAF</b>
+                      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 6 6-6 6" /></svg>
+                    </div>
+                  </li>
+                  <li class="payments-item">
+                    <span class="payments-item__icon" aria-hidden="true">
+                      <img src="./assets/Payment/bonus.svg" alt="" />
+                    </span>
+                    <div class="payments-item__info">
+                      <strong>Welcome Cashback</strong>
+                      <p>
+                        May 05, 2024
+                        <em class="payments-tag payments-tag--promo">Promotional</em>
+                        TRX-9782
+                      </p>
+                    </div>
+                    <div class="payments-item__amount">
+                      <b>+ 25.00 XAF</b>
+                      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 6 6-6 6" /></svg>
+                    </div>
+                  </li>
+                  <li class="payments-item">
+                    <span class="payments-item__icon" aria-hidden="true">
+                      <img src="./assets/Payment/refund.svg" alt="" />
+                    </span>
+                    <div class="payments-item__info">
+                      <strong>Refund for Order #2</strong>
+                      <p>
+                        May 03, 2024
+                        <em class="payments-tag">Refund</em>
+                        TRX-9765
+                      </p>
+                    </div>
+                    <div class="payments-item__amount">
+                      <b>+ 18.50 XAF</b>
+                      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 6 6-6 6" /></svg>
+                    </div>
+                  </li>
+                  <li class="payments-item">
+                    <span class="payments-item__icon" aria-hidden="true">
+                      <img src="./assets/Payment/balance.svg" alt="" />
+                    </span>
+                    <div class="payments-item__info">
+                      <strong>Wallet Top-up</strong>
+                      <p>
+                        Apr 28, 2024
+                        <em class="payments-tag payments-tag--promo">Promotional</em>
+                        TRX-9740
+                      </p>
+                    </div>
+                    <div class="payments-item__amount">
+                      <b>+ 200.00 XAF</b>
+                      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 6 6-6 6" /></svg>
+                    </div>
+                  </li>
+                </ul>
+
+                <ul class="payments-list" data-panel="debited" hidden>
+                  <li class="payments-item">
+                    <span class="payments-item__icon" aria-hidden="true">
+                      <img src="./assets/Payment/balance.svg" alt="" />
+                    </span>
+                    <div class="payments-item__info">
+                      <strong>Food Order</strong>
+                      <p>
+                        May 21, 2024
+                        <em class="payments-tag">Order</em>
+                        TRX-98401
+                      </p>
+                    </div>
+                    <div class="payments-item__amount payments-item__amount--debit">
+                      <b>- 42.80 XAF</b>
+                      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 6 6-6 6" /></svg>
+                    </div>
+                  </li>
+                  <li class="payments-item">
+                    <span class="payments-item__icon" aria-hidden="true">
+                      <img src="./assets/Payment/balance.svg" alt="" />
+                    </span>
+                    <div class="payments-item__info">
+                      <strong>Grocery Delivery</strong>
+                      <p>
+                        May 19, 2024
+                        <em class="payments-tag">Order</em>
+                        TRX-98355
+                      </p>
+                    </div>
+                    <div class="payments-item__amount payments-item__amount--debit">
+                      <b>- 124.30 XAF</b>
+                      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 6 6-6 6" /></svg>
+                    </div>
+                  </li>
+                  <li class="payments-item">
+                    <span class="payments-item__icon" aria-hidden="true">
+                      <img src="./assets/Payment/refund.svg" alt="" />
+                    </span>
+                    <div class="payments-item__info">
+                      <strong>Parcel Delivery</strong>
+                      <p>
+                        May 15, 2024
+                        <em class="payments-tag">Parcel</em>
+                        TRX-98220
+                      </p>
+                    </div>
+                    <div class="payments-item__amount payments-item__amount--debit">
+                      <b>- 18.00 XAF</b>
+                      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 6 6-6 6" /></svg>
+                    </div>
+                  </li>
+                  <li class="payments-item">
+                    <span class="payments-item__icon" aria-hidden="true">
+                      <img src="./assets/Payment/balance.svg" alt="" />
+                    </span>
+                    <div class="payments-item__info">
+                      <strong>Pharmacy Order</strong>
+                      <p>
+                        May 11, 2024
+                        <em class="payments-tag">Order</em>
+                        TRX-98188
+                      </p>
+                    </div>
+                    <div class="payments-item__amount payments-item__amount--debit">
+                      <b>- 36.20 XAF</b>
+                      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 6 6-6 6" /></svg>
+                    </div>
+                  </li>
+                  <li class="payments-item">
+                    <span class="payments-item__icon" aria-hidden="true">
+                      <img src="./assets/Payment/balance.svg" alt="" />
+                    </span>
+                    <div class="payments-item__info">
+                      <strong>Restaurant Order</strong>
+                      <p>
+                        May 07, 2024
+                        <em class="payments-tag">Order</em>
+                        TRX-98012
+                      </p>
+                    </div>
+                    <div class="payments-item__amount payments-item__amount--debit">
+                      <b>- 67.40 XAF</b>
+                      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 6 6-6 6" /></svg>
+                    </div>
+                  </li>
+                  <li class="payments-item">
+                    <span class="payments-item__icon" aria-hidden="true">
+                      <img src="./assets/Payment/balance.svg" alt="" />
+                    </span>
+                    <div class="payments-item__info">
+                      <strong>Bill Payment</strong>
+                      <p>
+                        May 02, 2024
+                        <em class="payments-tag">Bill</em>
+                        TRX-97901
+                      </p>
+                    </div>
+                    <div class="payments-item__amount payments-item__amount--debit">
+                      <b>- 15.00 XAF</b>
+                      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 6 6-6 6" /></svg>
+                    </div>
+                  </li>
+                </ul>
+
+                <button class="payments-more" type="button">
+                  View More Transactions
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg>
+                </button>
+              </section>
+            </div>
+
+            <aside class="payments-side" aria-label="Wallet sidebar">
+              <section class="payments-panel payments-panel--actions">
+                <h2>Quick Actions</h2>
+                <ul class="payments-actions">
+                  <li>
+                    <a href="#">
+                      <span class="payments-actions__icon" aria-hidden="true">
+                        <img src="./assets/Payment/Add.svg" alt="" />
+                      </span>
+                      <span>
+                        <strong>Add Funds</strong>
+                        <small>Top-up your wallet balance</small>
+                      </span>
+                      <svg class="payments-actions__chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 6 6-6 6" /></svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <span class="payments-actions__icon" aria-hidden="true">
+                        <img src="./assets/Payment/Payment.svg" alt="" />
+                      </span>
+                      <span>
+                        <strong>Payment Methods</strong>
+                        <small>Manage your cards &amp; UPI</small>
+                      </span>
+                      <svg class="payments-actions__chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 6 6-6 6" /></svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <span class="payments-actions__icon" aria-hidden="true">
+                        <img src="./assets/Payment/Transaction.svg" alt="" />
+                      </span>
+                      <span>
+                        <strong>Transaction History</strong>
+                        <small>View all your wallet activities</small>
+                      </span>
+                      <svg class="payments-actions__chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 6 6-6 6" /></svg>
+                    </a>
+                  </li>
+                </ul>
+              </section>
+
+              <section class="payments-panel payments-panel--benefits">
+                <h2>Wallet Benefits</h2>
+                <ul class="payments-benefits">
+                  <li>
+                    <span class="payments-benefits__icon" aria-hidden="true">
+                      <img src="./assets/Payment/faster.svg" alt="" />
+                    </span>
+                    <div>
+                      <strong>Faster Checkout</strong>
+                      <p>Pay in one click on every order</p>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="payments-benefits__icon" aria-hidden="true">
+                      <img src="./assets/Payment/secure.svg" alt="" />
+                    </span>
+                    <div>
+                      <strong>Secure &amp; Safe</strong>
+                      <p>100% secure transactions</p>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="payments-benefits__icon" aria-hidden="true">
+                      <img src="./assets/Payment/offer.svg" alt="" />
+                    </span>
+                    <div>
+                      <strong>Great Offers</strong>
+                      <p>Exclusive wallet offers and rewards</p>
+                    </div>
+                  </li>
+                </ul>
+              </section>
+
+              <section class="payments-help">
+                <h2>Need Help?</h2>
+                <p>Our support team is here to help with payments, refunds, and wallet top-ups 24/7.</p>
+                <button class="payments-help__btn" type="button">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M3 11a9 9 0 0 1 18 0v5a3 3 0 0 1-3 3h-1" />
+                    <path d="M21 16v2a2 2 0 0 1-2 2h-1" />
+                    <path d="M3 16v2a2 2 0 0 0 2 2h1" />
+                  </svg>
+                  Contact Support
+                </button>
+              </section>
+            </aside>
+          </div>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

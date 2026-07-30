@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Help Center — find answers and support on SITÙCKA." />
+    <title>Help Center | SITÙCKA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/theme.css" />
+    <link rel="stylesheet" href="./css/dashboard.css" />
+    <script type="module" src="./js/components/sidebar.js"></script>
+    <script type="module" src="./js/components/header.js"></script>
+    <script type="module" src="./js/home.js"></script>
+    <script type="module" src="./js/help.js"></script>
+  </head>
+  <body class="help-page">
+    <div class="app-shell">
+      <app-sidebar active="help"></app-sidebar>
+      <button class="mobile-overlay" type="button" aria-label="Close menu"></button>
+
+      <div class="app-main">
+        <app-header></app-header>
+
+        <main class="help-content">
+          <header class="help-header">
+            <h1>Help Center</h1>
+            <p>How can we help you today?</p>
+          </header>
+
+          <label class="help-search" aria-label="Search help topics">
+            <svg class="help-search__icon" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="11" cy="11" r="7" />
+              <path d="m20 20-3.5-3.5" />
+            </svg>
+            <input
+              id="help-search-input"
+              type="search"
+              placeholder="Type keywords like 'refund', 'delivery issue'..."
+              autocomplete="off"
+            />
+            <button class="help-search__mic" type="button" aria-label="Voice search">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 14a3 3 0 0 0 3-3V6a3 3 0 0 0-6 0v5a3 3 0 0 0 3 3Z" />
+                <path d="M19 11a7 7 0 0 1-14 0" />
+                <path d="M12 18v3" />
+              </svg>
+            </button>
+          </label>
+
+          <section class="help-grid" aria-label="Help topics">
+            <a class="help-card" href="#" data-keywords="shopper support orders returns accounts">
+              <span class="help-card__icon" aria-hidden="true">
+                <img src="./assets/Help/shopper.svg" alt="" />
+              </span>
+              <strong>Shopper Support</strong>
+              <p>Issues with orders, returns, accounts</p>
+              <svg class="help-card__arrow" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M5 12h14M13 6l6 6-6 6" />
+              </svg>
+            </a>
+
+            <a class="help-card" href="#" data-keywords="vendor help seller store">
+              <span class="help-card__icon" aria-hidden="true">
+                <img src="./assets/Help/vendor.svg" alt="" />
+              </span>
+              <strong>Vendor Help</strong>
+              <p>Issues with orders, returns, accounts</p>
+              <svg class="help-card__arrow" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M5 12h14M13 6l6 6-6 6" />
+              </svg>
+            </a>
+
+            <a class="help-card" href="#" data-keywords="billing payments refund wallet card">
+              <span class="help-card__icon" aria-hidden="true">
+                <img src="./assets/Help/Billing.svg" alt="" />
+              </span>
+              <strong>Billing &amp; Payments</strong>
+              <p>Issues with orders, returns, accounts</p>
+              <svg class="help-card__arrow" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M5 12h14M13 6l6 6-6 6" />
+              </svg>
+            </a>
+
+            <a class="help-card" href="#" data-keywords="livestream faqs live stream">
+              <span class="help-card__icon" aria-hidden="true">
+                <img src="./assets/Help/FAQ.svg" alt="" />
+              </span>
+              <strong>Livestream FAQs</strong>
+              <p>Issues with orders, returns, accounts</p>
+              <svg class="help-card__arrow" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M5 12h14M13 6l6 6-6 6" />
+              </svg>
+            </a>
+
+            <a class="help-card" href="#" data-keywords="returns refunds refund return">
+              <span class="help-card__icon" aria-hidden="true">
+                <img src="./assets/Help/return.svg" alt="" />
+              </span>
+              <strong>Returns &amp; Refunds</strong>
+              <p>Issues with orders, returns, accounts</p>
+              <svg class="help-card__arrow" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M5 12h14M13 6l6 6-6 6" />
+              </svg>
+            </a>
+
+            <a class="help-card" href="#" data-keywords="shipping delivery parcel tracking">
+              <span class="help-card__icon" aria-hidden="true">
+                <img src="./assets/Help/shipping.svg" alt="" />
+              </span>
+              <strong>Shipping &amp; Delivery</strong>
+              <p>Issues with orders, returns, accounts</p>
+              <svg class="help-card__arrow" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M5 12h14M13 6l6 6-6 6" />
+              </svg>
+            </a>
+
+            <a class="help-card" href="#" data-keywords="submit ticket support request">
+              <span class="help-card__icon" aria-hidden="true">
+                <img src="./assets/Help/ticket.svg" alt="" />
+              </span>
+              <strong>Submit a Ticket</strong>
+              <p>Issues with orders, returns, accounts</p>
+              <svg class="help-card__arrow" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M5 12h14M13 6l6 6-6 6" />
+              </svg>
+            </a>
+
+            <a class="help-card" href="#" data-keywords="general faqs questions help">
+              <span class="help-card__icon" aria-hidden="true">
+                <img src="./assets/Help/general.svg" alt="" />
+              </span>
+              <strong>General FAQs</strong>
+              <p>Issues with orders, returns, accounts</p>
+              <svg class="help-card__arrow" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M5 12h14M13 6l6 6-6 6" />
+              </svg>
+            </a>
+
+            <a class="help-card" href="#" data-keywords="contact us support email phone">
+              <span class="help-card__icon" aria-hidden="true">
+                <img src="./assets/Help/conatct.svg" alt="" />
+              </span>
+              <strong>Contact Us</strong>
+              <p>Issues with orders, returns, accounts</p>
+              <svg class="help-card__arrow" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M5 12h14M13 6l6 6-6 6" />
+              </svg>
+            </a>
+          </section>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>
