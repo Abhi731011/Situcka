@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Chat Center — message support and order chats on SITÙCKA." />
+    <title>Chat Center | SITÙCKA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/theme.css" />
+    <link rel="stylesheet" href="./css/dashboard.css" />
+    <script type="module" src="./js/chat.js"></script>
+  </head>
+  <body class="chat-page">
+    <div class="chat-shell">
+      <aside class="chat-sidebar" aria-label="Conversations">
+        <header class="chat-sidebar__head">
+          <a class="chat-icon-btn" href="./dashboard.html" aria-label="Back to dashboard">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 18 9 12l6-6" /></svg>
+          </a>
+          <h1>Chat Center</h1>
+          <button class="chat-icon-btn" type="button" aria-label="Filter chats">
+            <img src="./assets/Payment/filter.svg" alt="" />
+          </button>
+        </header>
+
+        <label class="chat-search">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="11" cy="11" r="7" />
+            <path d="m20 20-3.5-3.5" />
+          </svg>
+          <input type="search" placeholder="Search conversations..." id="chat-search" />
+        </label>
+
+        <div class="chat-tabs" role="tablist" aria-label="Chat filters">
+          <button class="chat-tab is-active" type="button" data-filter="all">All Chats</button>
+          <button class="chat-tab" type="button" data-filter="active">Active Orders</button>
+          <button class="chat-tab" type="button" data-filter="completed">Completed</button>
+          <button class="chat-tab" type="button" data-filter="refunds">Refunds</button>
+        </div>
+
+        <button class="chat-ai" type="button" data-chat="ai">
+          <span class="chat-ai__icon" aria-hidden="true">
+            <img src="./assets/Ai.svg" alt="" />
+          </span>
+          <span class="chat-ai__copy">
+            <strong>Situcka AI Assistant <em>Online</em></strong>
+            <small>Ask me anything about your orders...</small>
+          </span>
+          <svg class="chat-ai__pin" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 17v5M9 3h6l1 7 3 2v2H5v-2l3-2 1-7z" />
+          </svg>
+        </button>
+
+        <p class="chat-section-label">Recent Conversations</p>
+
+        <ul class="chat-list" id="chat-list">
+          <li>
+            <button class="chat-item is-active" type="button" data-chat="ord-8829" data-filter="completed">
+              <img src="./assets/Images/img25.png" alt="" />
+              <span class="chat-item__copy">
+                <strong>#ORD-8829 • Green Leaf</strong>
+                <small>Your order has been delivered. Enjoy!</small>
+              </span>
+              <span class="chat-item__meta">
+                <time>12:45 PM</time>
+                <em>2</em>
+              </span>
+            </button>
+          </li>
+          <li>
+            <button class="chat-item" type="button" data-chat="ord-8831" data-filter="active">
+              <img src="./assets/Images/img26.png" alt="" />
+              <span class="chat-item__copy">
+                <strong>#ORD-8831 • Burger Hub</strong>
+                <small>Rider is on the way to your location</small>
+              </span>
+              <span class="chat-item__meta">
+                <time>11:20 AM</time>
+                <em>1</em>
+              </span>
+            </button>
+          </li>
+          <li>
+            <button class="chat-item" type="button" data-chat="ord-8810" data-filter="completed">
+              <img src="./assets/Images/img27.jpg" alt="" />
+              <span class="chat-item__copy">
+                <strong>#ORD-8810 • Fresh Mart</strong>
+                <small>Thanks for your feedback!</small>
+              </span>
+              <span class="chat-item__meta">
+                <time>Yesterday</time>
+              </span>
+            </button>
+          </li>
+          <li>
+            <button class="chat-item" type="button" data-chat="billing" data-filter="refunds">
+              <span class="chat-item__icon chat-item__icon--billing" aria-hidden="true">
+                <img src="./assets/billing.svg" alt="" />
+              </span>
+              <span class="chat-item__copy">
+                <strong>Billing &amp; Refund Inquiry</strong>
+                <small>Refund processed for order #ORD-8799</small>
+              </span>
+              <span class="chat-item__meta">
+                <time>Mon</time>
+                <em>3</em>
+              </span>
+            </button>
+          </li>
+        </ul>
+      </aside>
+
+      <section class="chat-main" aria-label="Active conversation">
+        <header class="chat-main__head">
+          <button class="chat-icon-btn chat-main__back" type="button" data-chat-back aria-label="Back to conversations">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 18 9 12l6-6" /></svg>
+          </button>
+          <img class="chat-main__avatar" src="./assets/Images/img25.png" alt="" />
+          <div class="chat-main__info">
+            <div class="chat-main__title-row">
+              <strong>#ORD-8829</strong>
+              <span class="chat-status">DELIVERED</span>
+            </div>
+            <p>Green Leaf Bistro • 2 items • $24.50</p>
+          </div>
+          <div class="chat-main__actions">
+            <button class="chat-icon-btn" type="button" aria-label="Call">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M22 16.9v2a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h2a2 2 0 0 1 2 1.7c.1.9.3 1.7.6 2.5a2 2 0 0 1-.5 2.1L7 9.1a16 16 0 0 0 6 6l.8-1.2a2 2 0 0 1 2.1-.5c.8.3 1.6.5 2.5.6A2 2 0 0 1 22 16.9Z" />
+              </svg>
+            </button>
+            <button class="chat-icon-btn" type="button" aria-label="Profile">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 12a4 4 0 1 0-4-4 4 4 0 0 0 4 4Z" />
+                <path d="M4 20a8 8 0 0 1 16 0" />
+              </svg>
+            </button>
+            <button class="chat-icon-btn" type="button" aria-label="More options">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="12" cy="5" r="1.5" />
+                <circle cx="12" cy="12" r="1.5" />
+                <circle cx="12" cy="19" r="1.5" />
+              </svg>
+            </button>
+          </div>
+        </header>
+
+        <div class="chat-thread" id="chat-thread">
+          <p class="chat-secure">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 15v2M7 11V8a5 5 0 0 1 10 0v3" />
+              <rect x="5" y="11" width="14" height="10" rx="2" />
+            </svg>
+            This is the beginning of your conversation. Your data is secure with Situcka.
+          </p>
+
+          <p class="chat-day">Today</p>
+
+          <div class="chat-msg chat-msg--out">
+            <div class="chat-bubble">Hi, I just received my order. Thanks!</div>
+            <span class="chat-msg__meta">
+              12:30 PM
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m4 12 4 4 8-10M10 16l2 2 8-10" /></svg>
+            </span>
+          </div>
+
+          <div class="chat-msg chat-msg--in">
+            <span class="chat-msg__avatar" aria-hidden="true">
+              <img src="./assets/chat.svg" alt="" />
+            </span>
+            <div>
+              <strong class="chat-msg__name">Situcka Support</strong>
+              <div class="chat-bubble">
+                You’re welcome! We’re glad it arrived safely. Let us know if you need anything else.
+              </div>
+              <span class="chat-msg__meta">12:32 PM</span>
+            </div>
+          </div>
+
+          <div class="chat-msg chat-msg--in">
+            <span class="chat-msg__avatar" aria-hidden="true">
+              <img src="./assets/chat.svg" alt="" />
+            </span>
+            <div>
+              <strong class="chat-msg__name">Situcka Support</strong>
+              <div class="chat-bubble chat-bubble--card">
+                <div class="chat-rider">
+                  <img src="./assets/Header/img.jpg" alt="Marcus" />
+                  <div>
+                    <strong>Marcus</strong>
+                    <small>Scooter • ⭐ 4.9</small>
+                  </div>
+                </div>
+                <div class="chat-rider__actions">
+                  <button type="button">Track Order</button>
+                  <button type="button">Call Rider</button>
+                </div>
+              </div>
+              <span class="chat-msg__meta">12:33 PM</span>
+            </div>
+          </div>
+
+          <div class="chat-msg chat-msg--out">
+            <div class="chat-bubble">Perfect, I’ll track from here.</div>
+            <span class="chat-msg__meta">
+              12:35 PM
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m4 12 4 4 8-10M10 16l2 2 8-10" /></svg>
+            </span>
+          </div>
+        </div>
+
+        <div class="chat-compose">
+          <div class="chat-quick">
+            <button type="button">Where is my order?</button>
+            <button type="button">Talk to rider</button>
+            <button type="button">Request refund</button>
+            <button type="button">Order issue</button>
+          </div>
+
+          <form class="chat-input-bar" id="chat-form">
+            <button class="chat-icon-btn" type="button" aria-label="Attach file">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="m21.4 11.6-8.8 8.8a5 5 0 0 1-7.1-7.1l9.2-9.2a3.2 3.2 0 0 1 4.5 4.5l-9.2 9.2a1.4 1.4 0 0 1-2-2l8.1-8.2" />
+              </svg>
+            </button>
+            <label class="chat-input">
+              <input type="text" id="chat-input" placeholder="Type a message..." autocomplete="off" />
+              <button type="button" aria-label="Emoji">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <circle cx="12" cy="12" r="9" />
+                  <path d="M8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01" />
+                </svg>
+              </button>
+              <button type="button" aria-label="Gallery">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <rect x="3" y="5" width="18" height="14" rx="2" />
+                  <circle cx="9" cy="10" r="1.5" />
+                  <path d="m21 16-5-5-8 8" />
+                </svg>
+              </button>
+            </label>
+            <button class="chat-send" type="submit" aria-label="Send message">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M22 2 11 13M22 2l-7 20-4-9-9-4 20-7z" />
+              </svg>
+            </button>
+          </form>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

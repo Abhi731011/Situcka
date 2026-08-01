@@ -18,7 +18,7 @@ const exploreItems = [
   { key: "addresses", label: "Addresses", icon: "Address.svg", href: "./addresses.html" },
   { key: "payments", label: "Payments", icon: "Payment.svg", href: "./payments.html" },
   { key: "help", label: "Help & Support", icon: "Help.svg", href: "./help.html" },
-  { key: "settings", label: "Settings", icon: "Setting.svg", href: "#" },
+  { key: "settings", label: "Settings", icon: "Setting.svg", href: "./settings.html" },
 ];
 
 function getActiveKey(host) {
@@ -38,6 +38,7 @@ function getActiveKey(host) {
   if (file.includes("address")) return "addresses";
   if (file.includes("payment")) return "payments";
   if (file.includes("help")) return "help";
+  if (file.includes("setting")) return "settings";
   if (file.includes("parcel")) return "parcel";
   return "home";
 }

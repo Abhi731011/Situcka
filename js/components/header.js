@@ -1,6 +1,6 @@
 const headerActions = [
   { label: "Notifications", icon: "notification.svg", count: 3 },
-  { label: "Messages", icon: "message.svg", count: 1 },
+  { label: "Messages", icon: "message.svg", count: 1, href: "./chat.html" },
   { label: "Cart", icon: "cart.svg", count: 4 },
 ];
 
@@ -36,8 +36,15 @@ class AppHeader extends HTMLElement {
 
         <div class="header-actions" aria-label="Quick actions">
           ${headerActions
-            .map(
-              ({ label, icon, count }) => `
+            .map(({ label, icon, count, href }) =>
+              href
+                ? `
+                <a class="header-action" href="${href}" aria-label="${label}">
+                  <img src="./assets/Header/${icon}" alt="" aria-hidden="true" />
+                  <span>${count}</span>
+                </a>
+              `
+                : `
                 <button class="header-action" type="button" aria-label="${label}">
                   <img src="./assets/Header/${icon}" alt="" aria-hidden="true" />
                   <span>${count}</span>
@@ -47,7 +54,7 @@ class AppHeader extends HTMLElement {
             .join("")}
         </div>
 
-        <button class="profile-menu" type="button" aria-label="Open profile menu">
+        <a class="profile-menu" href="./profile.html" aria-label="Open profile">
           <span class="profile-avatar">
             <span class="profile-fallback">JD</span>
             <img src="./assets/Header/img.jpg" alt="John Doe" />
@@ -59,7 +66,7 @@ class AppHeader extends HTMLElement {
           <svg class="chevron" viewBox="0 0 24 24" aria-hidden="true">
             <path d="m7 10 5 5 5-5" />
           </svg>
-        </button>
+        </a>
       </header>
     `;
 

@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Settings — manage your SITÙCKA account and preferences." />
+    <title>Settings | SITÙCKA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/theme.css" />
+    <link rel="stylesheet" href="./css/dashboard.css" />
+    <script type="module" src="./js/components/sidebar.js"></script>
+    <script type="module" src="./js/components/header.js"></script>
+    <script type="module" src="./js/home.js"></script>
+    <script type="module" src="./js/settings.js"></script>
+  </head>
+  <body class="settings-page">
+    <div class="app-shell">
+      <app-sidebar active="settings"></app-sidebar>
+      <button class="mobile-overlay" type="button" aria-label="Close menu"></button>
+
+      <div class="app-main">
+        <app-header></app-header>
+
+        <main class="settings-content">
+          <header class="settings-header">
+            <h1>Settings</h1>
+            <p>Manage your account, preferences and app settings</p>
+          </header>
+
+          <div class="settings-layout">
+            <div class="settings-main">
+              <section class="settings-panel" aria-label="Account settings">
+                <ul class="settings-list">
+                  <li>
+                    <a class="settings-row" href="./profile.html">
+                      <span class="settings-row__icon" aria-hidden="true">
+                        <img src="./assets/profile.svg" alt="" />
+                      </span>
+                      <span class="settings-row__copy">
+                        <strong>Profile Information</strong>
+                        <small>Update your name, email, phone number and profile picture</small>
+                      </span>
+                      <svg class="settings-row__chevron" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="m9 6 6 6-6 6" />
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <button class="settings-row" type="button" data-open-password-modal>
+                      <span class="settings-row__icon" aria-hidden="true">
+                        <img src="./assets/lock.svg" alt="" />
+                      </span>
+                      <span class="settings-row__copy">
+                        <strong>Change Password</strong>
+                        <small>Update your password to keep your account secure</small>
+                      </span>
+                      <svg class="settings-row__chevron" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="m9 6 6 6-6 6" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <div class="settings-row">
+                      <span class="settings-row__icon" aria-hidden="true">
+                        <img src="./assets/app.svg" alt="" />
+                      </span>
+                      <span class="settings-row__copy">
+                        <strong>App Language</strong>
+                        <small>Choose your preferred language for the app</small>
+                      </span>
+                      <div class="settings-dropdown" data-dropdown>
+                        <button
+                          class="settings-select"
+                          type="button"
+                          aria-label="Select language"
+                          aria-haspopup="listbox"
+                          aria-expanded="false"
+                        >
+                          <span class="settings-select__value">English</span>
+                          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg>
+                        </button>
+                        <ul class="settings-dropdown__menu" role="listbox" hidden>
+                          <li>
+                            <button type="button" role="option" data-value="English" aria-selected="true">
+                              English
+                            </button>
+                          </li>
+                          <li>
+                            <button type="button" role="option" data-value="Spanish" aria-selected="false">
+                              Spanish
+                            </button>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="settings-row">
+                      <span class="settings-row__icon" aria-hidden="true">
+                        <img src="./assets/currency.svg" alt="" />
+                      </span>
+                      <span class="settings-row__copy">
+                        <strong>Currency</strong>
+                        <small>Select your preferred currency for all transactions</small>
+                      </span>
+                      <div class="settings-dropdown" data-dropdown>
+                        <button
+                          class="settings-select"
+                          type="button"
+                          aria-label="Select currency"
+                          aria-haspopup="listbox"
+                          aria-expanded="false"
+                        >
+                          <span class="settings-select__value">XFA</span>
+                          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg>
+                        </button>
+                        <ul class="settings-dropdown__menu" role="listbox" hidden>
+                          <li>
+                            <button type="button" role="option" data-value="XFA" aria-selected="true">
+                              XFA
+                            </button>
+                          </li>
+                          <li>
+                            <button type="button" role="option" data-value="USD" aria-selected="false">
+                              USD
+                            </button>
+                          </li>
+                          <li>
+                            <button type="button" role="option" data-value="EUR" aria-selected="false">
+                              EUR
+                            </button>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="settings-row">
+                      <span class="settings-row__icon" aria-hidden="true">
+                        <img src="./assets/dark.svg" alt="" />
+                      </span>
+                      <span class="settings-row__copy">
+                        <strong>Dark Mode</strong>
+                        <small>Switch between light and dark theme</small>
+                      </span>
+                      <button
+                        class="settings-toggle"
+                        type="button"
+                        role="switch"
+                        aria-checked="false"
+                        aria-label="Toggle dark mode"
+                      >
+                        <span class="settings-toggle__thumb"></span>
+                      </button>
+                    </div>
+                  </li>
+                  <li>
+                    <button class="settings-row settings-row--logout" type="button">
+                      <span class="settings-row__icon" aria-hidden="true">
+                        <img src="./assets/logout.svg" alt="" />
+                      </span>
+                      <span class="settings-row__copy">
+                        <strong>Log Out</strong>
+                        <small>Sign out from your account on this device</small>
+                      </span>
+                    </button>
+                  </li>
+                </ul>
+              </section>
+
+              <section class="settings-support" aria-label="Contact support">
+                <span class="settings-support__avatar-wrap">
+                  <img
+                    class="settings-support__avatar"
+                    src="./assets/Header/img.jpg"
+                    alt="Support representative"
+                  />
+                  <span class="settings-support__status" aria-hidden="true"></span>
+                </span>
+                <div class="settings-support__copy">
+                  <strong>Need help with your account?</strong>
+                  <p>Our support team is here to help you.</p>
+                </div>
+                <a class="settings-support__btn" href="./help.html">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M3 11a9 9 0 0 1 18 0v5a3 3 0 0 1-3 3h-1" />
+                    <path d="M21 16v2a2 2 0 0 1-2 2h-1" />
+                    <path d="M3 16v2a2 2 0 0 0 2 2h1" />
+                  </svg>
+                  Contact Support
+                </a>
+              </section>
+            </div>
+
+            <aside class="settings-side" aria-label="Account summary">
+              <section class="settings-card">
+                <h2>Account Overview</h2>
+                <div class="settings-account">
+                  <img src="./assets/Header/img.jpg" alt="John Doe" />
+                  <div>
+                    <strong>John Doe</strong>
+                    <small>john.doe@email.com</small>
+                  </div>
+                </div>
+                <a class="settings-profile-btn" href="./profile.html">
+                  View Profile
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 6 6-6 6" /></svg>
+                </a>
+              </section>
+
+              <section class="settings-secure">
+                <h2>
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                    <path d="m9 12 2 2 4-4" />
+                  </svg>
+                  Keep your account secure
+                </h2>
+                <p>Never share your password or OTP with anyone. Situcka will never ask for it.</p>
+                <a href="#">Learn More</a>
+              </section>
+
+              <section class="settings-card">
+                <h2>App Information</h2>
+                <ul class="settings-meta">
+                  <li>
+                    <span>
+                      <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <rect x="5" y="2" width="14" height="20" rx="2" />
+                        <path d="M12 18h.01" />
+                      </svg>
+                      App Version
+                    </span>
+                    <strong>v2.4.1</strong>
+                  </li>
+                  <li>
+                    <span>
+                      <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <circle cx="12" cy="12" r="9" />
+                        <path d="M12 7v5l3 2" />
+                      </svg>
+                      Last Updated
+                    </span>
+                    <strong>May 2024</strong>
+                  </li>
+                  <li>
+                    <span>
+                      <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M12 12a4 4 0 1 0-4-4 4 4 0 0 0 4 4Z" />
+                        <path d="M4 20a8 8 0 0 1 16 0" />
+                      </svg>
+                      Developer
+                    </span>
+                    <strong>Situcka Inc.</strong>
+                  </li>
+                </ul>
+              </section>
+            </aside>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <div class="password-modal" id="password-modal" hidden>
+      <button class="password-modal__overlay" type="button" data-close-password-modal aria-label="Close modal"></button>
+      <div
+        class="password-modal__dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="password-modal-title"
+      >
+        <header class="password-modal__head">
+          <div class="password-modal__title-wrap">
+            <span class="password-modal__title-icon" aria-hidden="true">
+              <img src="./assets/openlock.svg" alt="" />
+            </span>
+            <div>
+              <h2 id="password-modal-title">Change Password</h2>
+              <p>Secure your account by updating your password</p>
+            </div>
+          </div>
+          <button class="password-modal__close" type="button" data-close-password-modal aria-label="Close">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M18 6 6 18M6 6l12 12" />
+            </svg>
+          </button>
+        </header>
+
+        <div class="password-modal__body">
+          <form class="password-modal__form" id="password-form">
+            <div class="password-modal__form-intro">
+              <h3>Secure Your Account</h3>
+              <p>Update your password to keep your account protected.</p>
+            </div>
+
+            <label class="password-field">
+              <span>Current Password</span>
+              <span class="password-field__wrap">
+                <input
+                  type="password"
+                  name="currentPassword"
+                  placeholder="Enter current password"
+                  required
+                />
+                <button class="password-field__toggle" type="button" aria-label="Show password">
+                  <img src="./assets/eye.svg" alt="" />
+                </button>
+              </span>
+            </label>
+            <a class="password-forgot" href="#">Forgot Password?</a>
+
+            <label class="password-field">
+              <span>New Password</span>
+              <span class="password-field__wrap">
+                <input
+                  type="password"
+                  name="newPassword"
+                  placeholder="Enter new password"
+                  required
+                />
+                <button class="password-field__toggle" type="button" aria-label="Show password">
+                  <img src="./assets/eye.svg" alt="" />
+                </button>
+              </span>
+            </label>
+
+            <ul class="password-reqs" aria-label="Password requirements">
+              <li>
+                <span aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="m5 12 4 4 10-10" /></svg>
+                </span>
+                Min. 8 characters
+              </li>
+              <li>
+                <span aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="m5 12 4 4 10-10" /></svg>
+                </span>
+                Include a symbol
+              </li>
+            </ul>
+
+            <label class="password-field">
+              <span>Confirm New Password</span>
+              <span class="password-field__wrap">
+                <input
+                  type="password"
+                  name="confirmPassword"
+                  placeholder="Confirm new password"
+                  required
+                />
+                <button class="password-field__toggle" type="button" aria-label="Show password">
+                  <img src="./assets/eye.svg" alt="" />
+                </button>
+              </span>
+            </label>
+
+            <button class="password-submit" type="submit">
+              <img src="./assets/openlock.svg" alt="" aria-hidden="true" />
+              Update Password
+            </button>
+          </form>
+
+          <aside class="password-modal__aside" aria-label="Password tips">
+            <img class="password-modal__art" src="./assets/change.png" alt="" />
+
+            <section class="password-tip">
+              <div class="password-tip__head">
+                <span aria-hidden="true">
+                  <img src="./assets/shield.svg" alt="" />
+                </span>
+                <div>
+                  <strong>Security Tip</strong>
+                  <p>Avoid using common words or birthdays for a stronger password.</p>
+                </div>
+              </div>
+
+              <ul class="password-tip__list">
+                <li>
+                  <span class="password-tip__icon" aria-hidden="true">
+                    <img src="./assets/openlock.svg" alt="" />
+                  </span>
+                  <span>Use a combination of letters, numbers &amp; symbols</span>
+                </li>
+                <li>
+                  <span class="password-tip__icon" aria-hidden="true">
+                    <img src="./assets/eye.svg" alt="" />
+                  </span>
+                  <span>Avoid using personal information like names or dates</span>
+                </li>
+                <li>
+                  <span class="password-tip__icon" aria-hidden="true">
+                    <img src="./assets/replace.svg" alt="" />
+                  </span>
+                  <span>Change your password regularly for better security</span>
+                </li>
+              </ul>
+            </section>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

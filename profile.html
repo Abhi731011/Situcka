@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Update your personal details and profile information on SITÙCKA." />
+    <title>Profile Information | SITÙCKA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/theme.css" />
+    <link rel="stylesheet" href="./css/dashboard.css" />
+    <script type="module" src="./js/components/sidebar.js"></script>
+    <script type="module" src="./js/components/header.js"></script>
+    <script type="module" src="./js/home.js"></script>
+    <script type="module" src="./js/profile.js"></script>
+  </head>
+  <body class="profile-page">
+    <div class="app-shell">
+      <app-sidebar active="settings"></app-sidebar>
+      <button class="mobile-overlay" type="button" aria-label="Close menu"></button>
+
+      <div class="app-main">
+        <app-header></app-header>
+
+        <main class="profile-content">
+          <header class="profile-header">
+            <a class="profile-back" href="./settings.html" aria-label="Back to settings">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 18 9 12l6-6" /></svg>
+            </a>
+            <div>
+              <h1>Profile Information</h1>
+              <p>Update your personal details and profile information.</p>
+            </div>
+          </header>
+
+          <div class="profile-layout">
+            <form class="profile-main" id="profile-form">
+              <section class="profile-card">
+                <div class="profile-card__head">
+                  <div class="profile-card__title">
+                    <span class="profile-card__icon" aria-hidden="true">
+                      <img src="./assets/profile.svg" alt="" />
+                    </span>
+                    <h2>Personal Details</h2>
+                  </div>
+                  <button class="profile-photo-btn" type="button">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M4 7h3l2-2h6l2 2h3v12H4z" />
+                      <circle cx="12" cy="13" r="3.5" />
+                    </svg>
+                    Change Photo
+                  </button>
+                </div>
+
+                <div class="profile-grid">
+                  <label class="profile-field">
+                    <span>Full Name</span>
+                    <input type="text" name="fullName" value="John Doe" />
+                  </label>
+
+                  <label class="profile-field">
+                    <span>Email Address</span>
+                    <span class="profile-input-wrap">
+                      <input type="email" name="email" value="johndoe@gmail.com" />
+                      <em class="profile-verified">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4 10-10" /></svg>
+                        Verified
+                      </em>
+                    </span>
+                  </label>
+
+                  <label class="profile-field">
+                    <span>Phone Number</span>
+                    <span class="profile-phone">
+                      <button class="profile-phone__code" type="button" aria-label="Country code">
+                        <span aria-hidden="true">🇺🇸</span>
+                        +1
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg>
+                      </button>
+                      <span class="profile-input-wrap">
+                        <input type="tel" name="phone" value="(555) 123-4567" />
+                        <em class="profile-verified">
+                          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4 10-10" /></svg>
+                          Verified
+                        </em>
+                      </span>
+                    </span>
+                  </label>
+
+                  <label class="profile-field">
+                    <span>Date of Birth</span>
+                    <span class="profile-input-wrap profile-input-wrap--icon">
+                      <svg class="profile-field__lead" viewBox="0 0 24 24" aria-hidden="true">
+                        <rect x="3" y="5" width="18" height="16" rx="2" />
+                        <path d="M3 10h18M8 3v4M16 3v4" />
+                      </svg>
+                      <input type="text" name="dob" value="May 12, 1990" />
+                    </span>
+                  </label>
+                </div>
+
+                <fieldset class="profile-gender">
+                  <legend>Gender</legend>
+                  <label class="profile-radio">
+                    <input type="radio" name="gender" value="male" checked />
+                    <span></span>
+                    Male
+                  </label>
+                  <label class="profile-radio">
+                    <input type="radio" name="gender" value="female" />
+                    <span></span>
+                    Female
+                  </label>
+                  <label class="profile-radio">
+                    <input type="radio" name="gender" value="prefer-not" />
+                    <span></span>
+                    Prefer not to say
+                  </label>
+                </fieldset>
+              </section>
+
+              <section class="profile-card">
+                <div class="profile-card__head">
+                  <div class="profile-card__title">
+                    <span class="profile-card__icon" aria-hidden="true">
+                      <img src="./assets/Address/location.svg" alt="" />
+                    </span>
+                    <h2>Address</h2>
+                  </div>
+                </div>
+
+                <div class="profile-grid">
+                  <label class="profile-field">
+                    <span>Address Line 1</span>
+                    <input type="text" name="address1" value="128 Knightsbridge" />
+                  </label>
+                  <label class="profile-field">
+                    <span>Address Line 2 (Optional)</span>
+                    <input type="text" name="address2" value="Apartment 4B" />
+                  </label>
+                </div>
+
+                <div class="profile-grid profile-grid--3">
+                  <label class="profile-field">
+                    <span>City</span>
+                    <input type="text" name="city" value="New York" />
+                  </label>
+                  <label class="profile-field">
+                    <span>State</span>
+                    <span class="profile-select-wrap">
+                      <select name="state">
+                        <option selected>New York</option>
+                        <option>California</option>
+                        <option>Texas</option>
+                        <option>Florida</option>
+                      </select>
+                    </span>
+                  </label>
+                  <label class="profile-field">
+                    <span>ZIP Code</span>
+                    <input type="text" name="zip" value="10012" />
+                  </label>
+                </div>
+
+                <label class="profile-field">
+                  <span>Country</span>
+                  <span class="profile-select-wrap">
+                    <select name="country">
+                      <option selected>United States</option>
+                      <option>Canada</option>
+                      <option>United Kingdom</option>
+                      <option>Cameroon</option>
+                    </select>
+                  </span>
+                </label>
+              </section>
+
+              <section class="profile-card">
+                <div class="profile-card__head">
+                  <div class="profile-card__title">
+                    <span class="profile-card__icon" aria-hidden="true">
+                      <img src="./assets/mail.svg" alt="" />
+                    </span>
+                    <h2>Communication Preferences</h2>
+                  </div>
+                </div>
+
+                <label class="profile-check">
+                  <input type="checkbox" name="emailUpdates" checked />
+                  <span></span>
+                  I want to receive order updates and offers via email
+                </label>
+                <label class="profile-check">
+                  <input type="checkbox" name="smsUpdates" checked />
+                  <span></span>
+                  I want to receive SMS notifications about orders and offers
+                </label>
+              </section>
+
+              <div class="profile-actions">
+                <a class="profile-cancel" href="./settings.html">Cancel</a>
+                <button class="profile-save" type="submit">Save Changes</button>
+              </div>
+            </form>
+
+            <aside class="profile-side" aria-label="Profile summary">
+              <section class="profile-side-card profile-overview">
+                <h2>Profile Overview</h2>
+                <div class="profile-overview__body">
+                  <span class="profile-overview__avatar">
+                    <img src="./assets/Header/img.jpg" alt="John Doe" />
+                    <em aria-hidden="true">
+                      <svg viewBox="0 0 24 24"><path d="m5 12 4 4 10-10" /></svg>
+                    </em>
+                  </span>
+                  <strong>John Doe</strong>
+                  <span class="profile-overview__badge">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4Z" />
+                      <path d="M7 4 4 7l3 2M17 4l3 3-3 2" />
+                    </svg>
+                    Premium Member
+                  </span>
+                  <small>MEMBER SINCE MAY 2023</small>
+                </div>
+              </section>
+
+              <section class="profile-side-card">
+                <h2>Account Status</h2>
+                <ul class="profile-status">
+                  <li>
+                    <span>
+                      <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <rect x="3" y="5" width="18" height="14" rx="2" />
+                        <path d="m3 7 9 6 9-6" />
+                      </svg>
+                      Email
+                    </span>
+                    <b>Verified</b>
+                  </li>
+                  <li>
+                    <span>
+                      <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M22 16.9v2a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h2a2 2 0 0 1 2 1.7c.1.9.3 1.7.6 2.5a2 2 0 0 1-.5 2.1L7 9.1a16 16 0 0 0 6 6l.8-1.2a2 2 0 0 1 2.1-.5c.8.3 1.6.5 2.5.6A2 2 0 0 1 22 16.9Z" />
+                      </svg>
+                      Phone
+                    </span>
+                    <b>Verified</b>
+                  </li>
+                  <li>
+                    <span>
+                      <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M12 12a4 4 0 1 0-4-4 4 4 0 0 0 4 4Z" />
+                        <path d="M4 20a8 8 0 0 1 16 0" />
+                      </svg>
+                      Account
+                    </span>
+                    <b>Active</b>
+                  </li>
+                  <li>
+                    <span>
+                      <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                      </svg>
+                      KYC Status
+                    </span>
+                    <b>Verified</b>
+                  </li>
+                </ul>
+              </section>
+
+              <section class="profile-side-card profile-help">
+                <div class="profile-help__top">
+                  <span class="profile-help__icon" aria-hidden="true">
+                    <img src="./assets/need.svg" alt="" />
+                  </span>
+                  <div class="profile-help__copy">
+                    <strong>Need Help?</strong>
+                    <p>Our support team is here to help you.</p>
+                  </div>
+                </div>
+                <a class="profile-help__btn" href="./help.html">Contact Support</a>
+              </section>
+            </aside>
+          </div>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>
