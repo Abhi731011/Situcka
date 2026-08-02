@@ -2,6 +2,10 @@ const darkToggle = document.querySelector(".settings-toggle");
 const passwordModal = document.getElementById("password-modal");
 const openPasswordBtn = document.querySelector("[data-open-password-modal]");
 const closePasswordBtns = document.querySelectorAll("[data-close-password-modal]");
+const logoutModal = document.getElementById("logout-modal");
+const openLogoutBtn = document.querySelector("[data-open-logout-modal]");
+const closeLogoutBtns = document.querySelectorAll("[data-close-logout-modal]");
+const confirmLogoutBtn = document.querySelector("[data-confirm-logout]");
 
 darkToggle?.addEventListener("click", () => {
   const enabled = darkToggle.getAttribute("aria-checked") === "true";
@@ -21,14 +25,42 @@ function closePasswordModal() {
   document.body.classList.remove("password-modal-open");
 }
 
+function openLogoutModal() {
+  if (!logoutModal) return;
+  logoutModal.hidden = false;
+  document.body.classList.add("logout-modal-open");
+  confirmLogoutBtn?.focus();
+}
+
+function closeLogoutModal() {
+  if (!logoutModal) return;
+  logoutModal.hidden = true;
+  document.body.classList.remove("logout-modal-open");
+}
+
 openPasswordBtn?.addEventListener("click", openPasswordModal);
 
 closePasswordBtns.forEach((btn) => {
   btn.addEventListener("click", closePasswordModal);
 });
 
+openLogoutBtn?.addEventListener("click", openLogoutModal);
+
+closeLogoutBtns.forEach((btn) => {
+  btn.addEventListener("click", closeLogoutModal);
+});
+
+confirmLogoutBtn?.addEventListener("click", () => {
+  window.location.href = "./index.html";
+});
+
 window.addEventListener("keydown", (event) => {
-  if (event.key === "Escape" && passwordModal && !passwordModal.hidden) {
+  if (event.key !== "Escape") return;
+  if (logoutModal && !logoutModal.hidden) {
+    closeLogoutModal();
+    return;
+  }
+  if (passwordModal && !passwordModal.hidden) {
     closePasswordModal();
   }
 });

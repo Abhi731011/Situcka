@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es" class="h-full">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Enter OTP — SITÙCKA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/output.css" />
+    <link rel="stylesheet" href="./css/auth.css" />
+  </head>
+  <body class="min-h-full bg-white font-sans text-neutral-900 antialiased">
+    <div class="flex min-h-screen lg:grid lg:min-h-screen lg:grid-cols-[minmax(0,44%)_minmax(0,56%)]">
+      <!-- OTP form -->
+      <div
+        class="auth-panel px-5 pt-6 pb-8 xs:px-7 xs:pt-8 sm:px-10 sm:pt-10 sm:pb-10 md:px-12 lg:px-14 lg:py-12 xl:px-16"
+      >
+        <div class="mx-auto w-full max-w-md">
+          <a href="./index.html" class="mb-6 inline-flex sm:mb-8">
+            <img
+              src="./assets/logo-basket.svg"
+              alt="SITÙCKA - Tu cesta de la compra"
+              class="h-14 w-auto xs:h-16 sm:h-[4.5rem] md:h-20"
+              width="200"
+              height="94"
+            />
+          </a>
+
+          <h1 class="mb-2 text-2xl font-bold text-neutral-900 sm:mb-3 sm:text-3xl lg:text-[2rem]">
+            Enter OTP
+          </h1>
+          <p class="mb-1 text-sm leading-relaxed text-neutral-500 sm:text-base">
+            We&apos;ve sent a password OTP to your email.
+          </p>
+          <div class="mb-6 flex items-center gap-2 sm:mb-8">
+            <span id="otp-email" class="text-sm font-medium text-neutral-900 sm:text-base"
+              >davidjosh32@gmail.com</span
+            >
+            <a
+              href="./forgot-password.html"
+              class="inline-flex shrink-0 items-center justify-center"
+              aria-label="Edit email"
+            >
+              <img src="./assets/Address/edit.svg" alt="" class="h-4 w-4 object-contain sm:h-[18px] sm:w-[18px]" />
+            </a>
+          </div>
+
+          <form id="otp-form" class="w-full" novalidate>
+            <div class="otp-inputs mb-6 sm:mb-8" role="group" aria-label="One-time password">
+              <input
+                type="text"
+                inputmode="numeric"
+                maxlength="1"
+                pattern="[0-9]*"
+                autocomplete="one-time-code"
+                aria-label="Digit 1"
+                class="otp-input h-12 w-12 shrink-0 rounded-xl border border-hero-yellow bg-white text-center text-lg font-semibold text-neutral-900 outline-none transition-colors focus:border-hero-yellow focus:ring-2 focus:ring-hero-yellow/20 sm:h-14 sm:w-14 sm:text-xl"
+              />
+              <input
+                type="text"
+                inputmode="numeric"
+                maxlength="1"
+                pattern="[0-9]*"
+                aria-label="Digit 2"
+                class="otp-input h-12 w-12 shrink-0 rounded-xl border border-hero-yellow bg-white text-center text-lg font-semibold text-neutral-900 outline-none transition-colors focus:border-hero-yellow focus:ring-2 focus:ring-hero-yellow/20 sm:h-14 sm:w-14 sm:text-xl"
+              />
+              <input
+                type="text"
+                inputmode="numeric"
+                maxlength="1"
+                pattern="[0-9]*"
+                aria-label="Digit 3"
+                class="otp-input h-12 w-12 shrink-0 rounded-xl border border-hero-yellow bg-white text-center text-lg font-semibold text-neutral-900 outline-none transition-colors focus:border-hero-yellow focus:ring-2 focus:ring-hero-yellow/20 sm:h-14 sm:w-14 sm:text-xl"
+              />
+              <input
+                type="text"
+                inputmode="numeric"
+                maxlength="1"
+                pattern="[0-9]*"
+                aria-label="Digit 4"
+                class="otp-input h-12 w-12 shrink-0 rounded-xl border border-hero-yellow bg-white text-center text-lg font-semibold text-neutral-900 outline-none transition-colors focus:border-hero-yellow focus:ring-2 focus:ring-hero-yellow/20 sm:h-14 sm:w-14 sm:text-xl"
+              />
+            </div>
+
+            <button
+              type="submit"
+              class="mb-5 w-full rounded-xl bg-hero-yellow py-3 text-base font-bold text-white transition-colors hover:bg-brand-orange-dark sm:mb-6 sm:py-3.5"
+            >
+              Continue
+            </button>
+          </form>
+
+          <p class="auth-resend text-center text-sm font-medium sm:text-base">
+            <button
+              type="button"
+              id="resend-otp"
+              class="font-medium transition-colors disabled:cursor-not-allowed disabled:opacity-60"
+              disabled
+            >
+              Resend OTP
+            </button>
+            <span id="otp-timer" class="ml-1 tabular-nums">00:21</span>
+          </p>
+        </div>
+      </div>
+
+      <!-- Illustration (desktop only) -->
+      <div class="relative hidden min-h-[280px] overflow-hidden bg-surface-peach lg:block lg:min-h-screen">
+        <img
+          src="./assets/login-img.svg"
+          alt="Delivery rider on a scooter in the city"
+          class="h-full w-full object-cover object-center"
+          width="1085"
+          height="1024"
+        />
+      </div>
+    </div>
+
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const emailFromQuery = params.get("email");
+      const emailEl = document.getElementById("otp-email");
+      if (emailFromQuery) {
+        emailEl.textContent = emailFromQuery;
+        const editLink = document.querySelector('a[aria-label="Edit email"]');
+        if (editLink) {
+          editLink.href = `./forgot-password.html?email=${encodeURIComponent(emailFromQuery)}`;
+        }
+      }
+
+      const inputs = [...document.querySelectorAll(".otp-input")];
+      const form = document.getElementById("otp-form");
+      const resendBtn = document.getElementById("resend-otp");
+      const timerEl = document.getElementById("otp-timer");
+      let remaining = 21;
+      let timerId = null;
+
+      function formatTime(seconds) {
+        const m = String(Math.floor(seconds / 60)).padStart(2, "0");
+        const s = String(seconds % 60).padStart(2, "0");
+        return `${m}:${s}`;
+      }
+
+      function startTimer(seconds = 21) {
+        remaining = seconds;
+        resendBtn.disabled = true;
+        timerEl.textContent = formatTime(remaining);
+        clearInterval(timerId);
+        timerId = setInterval(() => {
+          remaining -= 1;
+          if (remaining <= 0) {
+            clearInterval(timerId);
+            timerEl.textContent = "";
+            resendBtn.disabled = false;
+            return;
+          }
+          timerEl.textContent = formatTime(remaining);
+        }, 1000);
+      }
+
+      inputs.forEach((input, index) => {
+        input.addEventListener("input", (event) => {
+          const value = event.target.value.replace(/\D/g, "").slice(0, 1);
+          event.target.value = value;
+          if (value && index < inputs.length - 1) {
+            inputs[index + 1].focus();
+          }
+        });
+
+        input.addEventListener("keydown", (event) => {
+          if (event.key === "Backspace" && !event.target.value && index > 0) {
+            inputs[index - 1].focus();
+          }
+        });
+
+        input.addEventListener("paste", (event) => {
+          event.preventDefault();
+          const pasted = (event.clipboardData || window.clipboardData)
+            .getData("text")
+            .replace(/\D/g, "")
+            .slice(0, inputs.length);
+          pasted.split("").forEach((digit, i) => {
+            if (inputs[i]) inputs[i].value = digit;
+          });
+          const focusIndex = Math.min(pasted.length, inputs.length - 1);
+          inputs[focusIndex]?.focus();
+        });
+      });
+
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const code = inputs.map((input) => input.value).join("");
+        if (code.length < inputs.length) {
+          inputs.find((input) => !input.value)?.focus();
+          return;
+        }
+        window.location.href = "./create-password.html";
+      });
+
+      resendBtn.addEventListener("click", () => {
+        if (resendBtn.disabled) return;
+        inputs.forEach((input) => {
+          input.value = "";
+        });
+        inputs[0]?.focus();
+        startTimer(21);
+      });
+
+      startTimer(21);
+      inputs[0]?.focus();
+    </script>
+  </body>
+</html>

@@ -1,7 +1,7 @@
 const headerActions = [
   { label: "Notifications", icon: "notification.svg", count: 3 },
   { label: "Messages", icon: "message.svg", count: 1, href: "./chat.html" },
-  { label: "Cart", icon: "cart.svg", count: 4 },
+  { label: "Cart", icon: "cart.svg", count: 4, href: "./cart.html" },
 ];
 
 class AppHeader extends HTMLElement {
@@ -54,7 +54,7 @@ class AppHeader extends HTMLElement {
             .join("")}
         </div>
 
-        <a class="profile-menu" href="./profile.html" aria-label="Open profile">
+        <a class="profile-menu" href="./settings.html" aria-label="Open Settings">
           <span class="profile-avatar">
             <span class="profile-fallback">JD</span>
             <img src="./assets/Header/img.jpg" alt="John Doe" />

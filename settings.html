@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="./css/dashboard.css" />
     <script type="module" src="./js/components/sidebar.js"></script>
     <script type="module" src="./js/components/header.js"></script>
+    <script type="module" src="./js/components/footer.js"></script>
     <script type="module" src="./js/home.js"></script>
     <script type="module" src="./js/settings.js"></script>
   </head>
@@ -160,7 +161,11 @@
                     </div>
                   </li>
                   <li>
-                    <button class="settings-row settings-row--logout" type="button">
+                    <button
+                      class="settings-row settings-row--logout"
+                      type="button"
+                      data-open-logout-modal
+                    >
                       <span class="settings-row__icon" aria-hidden="true">
                         <img src="./assets/logout.svg" alt="" />
                       </span>
@@ -404,5 +409,47 @@
         </div>
       </div>
     </div>
+
+    <div class="logout-modal" id="logout-modal" hidden>
+      <button
+        class="logout-modal__overlay"
+        type="button"
+        data-close-logout-modal
+        aria-label="Close modal"
+      ></button>
+      <div
+        class="logout-modal__dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="logout-modal-title"
+        aria-describedby="logout-modal-desc"
+      >
+        <button class="logout-modal__close" type="button" data-close-logout-modal aria-label="Close">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M18 6 6 18M6 6l12 12" />
+          </svg>
+        </button>
+
+        <span class="logout-modal__icon" aria-hidden="true">
+          <img src="./assets/logout.svg" alt="" />
+        </span>
+
+        <h2 id="logout-modal-title">Log out?</h2>
+        <p id="logout-modal-desc">
+          You’ll be signed out of your SITÙCKA account on this device. You can sign back in anytime.
+        </p>
+
+        <div class="logout-modal__actions">
+          <button class="logout-modal__cancel" type="button" data-close-logout-modal>
+            Cancel
+          </button>
+          <button class="logout-modal__confirm" type="button" data-confirm-logout>
+            Yes, Log Out
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <app-footer></app-footer>
   </body>
 </html>

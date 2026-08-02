@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es" class="h-full">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Account — SITÙCKA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/output.css" />
+    <link rel="stylesheet" href="./css/auth.css" />
+  </head>
+  <body class="min-h-full bg-white font-sans text-neutral-900 antialiased">
+    <div class="flex min-h-screen lg:grid lg:min-h-screen lg:grid-cols-[minmax(0,44%)_minmax(0,56%)]">
+      <!-- Create account form -->
+      <div
+        class="auth-panel px-5 pt-6 pb-8 xs:px-7 xs:pt-8 sm:px-10 sm:pt-10 sm:pb-10 md:px-12 lg:px-14 lg:py-12 xl:px-16"
+      >
+        <div class="mx-auto w-full max-w-md">
+          <a href="./index.html" class="mb-5 inline-flex sm:mb-6">
+            <img
+              src="./assets/logo-basket.svg"
+              alt="SITÙCKA - Tu cesta de la compra"
+              class="h-14 w-auto xs:h-16 sm:h-[4.5rem] md:h-20"
+              width="200"
+              height="94"
+            />
+          </a>
+
+          <h1 class="mb-5 text-2xl font-bold text-neutral-900 sm:mb-6 sm:text-3xl lg:text-[2rem]">
+            Create Account
+          </h1>
+
+          <form id="signup-form" class="w-full" novalidate>
+            <div class="signup-name-row mb-4 sm:mb-5">
+              <div>
+                <label for="first-name" class="mb-1.5 block text-sm font-medium text-neutral-800">
+                  First Name <span class="text-red-500">*</span>
+                </label>
+                <input
+                  id="first-name"
+                  name="firstName"
+                  type="text"
+                  placeholder="David"
+                  required
+                  autocomplete="given-name"
+                  class="w-full rounded-xl border border-hero-yellow bg-white px-3 py-2.5 text-sm text-neutral-800 outline-none transition-colors placeholder:text-neutral-400 focus:border-hero-yellow focus:ring-2 focus:ring-hero-yellow/20 sm:px-4 sm:py-3"
+                />
+              </div>
+              <div>
+                <label for="last-name" class="mb-1.5 block text-sm font-medium text-neutral-800">
+                  Last Name <span class="text-red-500">*</span>
+                </label>
+                <input
+                  id="last-name"
+                  name="lastName"
+                  type="text"
+                  placeholder="Josh"
+                  required
+                  autocomplete="family-name"
+                  class="w-full rounded-xl border border-hero-yellow bg-white px-3 py-2.5 text-sm text-neutral-800 outline-none transition-colors placeholder:text-neutral-400 focus:border-hero-yellow focus:ring-2 focus:ring-hero-yellow/20 sm:px-4 sm:py-3"
+                />
+              </div>
+            </div>
+
+            <div class="mb-4 sm:mb-5">
+              <label for="phone" class="mb-1.5 block text-sm font-medium text-neutral-800">
+                Phone Number <span class="text-red-500">*</span>
+              </label>
+              <div class="signup-phone">
+                <button class="signup-phone__code" type="button" aria-label="Country code">
+                  <svg class="signup-phone__flag" viewBox="0 0 20 14" aria-hidden="true">
+                    <rect width="20" height="14" fill="#B22234" />
+                    <path
+                      fill="#fff"
+                      d="M0 1.08h20v1.08H0zm0 2.16h20v1.08H0zm0 2.16h20v1.08H0zm0 2.16h20v1.08H0zm0 2.16h20v1.08H0zm0 2.16h20V14H0z"
+                    />
+                    <rect width="8.5" height="7.56" fill="#3C3B6E" />
+                  </svg>
+                  <span>+1</span>
+                </button>
+                <input
+                  id="phone"
+                  name="phone"
+                  type="tel"
+                  placeholder="(555) 000-0000"
+                  required
+                  autocomplete="tel-national"
+                  class="signup-phone__input w-full rounded-xl border border-hero-yellow bg-white px-3 py-2.5 text-sm text-neutral-800 outline-none transition-colors placeholder:text-neutral-400 focus:border-hero-yellow focus:ring-2 focus:ring-hero-yellow/20 sm:px-4 sm:py-3"
+                />
+              </div>
+            </div>
+
+            <div class="mb-4 sm:mb-5">
+              <label for="email" class="mb-1.5 block text-sm font-medium text-neutral-800">
+                Email <span class="text-red-500">*</span>
+              </label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                placeholder="davidjosh32@gmail.com"
+                required
+                autocomplete="email"
+                class="w-full rounded-xl border border-hero-yellow bg-white px-3 py-2.5 text-sm text-neutral-800 outline-none transition-colors placeholder:text-neutral-400 focus:border-hero-yellow focus:ring-2 focus:ring-hero-yellow/20 sm:px-4 sm:py-3"
+              />
+            </div>
+
+            <div class="mb-4 sm:mb-5">
+              <label for="password" class="mb-1.5 block text-sm font-medium text-neutral-800">
+                Password <span class="text-red-500">*</span>
+              </label>
+              <div class="relative">
+                <input
+                  id="password"
+                  name="password"
+                  type="password"
+                  placeholder="DAvidjosh332@"
+                  required
+                  autocomplete="new-password"
+                  class="w-full rounded-xl border border-hero-yellow bg-white py-2.5 pl-3 pr-11 text-sm text-neutral-800 outline-none transition-colors placeholder:text-neutral-400 focus:border-hero-yellow focus:ring-2 focus:ring-hero-yellow/20 sm:py-3 sm:pl-4 sm:pr-12"
+                />
+                <button
+                  type="button"
+                  class="password-toggle absolute right-3 top-1/2 -translate-y-1/2 text-neutral-400 transition-colors hover:text-neutral-600"
+                  data-target="password"
+                  aria-label="Show password"
+                >
+                  <svg
+                    class="h-4 w-4 sm:h-5 sm:w-5"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    aria-hidden="true"
+                  >
+                    <path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z" />
+                    <circle cx="12" cy="12" r="3" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <div class="mb-5 sm:mb-6">
+              <label for="confirm-password" class="mb-1.5 block text-sm font-medium text-neutral-800">
+                Re-enter Password <span class="text-red-500">*</span>
+              </label>
+              <div class="relative">
+                <input
+                  id="confirm-password"
+                  name="confirmPassword"
+                  type="password"
+                  placeholder="DAvidjosh332@"
+                  required
+                  autocomplete="new-password"
+                  class="w-full rounded-xl border border-hero-yellow bg-white py-2.5 pl-3 pr-11 text-sm text-neutral-800 outline-none transition-colors placeholder:text-neutral-400 focus:border-hero-yellow focus:ring-2 focus:ring-hero-yellow/20 sm:py-3 sm:pl-4 sm:pr-12"
+                />
+                <button
+                  type="button"
+                  class="password-toggle absolute right-3 top-1/2 -translate-y-1/2 text-neutral-400 transition-colors hover:text-neutral-600"
+                  data-target="confirm-password"
+                  aria-label="Show password"
+                >
+                  <svg
+                    class="h-4 w-4 sm:h-5 sm:w-5"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    aria-hidden="true"
+                  >
+                    <path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z" />
+                    <circle cx="12" cy="12" r="3" />
+                  </svg>
+                </button>
+              </div>
+              <p id="confirm-error" class="mt-1.5 hidden text-xs text-red-500" role="alert">
+                Passwords do not match
+              </p>
+            </div>
+
+            <button
+              type="submit"
+              class="mb-5 w-full rounded-xl bg-hero-yellow py-3 text-base font-bold text-white transition-colors hover:bg-brand-orange-dark sm:mb-6 sm:py-3.5"
+            >
+              Create account
+            </button>
+          </form>
+
+          <div class="mb-4 flex items-center gap-3 sm:mb-5">
+            <span class="h-px flex-1 bg-neutral-200"></span>
+            <span class="shrink-0 text-sm text-neutral-500">or Continue with</span>
+            <span class="h-px flex-1 bg-neutral-200"></span>
+          </div>
+
+          <div class="mb-5 flex items-center justify-center gap-4 sm:mb-6 sm:gap-5">
+            <a
+              href="#"
+              class="inline-flex h-10 w-10 items-center justify-center transition-opacity hover:opacity-85 sm:h-11 sm:w-11"
+              aria-label="Continue with Facebook"
+            >
+              <img src="./assets/facebook.svg" alt="" class="h-full w-full" />
+            </a>
+            <a
+              href="#"
+              class="inline-flex h-10 w-10 items-center justify-center transition-opacity hover:opacity-85 sm:h-11 sm:w-11"
+              aria-label="Continue with Google"
+            >
+              <img src="./assets/google.svg" alt="" class="h-full w-full" />
+            </a>
+            <a
+              href="#"
+              class="inline-flex h-10 w-10 items-center justify-center transition-opacity hover:opacity-85 sm:h-11 sm:w-11"
+              aria-label="Continue with Apple"
+            >
+              <img src="./assets/apple.svg" alt="" class="h-full w-full" />
+            </a>
+          </div>
+
+          <p class="mb-5 text-center text-sm text-neutral-500 sm:mb-6">
+            Already have an account?
+            <a href="./login.html" class="font-semibold text-hero-yellow hover:text-brand-orange-dark"
+              >Log In</a
+            >
+          </p>
+
+          <div class="border-t border-neutral-200 pt-4 sm:pt-5">
+            <p class="text-center text-[11px] leading-relaxed text-neutral-500 sm:text-xs">
+              By clicking &lsquo;Sign in&rsquo;, you agree to our
+              <a href="#" class="font-medium text-hero-yellow underline hover:text-brand-orange-dark"
+                >Terms of Service</a
+              >
+              and
+              <a href="#" class="font-medium text-hero-yellow underline hover:text-brand-orange-dark"
+                >Privacy Policy</a
+              >
+              or
+              <a href="#" class="font-medium text-hero-yellow underline hover:text-brand-orange-dark"
+                >Need Help ?</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Illustration (desktop only) -->
+      <div class="relative hidden min-h-[280px] overflow-hidden bg-surface-peach lg:block lg:min-h-screen">
+        <img
+          src="./assets/login-img.svg"
+          alt="Delivery rider on a scooter in the city"
+          class="h-full w-full object-cover object-center"
+          width="1085"
+          height="1024"
+        />
+      </div>
+    </div>
+
+    <script>
+      const form = document.getElementById("signup-form");
+      const confirmError = document.getElementById("confirm-error");
+      const passwordInput = document.getElementById("password");
+      const confirmInput = document.getElementById("confirm-password");
+
+      document.querySelectorAll(".password-toggle").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const input = document.getElementById(btn.dataset.target);
+          if (!input) return;
+          const showing = input.type === "text";
+          input.type = showing ? "password" : "text";
+          btn.setAttribute("aria-label", showing ? "Show password" : "Hide password");
+          const svg = btn.querySelector("svg");
+          if (!svg) return;
+          svg.innerHTML = showing
+            ? '<path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z" /><circle cx="12" cy="12" r="3" />'
+            : '<path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24" /><line x1="1" y1="1" x2="23" y2="23" />';
+        });
+      });
+
+      confirmInput.addEventListener("input", () => {
+        if (confirmInput.value === passwordInput.value) {
+          confirmError.classList.add("hidden");
+        }
+      });
+
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        if (passwordInput.value !== confirmInput.value) {
+          confirmError.classList.remove("hidden");
+          confirmInput.focus();
+          return;
+        }
+        confirmError.classList.add("hidden");
+        window.location.href = "./dashboard.html";
+      });
+    </script>
+  </body>
+</html>

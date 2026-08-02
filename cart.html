@@ -1,0 +1,565 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Your cart — review items and continue to checkout on SITÙCKA." />
+    <title>Your Cart | SITÙCKA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/theme.css" />
+    <link rel="stylesheet" href="./css/dashboard.css" />
+    <script type="module" src="./js/components/header.js"></script>
+    <script type="module" src="./js/components/footer.js"></script>
+    <script type="module" src="./js/home.js"></script>
+    <script type="module" src="./js/cart.js"></script>
+  </head>
+  <body class="cart-page">
+    <div class="cart-app">
+      <app-header></app-header>
+
+      <main class="cart-content">
+        <header class="cart-header">
+          <a class="cart-back" href="./dashboard.html" aria-label="Back">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 18 9 12l6-6" /></svg>
+          </a>
+          <div>
+            <h1>
+              Your Cart
+              <span class="cart-count">3 Items</span>
+            </h1>
+            <p class="cart-eta">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="12" cy="12" r="9" />
+                <path d="M12 7v5l3 2" />
+              </svg>
+              Estimated delivery in 25 — 35 mins
+            </p>
+          </div>
+        </header>
+
+        <div class="cart-layout">
+          <div class="cart-main">
+            <section class="cart-progress" aria-label="Free delivery progress">
+              <div class="cart-progress__row">
+                <span class="cart-progress__icon" aria-hidden="true">
+                  <img src="./assets/Motorcycle.svg" alt="" />
+                </span>
+                <p class="cart-progress__text">
+                  Add 8.50 XAF more to unlock <b>FREE delivery</b>
+                </p>
+                <small>8.50 XAF left</small>
+              </div>
+              <div class="cart-progress__bar" aria-hidden="true">
+                <span style="width: 78%"></span>
+              </div>
+            </section>
+
+            <ul class="cart-items">
+              <li class="cart-item" data-price="32">
+                <img src="./assets/Images/img25.png" alt="Truffle Fettuccine" />
+                <div class="cart-item__body">
+                  <div class="cart-item__main">
+                    <div class="cart-item__info">
+                      <h2>Truffle Fettuccine</h2>
+                      <div class="cart-item__shop">
+                        <p>L'Atelier Gourmet • Restaurant</p>
+                        <em class="cart-tag">ITALIAN</em>
+                      </div>
+                      <div class="cart-item__meta">
+                        <span>
+                          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 2.5 6H21l-5 4 2 7-6-4-6 4 2-7-5-4h6.5z" /></svg>
+                          4.8 (230)
+                        </span>
+                        <span>
+                          <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <circle cx="12" cy="12" r="9" />
+                            <path d="M12 7v5l3 2" />
+                          </svg>
+                          25—30 mins
+                        </span>
+                      </div>
+                      <button class="cart-item__note" type="button">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                          <path d="M8 4h8a2 2 0 0 1 2 2v14l-3-2-3 2-3-2-3 2V6a2 2 0 0 1 2-2z" />
+                          <path d="M9 9h6M9 13h4" />
+                        </svg>
+                        Add special instructions
+                      </button>
+                    </div>
+                    <div class="cart-item__side">
+                      <strong class="cart-item__price">32.00 XAF</strong>
+                      <div class="cart-item__actions">
+                        <div class="cart-qty">
+                          <button type="button" data-qty="-1" aria-label="Decrease quantity">−</button>
+                          <span data-qty-value>1</span>
+                          <button type="button" data-qty="1" aria-label="Increase quantity">+</button>
+                        </div>
+                        <button class="cart-item__remove" type="button" aria-label="Remove item">
+                          <img src="./assets/delete.svg" alt="" />
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="cart-item" data-price="8.5">
+                <img src="./assets/Images/img29.jpg" alt="Hass Avocados" />
+                <div class="cart-item__body">
+                  <div class="cart-item__main">
+                    <div class="cart-item__info">
+                      <h2>Hass Avocados</h2>
+                      <div class="cart-item__shop">
+                        <p>Fresh Market • Grocery</p>
+                        <em class="cart-tag">FRESH PRODUCE</em>
+                      </div>
+                      <div class="cart-item__meta">
+                        <span>
+                          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 2.5 6H21l-5 4 2 7-6-4-6 4 2-7-5-4h6.5z" /></svg>
+                          4.7 (180)
+                        </span>
+                        <span>
+                          <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <circle cx="12" cy="12" r="9" />
+                            <path d="M12 7v5l3 2" />
+                          </svg>
+                          15—20 mins
+                        </span>
+                      </div>
+                      <button class="cart-item__note" type="button">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                          <path d="M8 4h8a2 2 0 0 1 2 2v14l-3-2-3 2-3-2-3 2V6a2 2 0 0 1 2-2z" />
+                          <path d="M9 9h6M9 13h4" />
+                        </svg>
+                        Add special instructions
+                      </button>
+                    </div>
+                    <div class="cart-item__side">
+                      <strong class="cart-item__price">8.50 XAF</strong>
+                      <div class="cart-item__actions">
+                        <div class="cart-qty">
+                          <button type="button" data-qty="-1" aria-label="Decrease quantity">−</button>
+                          <span data-qty-value>1</span>
+                          <button type="button" data-qty="1" aria-label="Increase quantity">+</button>
+                        </div>
+                        <button class="cart-item__remove" type="button" aria-label="Remove item">
+                          <img src="./assets/delete.svg" alt="" />
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="cart-item" data-price="10">
+                <img src="./assets/Images/img26.png" alt="Greek Salad" />
+                <div class="cart-item__body">
+                  <div class="cart-item__main">
+                    <div class="cart-item__info">
+                      <h2>Greek Salad</h2>
+                      <div class="cart-item__shop">
+                        <p>Green Bowl • Restaurant</p>
+                        <em class="cart-tag">HEALTHY</em>
+                      </div>
+                      <div class="cart-item__meta">
+                        <span>
+                          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 2.5 6H21l-5 4 2 7-6-4-6 4 2-7-5-4h6.5z" /></svg>
+                          4.6 (95)
+                        </span>
+                        <span>
+                          <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <circle cx="12" cy="12" r="9" />
+                            <path d="M12 7v5l3 2" />
+                          </svg>
+                          20—25 mins
+                        </span>
+                      </div>
+                      <button class="cart-item__note" type="button">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                          <path d="M8 4h8a2 2 0 0 1 2 2v14l-3-2-3 2-3-2-3 2V6a2 2 0 0 1 2-2z" />
+                          <path d="M9 9h6M9 13h4" />
+                        </svg>
+                        Add special instructions
+                      </button>
+                    </div>
+                    <div class="cart-item__side">
+                      <strong class="cart-item__price">10.00 XAF</strong>
+                      <div class="cart-item__actions">
+                        <div class="cart-qty">
+                          <button type="button" data-qty="-1" aria-label="Decrease quantity">−</button>
+                          <span data-qty-value>1</span>
+                          <button type="button" data-qty="1" aria-label="Increase quantity">+</button>
+                        </div>
+                        <button class="cart-item__remove" type="button" aria-label="Remove item">
+                          <img src="./assets/delete.svg" alt="" />
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+
+            <section class="cart-method">
+              <h2>Delivery Method</h2>
+              <div class="cart-method__options">
+                <button class="cart-method__option is-active" type="button" data-method="instant">
+                  <span class="cart-method__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z" /></svg>
+                  </span>
+                  <span class="cart-method__copy">
+                    <strong>Instant Delivery</strong>
+                    <small>ETA 25 — 35 mins</small>
+                  </span>
+                  <span class="cart-method__radio" aria-hidden="true"></span>
+                </button>
+                <button class="cart-method__option" type="button" data-method="schedule">
+                  <span class="cart-method__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24">
+                      <rect x="3" y="5" width="18" height="16" rx="2" />
+                      <path d="M3 10h18M8 3v4M16 3v4" />
+                    </svg>
+                  </span>
+                  <span class="cart-method__copy">
+                    <strong>Schedule Delivery</strong>
+                    <small>Choose date and time slot</small>
+                  </span>
+                  <span class="cart-method__radio" aria-hidden="true"></span>
+                </button>
+              </div>
+            </section>
+
+            <div class="cart-notes">
+              <label for="cart-notes-input">
+                Delivery Instructions <span>(Optional)</span>
+              </label>
+              <textarea
+                id="cart-notes-input"
+                maxlength="200"
+                placeholder="Add gate code, apartment number, landmark, or any other instructions..."
+              ></textarea>
+              <small class="cart-notes__count"><em id="cart-notes-count">0</em>/200</small>
+            </div>
+
+            <section class="cart-help">
+              <span class="cart-help__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M21 15a2 2 0 0 1-2 2H8l-4 4V5a2 2 0 0 1 2-2h13a2 2 0 0 1 2 2z" />
+                  <path d="M8 9h.01M12 9h.01M16 9h.01" />
+                </svg>
+              </span>
+              <strong>Need help? Our support team is here for you 24/7.</strong>
+              <a class="cart-help__btn" href="./help.html">
+                <img src="./assets/chat.svg" alt="" aria-hidden="true" />
+                Contact Support
+              </a>
+            </section>
+          </div>
+
+          <aside class="cart-side" aria-label="Order summary">
+            <section class="cart-summary">
+              <h2>Order Summary</h2>
+              <ul class="cart-summary__lines">
+                <li>
+                  <span>Subtotal (3 items)</span>
+                  <b>50.50 XAF</b>
+                </li>
+                <li>
+                  <span>
+                    Delivery Fee
+                    <i class="cart-info" aria-label="More info" title="Delivery fee details">i</i>
+                  </span>
+                  <b>4.99 XAF</b>
+                </li>
+                <li>
+                  <span>
+                    Platform Fee
+                    <i class="cart-info" aria-label="More info" title="Platform fee details">i</i>
+                  </span>
+                  <b>2.00 XAF</b>
+                </li>
+                <li>
+                  <span>Estimated Tax</span>
+                  <b>3.25 XAF</b>
+                </li>
+                <li class="is-discount">
+                  <span>Promo Discount</span>
+                  <b>-5.00 XAF</b>
+                </li>
+                <li class="is-discount">
+                  <span>Wallet Discount</span>
+                  <b>-2.00 XAF</b>
+                </li>
+              </ul>
+
+              <div class="cart-summary__total">
+                <div>
+                  <strong>TOTAL AMOUNT</strong>
+                  <b id="cart-total">43.74 XAF</b>
+                </div>
+                <small>Includes VAT</small>
+              </div>
+
+              <form class="cart-promo" id="cart-promo">
+                <input type="text" placeholder="Enter coupon code" aria-label="Coupon code" />
+                <button type="submit">Apply</button>
+              </form>
+
+              <p class="cart-saved">
+                <span aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="m5 12 4 4 10-10" /></svg>
+                </span>
+                You saved $7.00 on this order
+              </p>
+            </section>
+
+            <section class="cart-checkout-card">
+              <div class="cart-panel">
+                <div class="cart-panel__head">
+                  <h2>Delivery Address</h2>
+                  <a href="./addresses.html">Change</a>
+                </div>
+                <div class="cart-address">
+                  <span class="cart-address__icon" aria-hidden="true">
+                    <img src="./assets/Address/home.svg" alt="" />
+                  </span>
+                  <div>
+                    <strong>Home</strong>
+                    <p>128 Knightsbridge, Apartment 4B, New York, NY 10012, United States</p>
+                    <em class="cart-address__status">
+                      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4 10-10" /></svg>
+                      Deliver here
+                    </em>
+                  </div>
+                </div>
+              </div>
+
+              <div class="cart-panel">
+                <div class="cart-panel__head">
+                  <h2>Payment Method</h2>
+                  <a href="./payments.html">Change</a>
+                </div>
+                <label class="cart-pay is-active">
+                  <input type="radio" name="payment" value="wallet" checked />
+                  <span class="cart-pay__radio"></span>
+                  <span class="cart-pay__icon" aria-hidden="true">
+                    <img src="./assets/card.svg" alt="" />
+                  </span>
+                  <span class="cart-pay__copy">
+                    <strong>SITUCKA Wallet</strong>
+                    <small>Balance: 1200.50 XAF</small>
+                  </span>
+                  <svg class="cart-pay__chevron" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="m9 6 6 6-6 6" />
+                  </svg>
+                </label>
+                <label class="cart-pay">
+                  <input type="radio" name="payment" value="cod" />
+                  <span class="cart-pay__radio"></span>
+                  <span class="cart-pay__icon" aria-hidden="true">
+                    <img src="./assets/cash.svg" alt="" />
+                  </span>
+                  <span class="cart-pay__copy">
+                    <strong>Cash on Delivery</strong>
+                  </span>
+                  <svg class="cart-pay__chevron cart-pay__chevron--down" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="m6 9 6 6 6-6" />
+                  </svg>
+                </label>
+              </div>
+
+              <button class="cart-checkout" type="button">
+                Continue to Checkout
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+              </button>
+              <p class="cart-secure">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                  <path d="m9 12 2 2 4-4" />
+                </svg>
+                Secure Checkout
+              </p>
+            </section>
+
+            <ul class="cart-trust">
+              <li>
+                <span aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z" /></svg>
+                </span>
+                Live order tracking
+              </li>
+              <li>
+                <span aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="m5 12 4 4 10-10" /></svg>
+                </span>
+                Freshness guarantee
+              </li>
+              <li>
+                <span aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M7 11V8a5 5 0 0 1 10 0v3" />
+                    <rect x="5" y="11" width="14" height="10" rx="2" />
+                  </svg>
+                </span>
+                Secure payments
+              </li>
+              <li>
+                <span aria-hidden="true">
+                  <img src="./assets/greenchat.svg" alt="" />
+                </span>
+                24/7 customer support
+              </li>
+            </ul>
+          </aside>
+        </div>
+
+        <section class="content-section content-section--products cart-suggest" aria-labelledby="cart-like-heading">
+          <div class="section-heading">
+            <div>
+              <h2 id="cart-like-heading">You May Also Like</h2>
+              <p>Daily needs delivered fresh to your door</p>
+            </div>
+            <a class="view-all" href="./groceries.html">View all</a>
+          </div>
+
+          <div class="product-scroller">
+            <a class="product-card-link" href="./product-detail.html">
+              <article class="product-card">
+                <div class="product-media">
+                  <img src="./assets/Images/img1.png" alt="Fresh Avocados" />
+                  <button class="product-wish" type="button" aria-label="Add Fresh Avocados to wishlist">
+                    <img src="./assets/Tab/wishlist.svg" alt="" aria-hidden="true" />
+                  </button>
+                </div>
+                <div class="product-body">
+                  <h3>Fresh Avocados</h3>
+                  <p>1kg • $3.49/unit</p>
+                  <div class="product-meta">
+                    <strong>$3.49</strong>
+                    <button class="product-cart" type="button" aria-label="Add Fresh Avocados to cart">
+                      <img src="./assets/Header/cart.svg" alt="" aria-hidden="true" />
+                    </button>
+                  </div>
+                </div>
+              </article>
+            </a>
+
+            <a class="product-card-link" href="./product-detail.html">
+              <article class="product-card">
+                <div class="product-media">
+                  <img src="./assets/Images/img2.png" alt="Fresh Oranges" />
+                  <button class="product-wish" type="button" aria-label="Add Fresh Oranges to wishlist">
+                    <img src="./assets/Tab/wishlist.svg" alt="" aria-hidden="true" />
+                  </button>
+                </div>
+                <div class="product-body">
+                  <h3>Fresh Oranges</h3>
+                  <p>1kg • $2.99/unit</p>
+                  <div class="product-meta">
+                    <strong>$2.99</strong>
+                    <button class="product-cart" type="button" aria-label="Add Fresh Oranges to cart">
+                      <img src="./assets/Header/cart.svg" alt="" aria-hidden="true" />
+                    </button>
+                  </div>
+                </div>
+              </article>
+            </a>
+
+            <a class="product-card-link" href="./product-detail.html">
+              <article class="product-card">
+                <div class="product-media">
+                  <img src="./assets/Images/img3.jpg" alt="Artisan Sourdough" />
+                  <button class="product-wish" type="button" aria-label="Add Artisan Sourdough to wishlist">
+                    <img src="./assets/Tab/wishlist.svg" alt="" aria-hidden="true" />
+                  </button>
+                </div>
+                <div class="product-body">
+                  <h3>Artisan Sourdough</h3>
+                  <p>1 loaf • Bakery</p>
+                  <div class="product-meta">
+                    <strong>$4.25</strong>
+                    <button class="product-cart" type="button" aria-label="Add Artisan Sourdough to cart">
+                      <img src="./assets/Header/cart.svg" alt="" aria-hidden="true" />
+                    </button>
+                  </div>
+                </div>
+              </article>
+            </a>
+
+            <a class="product-card-link" href="./product-detail.html">
+              <article class="product-card">
+                <div class="product-media">
+                  <img src="./assets/Images/img4.png" alt="Peanut Butter" />
+                  <button class="product-wish" type="button" aria-label="Add Peanut Butter to wishlist">
+                    <img src="./assets/Tab/wishlist.svg" alt="" aria-hidden="true" />
+                  </button>
+                </div>
+                <div class="product-body">
+                  <h3>Peanut Butter</h3>
+                  <p>340g • Creamy</p>
+                  <div class="product-meta">
+                    <strong>$3.99</strong>
+                    <button class="product-cart" type="button" aria-label="Add Peanut Butter to cart">
+                      <img src="./assets/Header/cart.svg" alt="" aria-hidden="true" />
+                    </button>
+                  </div>
+                </div>
+              </article>
+            </a>
+
+            <a class="product-card-link" href="./product-detail.html">
+              <article class="product-card">
+                <div class="product-media">
+                  <img src="./assets/Images/img5.png" alt="Choco Ice-cream" />
+                  <button class="product-wish" type="button" aria-label="Add Choco Ice-cream to wishlist">
+                    <img src="./assets/Tab/wishlist.svg" alt="" aria-hidden="true" />
+                  </button>
+                </div>
+                <div class="product-body">
+                  <h3>Choco Ice-cream</h3>
+                  <p>500ml • Premium</p>
+                  <div class="product-meta">
+                    <strong>$5.50</strong>
+                    <button class="product-cart" type="button" aria-label="Add Choco Ice-cream to cart">
+                      <img src="./assets/Header/cart.svg" alt="" aria-hidden="true" />
+                    </button>
+                  </div>
+                </div>
+              </article>
+            </a>
+
+            <a class="product-card-link" href="./product-detail.html">
+              <article class="product-card">
+                <div class="product-media">
+                  <img src="./assets/Images/img6.jpg" alt="Pomegranate" />
+                  <button class="product-wish" type="button" aria-label="Add Pomegranate to wishlist">
+                    <img src="./assets/Tab/wishlist.svg" alt="" aria-hidden="true" />
+                  </button>
+                </div>
+                <div class="product-body">
+                  <h3>Pomegranate</h3>
+                  <p>Pack of 3</p>
+                  <div class="product-meta">
+                    <strong>$6.00</strong>
+                    <button class="product-cart" type="button" aria-label="Add Pomegranate to cart">
+                      <img src="./assets/Header/cart.svg" alt="" aria-hidden="true" />
+                    </button>
+                  </div>
+                </div>
+              </article>
+            </a>
+          </div>
+        </section>
+      </main>
+
+     
+    </div>
+
+    <app-footer></app-footer>
+  </body>
+</html>
